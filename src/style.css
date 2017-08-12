@@ -1,63 +1,7 @@
-body { 
-	font-family: sans-serif;
-	padding: 0;
-	margin: 0;
-	padding-top: 70px; 
+# {
+    font-family: 'Montserrat', sans-serif;
 }
-.row {
-	text-align: center;
-}
-.card {
-	display: inline-block;
-	border: 1px solid grey;
-	border-radius: 2px;
-	width: 300px;
-	margin-bottom: 16px;
-}
-.cardHead {
-	height: 64px;
-	width: 100%;
-}
-.cardHeadIcon {
-	float: left;
-	height: 100%;
-	width: 32px;
-}
-.cardHeadTitle {
-	position: relative;
-	text-align: left;
-	top: 16px;
-	left: 48px;
-}
-.cardMedia {
-	height: 160px;
-	width: 100%;
-}
-.cardText {
-	padding: 16px 16px 0 16px;
-	height: 72px;
-	width: 100%;
-}
-.cardActions {
-	padding-top: 8px;
-	padding-botton: 8px;
-	border-top: 1px solid grey;
-	height: 48px;
-	width: 100%;
-}
-.cardActionsLeft {
-	padding-left: 16px;
-	height: 32px;
-	float: left;
-}
-.cardActionsRight {
-	padding-right: 16px;
-	height: 32px;
-	float: right;
-}
-button {
-	height: 32px;
-}
-img.cardActionsLeftButtonActionButton:hover {
-	cursor: pointer;
+
+.title {
+    font-family: 'Lora', serif;
 }

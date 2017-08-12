@@ -1,4 +1,0 @@
-SetEnv TZ canada/toronto
-AddType image/svg+xml svg
-AddType image/svg+xml svgz
-AddEncoding x-gzip .svgz

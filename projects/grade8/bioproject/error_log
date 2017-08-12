@@ -1,5 +1,0 @@
-[28-Jul-2014 17:33:19] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home1/zharry/public_html/projects/biography/classes/CMySQL.php on line 19
-[28-Jul-2014 17:33:19] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home1/zharry/public_html/projects/biography/classes/CMySQL.php on line 22
-[28-Jul-2014 17:33:19] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home1/zharry/public_html/projects/biography/classes/CMySQL.php on line 24
-[28-Jul-2014 17:33:19] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home1/zharry/public_html/projects/biography/classes/CMySQL.php on line 24
-[28-Jul-2014 17:33:19] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home1/zharry/public_html/projects/biography/classes/CMySQL.php on line 45
