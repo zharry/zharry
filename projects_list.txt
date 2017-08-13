@@ -43,7 +43,7 @@ School
 Other Projects
     G - Discord Bot (Banner)
     G - Platform Fantasy (Banner)
-    D - Grade9-Study
+    C - D - Grade9-Study
     N - MetroWeb
     G - TheGame
     G - SMK-Player
