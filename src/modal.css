@@ -27,6 +27,7 @@
 .modal.show .modal-dialog {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+  box-shadow: 0 5px 13px 0 rgba(0,0,0,0.5);
 }
 
 .modal-open .modal {
@@ -49,7 +50,7 @@
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 2px;
   outline: 0;
 }
 
@@ -133,13 +134,14 @@
 
 @media (min-width: 992px) {
   .modal-lg {
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 
 /*X Button*/
 
 .close {
+  cursor: pointer;
   float: right;
   font-size: 1.5rem;
   font-weight: bold;
@@ -165,6 +167,7 @@ button.close {
 /*Close Button*/
 
 .btn {
+  cursor: pointer;
   display: inline-block;
   font-weight: normal;
   text-align: center;
@@ -224,4 +227,12 @@ button.close {
   background-color: #727b84;
   background-image: none;
   border-color: #6c757d;
+}
+
+/* Other Modal Elements*/
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
