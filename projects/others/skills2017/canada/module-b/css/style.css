@@ -1,0 +1,93 @@
+* {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.navbar-brand {
+    transform: translateX(-50%);
+    position:absolute;
+    left: 50%;
+}
+.navlogo {
+    transition: height 0.5s;
+}
+.event{
+    cursor: pointer;
+}
+.eventImg{
+    height: auto;
+    width: 100%;
+}
+.eventTitle {
+    font-size: 16px; 
+    padding: 15px;
+    font-weight: bold;
+}
+.eventContent {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    margin:0;
+}
+.smallTitle {
+    font-size: 16px; 
+    padding: 9px 0px 3px 15px;
+    margin: 0;
+}
+.eventDesc {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 150px;
+    margin-bottom: 32px;
+}
+.smallDesc {
+    height: 65px;
+}
+.bottomItem {
+    border-left: 1px solid rgba(1,1,1,0.25);
+    text-align: center;
+    font-size:17px;
+    height: 100px;
+    display:table;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.listContent{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.cal {
+    border: 1px solid black;
+    height: 100px;
+    width: 14%;
+    
+}
+.cl {
+    height: 50px;
+    background-color: rgba(1,1,1,0.02);
+}
+
+
+#plan {
+    border-right: 1px solid rgba(1,1,1,0.25);
+    background-color:rgb(181, 255, 181);
+}
+#event1 {
+}
+#event2 {
+}
+#event3 {
+    margin-bottom:-12px;
+}
+#event4 {
+    margin-bottom:-12px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .bottomItem {
+        border: 1px solid rgba(1,1,1,0.25);
+        width: 100%;
+    }
+}
