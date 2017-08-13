@@ -2,7 +2,7 @@
 
 require_once('/etc/mysql-creds/mysql-creds.php');
 
-$DIR = "/zharry/projects/others/skills2017/ontario/";
+$DIR = "/projects/others/skills2017/ontario/";
 $NAME = "James Johnson";
 
 $HOST = $mysql_creds["host"];
