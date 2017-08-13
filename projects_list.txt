@@ -1,28 +1,28 @@
 Events
-    - Hack The North 2016
-    - Skills Canada 2017
-    - NASA Space Apps 2016
+    - Hack The North 2016 (Banner)
+    - Skills Canada 2017 (Banner)
+    - NASA Space Apps 2016 (Banner)
     - Masssey Hacks II
     - Local Hack Day 2015
 
 Projects
-    - StudyHub
-    - DMCI Robotics
+    - StudyHub (Banner)
+    - DMCI Robotics (Banner)
 
 School
     - Games
-        - Scrabble
+        - Scrabble (Banner)
         - Alterforce Rising
         - Finger Dance Revolution
         - Treasure Hunt
         - Seed of Nationhood
     - Websites
-        - Blog of the Flies
+        - Blog of the Flies (Banner)
         - Biography Project
         - NCTech
         - Tour2000
     - Presentations
-        - Crane Presentation
+        - Crane Presentation (Banner)
         - Evolution of a star
         - Take a Walk in my Shoes
         - Patterns in Human Geography
@@ -31,10 +31,10 @@ School
         - LSD Presentation
     
 Other Projects
-    - Discord Bot
-    - Platform Fantasy
+    - Discord Bot (Banner)
+    - Platform Fantasy (Banner)
     - Grade9-Study
     - MetroWeb
     - TheGame
     - SMK-Player
-    - Blogsquared
+    - Blogsquared (No Media)
