@@ -1,11 +1,11 @@
 <br/>
 <?php
 
-require_once('/etc/mysql-creds/zharry-mysql.inc.php');
+require_once('/etc/mysql-creds/mysql-creds.php');
 
 	$query = $_GET["query"];
 	$query = strtolower($query);
-	$connection = mysqli_connect($ZHM["host"], $ZHM["user"], $ZHM["pass"], $ZHM["dbo"]["study"]);
+	$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 	$sql = mysqli_prepare($connection, "SELECT * FROM SCIENCE_DEF WHERE KEYWORD LIKE ? UNION SELECT * FROM SCIENCE_DEF WHERE KEYWORD LIKE ?");
 	$que = "{$query}%";
 	$quer = "%{$query}%";

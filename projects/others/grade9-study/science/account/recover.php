@@ -1,10 +1,10 @@
 <?php
 
-require_once('/etc/mysql-creds/zharry-mysql.inc.php');
+require_once('/etc/mysql-creds/mysql-creds.php');
 
 	if($_POST != null && $_POST['remail'] != null){
 		$email = $_POST['remail'];
-		$connection = mysqli_connect($ZHM["host"], $ZHM["user"], $ZHM["pass"], $ZHM["dbo"]["study"]);
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE EMAIL = ?");
 		mysqli_stmt_bind_param($sql, 's', $email);
 		mysqli_stmt_execute($sql);
@@ -61,7 +61,7 @@ require_once('/etc/mysql-creds/zharry-mysql.inc.php');
 	else if($_POST != null && $_POST['rtoken'] != null && $_POST['rpasswd'] != null){
 		$token = base64_decode($_POST['rtoken']);
 
-		$connection = mysqli_connect("127.2.125.130", "study", "study#123*site.database->password", "study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM PASSWORD_RECOVER WHERE TOKEN = ?");
 		mysqli_stmt_bind_param($sql, 's', $token);
 		mysqli_stmt_execute($sql);
@@ -86,7 +86,7 @@ require_once('/etc/mysql-creds/zharry-mysql.inc.php');
 	}
 	else if($_GET != null && $_GET['recToken'] != null){
 		$token = base64_decode($_GET['recToken']);
-		$connection = mysqli_connect("127.2.125.130", "study", "study#123*site.database->password", "study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM PASSWORD_RECOVER WHERE TOKEN = ?");
 		mysqli_stmt_bind_param($sql, 's', $token);
 		mysqli_stmt_execute($sql);
