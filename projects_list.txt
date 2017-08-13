@@ -1,0 +1,40 @@
+Events
+    - Hack The North 2016
+    - Skills Canada 2017
+    - NASA Space Apps 2016
+    - Masssey Hacks II
+    - Local Hack Day 2015
+
+Projects
+    - StudyHub
+    - DMCI Robotics
+
+School
+    - Games
+        - Scrabble
+        - Alterforce Rising
+        - Finger Dance Revolution
+        - Treasure Hunt
+        - Seed of Nationhood
+    - Websites
+        - Blog of the Flies
+        - Biography Project
+        - NCTech
+        - Tour2000
+    - Presentations
+        - Crane Presentation
+        - Evolution of a star
+        - Take a Walk in my Shoes
+        - Patterns in Human Geography
+        - New France History Map
+        - Wheel of Number Sense
+        - LSD Presentation
+    
+Other Projects
+    - Discord Bot
+    - Platform Fantasy
+    - Grade9-Study
+    - MetroWeb
+    - TheGame
+    - SMK-Player
+    - Blogsquared

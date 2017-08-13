@@ -26,6 +26,7 @@
     width: 100%;
 }
 .headerTitle {
+    font-weight: 500;
     font-size: 39px;
     text-align: center;
     line-height: 80px;
@@ -83,6 +84,18 @@
     line-height: 1.5em;
     text-indent: 14px;
 }
+.bodyElemBanner {
+    width:100%;
+}
+.learnMore {
+    display: inline-block;
+    text-decoration: none!important;
+    line-height: 40px;
+    padding: 0 0 0 15px;
+    cursor: pointer;
+    color: blue;
+}
+
 .skillIcon {
     height: 75px;
     width: auto;
