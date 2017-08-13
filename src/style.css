@@ -129,7 +129,7 @@
     box-shadow: 0 1px 10px 0 rgba(0,0,0,0.25);
 }
 .learnMore-left > center {
-    padding: 12px;
+    padding-top: 12px;
 }
 .learnMore-left > center > a {
     text-decoration: none;

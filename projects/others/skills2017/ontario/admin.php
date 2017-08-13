@@ -123,7 +123,7 @@
 				<form action="admin.php" method="post">
 					<input type="hidden" name="submit" value="delete" required="">
 					<input id="deleteId" type="hidden" name="id" value="-1" required="">
-					<input type="submit" value="Confrim Delete Project" style="width: calc(80% + 4px);">
+					<input type="submit" value="Confirm Delete Project" style="width: calc(80% + 4px);">
 				</form>					
 			</div>
 			<div id="new"  class="adminElem">

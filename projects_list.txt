@@ -9,9 +9,9 @@ C - Checked
 T - Temp Done (Site Exists, Not Working)
 F - Done on Homepage
 
-Events
+Events (DONE!)
     F - T - S - Hack The North 2016 (Banner)
-    N - Skills Canada 2017 (Banner) (No Learn More)
+    F - C - T - Skills Canada 2017 (Banner) (No Learn More)
     F - T - P - NASA Space Apps 2016 (Banner)
     F - C - P - Masssey Hacks III 2016
     F - C - S - Local Hack Day 2015
