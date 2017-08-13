@@ -10,7 +10,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Websites</title>
+		<title>James Johnson</title>
 		<link href="<?=$DIR ?>src/style.css" rel="stylesheet" type="text/css">
 		<script src="<?=$DIR ?>src/jquery.js"></script>
 	</head>
