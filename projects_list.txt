@@ -38,3 +38,10 @@ Other Projects
     - TheGame
     - SMK-Player
     - Blogsquared (No Media)
+    
+Social Icons
+    - Facebook
+    - GitHub
+    - Devpost
+    - LinkedIn
+    - Email
