@@ -1,43 +1,53 @@
+LEGEND:
+D - Uploaded to zharry.tk
+N - Not uploaded, still need to
+G - Not uploaded, on GitHub
+S - Seperate Website
+P - No website available
+
+C - Checked
+F - Done on Homepage
+
 Events
-    - Hack The North 2016 (Banner)
-    - Skills Canada 2017 (Banner) (No Learn More)
-    - NASA Space Apps 2016 (Banner)
-    - Masssey Hacks III 2016
-    - Local Hack Day 2015
+    S - Hack The North 2016 (Banner)
+    N - Skills Canada 2017 (Banner) (No Learn More)
+    P - NASA Space Apps 2016 (Banner)
+    P - Masssey Hacks III 2016
+    S - Local Hack Day 2015
 
 Projects
-    - StudyHub (Banner)
-    - DMCI Robotics (Banner)
+    S - StudyHub (Banner)
+    S - DMCI Robotics (Banner)
 
 School
     - Games
-        - Scrabble (Banner) (Grade 11)
-        - Alterforce Rising (Grade 11)
-        - Finger Dance Revolution (Grade 11)
-        - Treasure Hunt (Grade 9)
-        - Seed of Nationhood (Grade 7)
+        G - Scrabble (Banner) (Grade 11)
+        G - Alterforce Rising (Grade 11)
+        G - Finger Dance Revolution (Grade 11)
+        G - Treasure Hunt (Grade 9)
+        G - Seed of Nationhood (Grade 7)
     - Websites
         D - Blog of the Flies (Banner) (Grade 9)
         N - Biography Project (Grade 8)
         N - NCTech (Grade 7)
-        D - Tour2000 (Grade 7)
+        C - D - Tour2000 (Grade 7)
     - Presentations
-        D - Crane Presentation (Banner) (Grade 9)
-        D - Evolution of a star (Grade 9)
-        D - Take a Walk in my Shoes (Grade 7)
-        D - Patterns in Human Geography (Grade 7)
-        - New France History Map (Grade 7)
-        - Wheel of Number Sense (Grade 7)
-        - LSD Presentation (Grade 7)
+        C - D - Crane Presentation (Banner) (Grade 9)
+        C - D - Evolution of a star (Grade 9)
+        C - D - Take a Walk in my Shoes (Grade 7)
+        C - D - Patterns in Human Geography (Grade 7)
+        G - New France History Map (Grade 7)
+        G - Wheel of Number Sense (Grade 7)
+        G - LSD Presentation (Grade 7)
     
 Other Projects
-    - Discord Bot (Banner)
-    - Platform Fantasy (Banner)
+    G - Discord Bot (Banner)
+    G - Platform Fantasy (Banner)
     D - Grade9-Study
-    - MetroWeb
-    - TheGame
-    - SMK-Player
-    - Blogsquared (No Media)
+    N - MetroWeb
+    G - TheGame
+    G - SMK-Player
+    G - Blogsquared (No Media)
     
 Social Icons
     - Facebook
