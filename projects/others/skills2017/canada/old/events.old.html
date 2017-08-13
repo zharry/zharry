@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Winnipeg Railway Museum</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/newlogo.png" id="navlogo" onmouseout="retractLogo();" onmouseover="expandLogo()" style="height: calc(100% + 24px); margin: -12px" class="navlogo"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="events.html">Events<span class="sr-only">(current)</span></a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Location</a></li>
+                <li><a href="#">Hours & Admission</a></li>
+                <li><a href="#">Locomotives</a></li>
+                <li><a href="#">Rolling Stock</a></li>
+                <li><a href="#">Maintenance of Way</a></li>
+                <li><a href="#">Other Equipment</a></li>
+                <li><a href="#">Displays</a></li>
+                <li><a href="#">Gift Shop</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <!--Body-->
+    <div class="container">
+        <br/>
+        <br/>
+        <div class="row">
+            <p style="font-size: 24px;">Events (June 2017)</p>
+        </div>
+        <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#listView" aria-controls="home" role="tab" data-toggle="tab">List View</a></li>
+            <li role="presentation">               <a href="#gridView" aria-controls="profile" role="tab" data-toggle="tab">Grid View</a></li>
+        </ul>
+            
+            
+        <div class="tab-content">
+            <!--List View Content-->
+            <div role="tabpanel" class="tab-pane active" id="listView">
+                <br/>
+                <div class="row">
+                    <p style="font-size: 20px;">&nbsp; June 1<small>st</small></p>
+                    <hr/>
+                    <div class="panel-group" id="accordion1" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e11"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#ce11" aria-expanded="true" aria-controls="ce11">
+                              Event 1 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce11" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e11"><div class="panel-body">
+                            Event 1 Description
+                          </div></div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p style="font-size: 20px;">&nbsp; June 8<small>th</small></p>
+                    <hr/>
+                    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e12"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#ce12" aria-expanded="true" aria-controls="ce11">
+                              Event 1 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e12"><div class="panel-body">
+                            Event 1 Description
+                          </div></div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e22"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#ce22" aria-expanded="true" aria-controls="ce21">
+                              Event 2 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce22" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e22"><div class="panel-body">
+                            Event 2 Description
+                          </div></div>
+                      </div>
+
+                    </div>
+                 </div>
+                 <div class="row">
+                    <p style="font-size: 20px;">&nbsp; June 15<small>th</small></p>
+                    <hr/>
+                    <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e13"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#ce13" aria-expanded="true" aria-controls="ce11">
+                              Event 1 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce13" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e13"><div class="panel-body">
+                            Event 1 Description
+                          </div></div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e23"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#ce23" aria-expanded="true" aria-controls="ce21">
+                              Event 2 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce23" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e23"><div class="panel-body">
+                            Event 2 Description
+                          </div></div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e33"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#ce33" aria-expanded="true" aria-controls="ce21">
+                              Event 3 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce33" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e33"><div class="panel-body">
+                            Event 3 Description
+                          </div></div>
+                      </div>
+                    </div>
+                 </div>
+                <div class="row">
+                    <p style="font-size: 20px;">&nbsp; June 24<small>th</small></p>
+                    <hr/>
+                    <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e14"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#ce14" aria-expanded="true" aria-controls="ce11">
+                              Event 1 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce14" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e14"><div class="panel-body">
+                            Event 1 Description
+                          </div></div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e24"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#ce24" aria-expanded="true" aria-controls="ce21">
+                              Event 2 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce24" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e24"><div class="panel-body">
+                            Event 2 Description
+                          </div></div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="e34"><h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#ce34" aria-expanded="true" aria-controls="ce21">
+                              Event 3 Title
+                            </a></h4>
+                        </div>
+                        <div id="ce34" class="panel-collapse collapse" role="tabpanel" aria-labelledby="e34"><div class="panel-body">
+                            Event 3 Description
+                          </div></div>
+                      </div>
+                    </div>
+                 </div>
+            </div>
+            
+            <!--Grid View Content-->
+            <div role="tabpanel" class="tab-pane" id="gridView">
+                <br/>
+                <table style="width: 100%;">
+                    <tr>
+                        <td class="cal cl">
+                            Sun
+                        </td>
+                        <td class="cal cl">
+                            Mon
+                        </td>
+                        <td class="cal cl">
+                            Tue
+                        </td>
+                        <td class="cal cl">
+                            Wed
+                        </td>
+                        <td class="cal cl">
+                            Thurs
+                        </td>
+                        <td class="cal cl">
+                            Fri
+                        </td>
+                        <td class="cal cl">
+                            Sat
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cal">
+                            
+                        </td>
+                        <td class="cal">
+                            
+                        </td>
+                        <td class="cal">
+                            
+                        </td>
+                        <td class="cal">
+                            
+                        </td>
+                        <td class="cal">
+                            1<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            2<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            3<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cal">
+                            4<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            5<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            6<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            7<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            8<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            9<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            10<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cal">
+                            11<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            12<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            13<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            14<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                        </td>
+                        <td class="cal">
+                            15<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            16<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            17<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cal">
+                            18<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            19<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            20<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            21<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            22<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            23<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                        <td class="cal">
+                            24<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event2">Event 2</button>
+                            <br/>
+                            <button data-toggle="modal" data-target="#event3">Event 3</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cal">
+                            25<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            26<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            27<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            28<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            29<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                            30<br/>
+                            <button data-toggle="modal" data-target="#event1">Event 1</button>
+                        </td>
+                        <td class="cal">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+      
+    <!--Modal Contents-->
+    <div class="modal fade" id="event1" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Event 1</h4>
+          </div>
+          <div class="modal-body">
+            Event 1 Description
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <div class="modal fade" id="event2" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Event 2</h4>
+          </div>
+          <div class="modal-body">
+            Event 2 Description
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="event3" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Event 3</h4>
+          </div>
+          <div class="modal-body">
+            Event 3 Description
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

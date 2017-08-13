@@ -2,6 +2,9 @@
 
 require_once('/etc/mysql-creds/mysql-creds.php');
 
+define('WP_HOME','https://zharry.tk/projects/grade7/nctech/');
+define('WP_SITEURL','https://zharry.tk/projects/grade7/nctech/');
+
 /**
  * The base configurations of the WordPress.
  *

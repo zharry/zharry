@@ -1,0 +1,165 @@
+@charset "utf-8";
+* {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+
+.menuElem {
+	color: black;
+}
+.elemHeader {
+	text-align: center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 40px;
+	text-decoration:underline;
+	width: 100%;
+	padding: 40px 0 25px 0;
+}
+.image {
+	max-width: 100%;
+	height: auto;
+	padding-bottom: 32px;
+}
+.imageLeft {
+	float: left;
+	padding-right: 32px;
+}
+.imageRight {
+	float: right;
+	padding-left: 32px;
+}
+.bodyElem{
+	max-width: 1200px;
+	width: 80%;
+	margin: auto;
+	display: table;
+	padding-bottom: 40px;
+}
+.bodyContent {
+	line-height: 133%;
+	font-size: 24px;
+}
+.reference {
+	color: inherit;
+}
+.background {
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+	z-index: -1;
+}
+.optional {
+	font-weight: normal;
+}
+
+#background {
+    background-image: url(src/background.jpg);
+}
+#backgroundOntario {
+    background-image: url(src/backgroundOntario.jpg);
+}
+#backgroundToronto {
+    background-image: url(src/backgroundToronto.jpg);
+}
+#header {
+	height: 128px;
+	width: calc(100% - 32px);
+	background-color: white;
+	padding-left: 32px;
+	font-family: fantasy;
+}
+#logo {
+	vertical-align: middle;
+	float: left;
+}
+#indexButton {
+	color: black;
+	text-decoration: none;
+}
+#title {
+	line-height: 128px;
+	text-transform:uppercase;
+	font-size: 42px;
+	font-weight: bold;
+	float: left;
+}
+#menu { 
+	height: 100%;
+    float: right;
+    line-height: 128px;
+    font-size: 28px;
+    padding-right: 64px;
+}
+#intro {
+	height: calc(100vh - 128px);
+	background-color: rgba(0,0,0,0.45);
+	line-height: 100vh;
+	text-align:center;
+	color: white;
+	font-size: 4vw;
+	overflow: hidden;
+}
+#first {
+	background-color: rgb(255, 118, 118);
+}
+#second {
+	background-color:  rgb(200, 200, 200);
+}
+#third {
+	background-color: rgb(255, 80, 80);
+}
+#footer {
+	background-color: rgb(128, 0, 0);
+	color: white;
+	padding-top: 40px;
+}
+#copyright {
+	width: 50%;
+	float:left;
+}
+#social {
+	width: 50%;
+	float:left;
+	text-align: center;
+}
+.social {
+	height: 64px;
+	width: 64px;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+	#menu {
+		font-size:4vw;
+		padding:0;
+	}
+	#header {
+		width: 100%;
+		padding-left: 0;
+	}
+	#title {
+		display: none;
+		font-size: 32px;
+	}
+	#intro {
+		font-size: 6vw;
+	}
+	.bodyElem {
+		width: 93%;
+	}
+	.bodyImage {
+		width: 100%;
+	}
+	.bodyContent {
+		line-height: 125%;
+        font-size: 20px;
+	}
+}

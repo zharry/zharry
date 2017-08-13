@@ -1,0 +1,219 @@
+* {
+	margin: 0;
+	font-family: "Trebuchet MS", sans-serif;
+	overflow-x: hidden;
+}
+
+.menuLink {
+	color: black;
+	text-decoration: none;
+}
+.hookLink{
+	text-decoration: none;
+	color: white;
+}	
+.mobileMenuLink {
+	border-top: 1px solid black;
+	display: block;
+	width: 100vw;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	background-color: white;
+}
+.mobileMenuLink:hover {
+	background-color: #E2E2E2;
+}
+.bodyElem {
+	width: 78%;
+	max-width: 1150px;
+	margin: auto;
+}
+.contentTitle {
+	padding-top: 52px;
+	padding-bottom: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+.contentBody {
+	padding-bottom: 40px;
+}
+.bodyImages {
+	width: 55%;
+	display: table-cell;
+}
+.bodyText {
+	width: 45%;
+	vertical-align: top;
+    padding-left: 24px;
+    text-indent: 24px;
+	display: table-cell;
+	line-height: 133%;
+}
+.bodyImagesIndex {
+	width: 33%;
+	display: table-cell;
+}
+.bodyTextIndex {
+	width: 66%;
+	vertical-align: top;
+    padding-left: 24px;
+    text-indent: 24px;
+	display: table-cell;
+	line-height: 133%;
+}
+.noImage {
+	width: 0% !important;
+}
+.textNoImage {
+	width: 100% !important;
+}
+.body {
+	background-color: #f8fdff;
+	width: 100vw;
+}
+.anchor {
+	margin: -50px;
+	height: 100px;
+	display: block;
+}
+.loginForm {
+	width: 150px;
+	height: 36px;
+}
+.adminElem {
+	float: left;
+	width: calc(50% - 50px);
+	padding: 25px
+}
+
+#adminContainer {
+	margin-top: 100px;
+	background-color: #f8fdff;
+}
+#background {
+	position: fixed;
+	top: 100px;
+	left:0 ;
+	height: calc(100vh - 100px);
+    width: 100vw;
+    z-index: -1;
+    background-size: cover;
+}
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	width: calc(100% - 64px);
+	height: 100px;
+	padding-left: 32px;
+	padding-right: 32px;
+	border-bottom: 2px solid black;
+}
+#title {
+	float: left;
+	text-transform: uppercase;
+	line-height: 100px;
+	font-size: 26px;
+}
+#menu {
+	float: right;
+	line-height: 100px;
+	font-size: 22px;
+}
+#hamburger {
+	display: none;
+	float: right;
+	line-height: 100px;
+	font-size: 28px;
+	padding-right: 15px;
+	cursor: pointer;
+}
+#mobileMenu {
+	display: none;
+	position: fixed;
+	top: 100px;
+	left: 0px;
+}
+#hook {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0,0,0,0.60);
+	line-height: 100vh;
+	color: white;
+	text-decoration: none;
+	font-size: 2vw;	
+	text-align: center;
+}
+#login {
+	height: calc(100vh - 100px);
+	width: 100vw;
+	padding-top: 150px;
+	color: white;
+	text-decoration: none;
+	font-size: 2vw;	
+	text-align: center;
+	background-color: rgba(0,0,0,0.30);
+}
+#footer {
+	background-color: #4E4E4E;
+	color: white;
+	text-align: center;
+	padding: 15px;
+}
+
+/*Tablets and Small Laptops*/
+@media screen and (max-width: 950px){
+	.bodyImages {
+		width: 100%;
+		display: block;
+	}
+	.bodyText {
+		width: 100%;
+		display: block;
+		text-indent: 0;
+		padding-left: 0;
+	}
+	.bodyImagesIndex {
+		width: 100%;
+		display: block;
+	}
+	.bodyTextIndex {
+		width: 100%;
+		display: block;
+		text-indent: 0;
+		padding-left: 0;
+	}
+}
+
+/*Phones*/
+@media screen and (max-width:750px) {
+	.bodyElem {
+		width: 95%;
+	}
+	#header {
+		width: calc(100% - 20px);
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#menu {
+		display: none;
+	}
+	#hamburger {
+		display: block;
+	}
+	#title {
+		font-size: 20px;
+	}
+	#hook {
+		font-size: 3.5vw;
+	}
+}
+@media screen and (min-width:750px){
+	#mobileMenu {
+		display: none !important;
+	}
+}
+ 

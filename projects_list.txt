@@ -10,7 +10,7 @@ T - Temp Done (Site Exists, Not Working)
 F - Done on Homepage
 
 Events
-    S - Hack The North 2016 (Banner)
+    F - T - S - Hack The North 2016 (Banner)
     N - Skills Canada 2017 (Banner) (No Learn More)
     F - T - P - NASA Space Apps 2016 (Banner)
     F - C - P - Masssey Hacks III 2016
@@ -18,7 +18,7 @@ Events
 
 Projects
     S - StudyHub (Banner)
-    S - DMCI Robotics (Banner)
+    C - S - DMCI Robotics (Banner)
 
 School
     - Games
@@ -30,7 +30,6 @@ School
     - Websites
         C - D - Blog of the Flies (Banner) (Grade 9)
         C - D - Biography Project (Grade 8)
-        N - NCTech (Grade 7)
         C - D - Tour2000 (Grade 7)
     - Presentations
         C - D - Crane Presentation (Banner) (Grade 9)
@@ -45,6 +44,7 @@ Other Projects
     C - G - Discord Bot (Banner)
     C - G - Platform Fantasy (Banner)
     C - D - Grade9-Study
+    T - N - NCTech (Grade 7)
     N - MetroWeb
     C - G - TheGame
     C - G - SMK-Player
