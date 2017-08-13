@@ -6,14 +6,15 @@ S - Seperate Website
 P - No website available
 
 C - Checked
+T - Temp Done (Site Exists, Not Working)
 F - Done on Homepage
 
 Events
     S - Hack The North 2016 (Banner)
     N - Skills Canada 2017 (Banner) (No Learn More)
-    P - NASA Space Apps 2016 (Banner)
-    P - Masssey Hacks III 2016
-    S - Local Hack Day 2015
+    F - T - P - NASA Space Apps 2016 (Banner)
+    F - C - P - Masssey Hacks III 2016
+    F - C - S - Local Hack Day 2015
 
 Projects
     S - StudyHub (Banner)
@@ -21,14 +22,14 @@ Projects
 
 School
     - Games
-        G - Scrabble (Banner) (Grade 11)
-        G - Alterforce Rising (Grade 11)
-        G - Finger Dance Revolution (Grade 11)
-        G - Treasure Hunt (Grade 9)
-        G - Seed of Nationhood (Grade 7)
+        C - G - Scrabble (Banner) (Grade 11)
+        C - G - Alterforce Rising (Grade 11)
+        C - G - Finger Dance Revolution (Grade 11)
+        C - G - Treasure Hunt (Grade 9)
+        C - G - Seed of Nationhood (Grade 7)
     - Websites
         C - D - Blog of the Flies (Banner) (Grade 9)
-        N - Biography Project (Grade 8)
+        C - D - Biography Project (Grade 8)
         N - NCTech (Grade 7)
         C - D - Tour2000 (Grade 7)
     - Presentations
@@ -36,18 +37,18 @@ School
         C - D - Evolution of a star (Grade 9)
         C - D - Take a Walk in my Shoes (Grade 7)
         C - D - Patterns in Human Geography (Grade 7)
-        G - New France History Map (Grade 7)
-        G - Wheel of Number Sense (Grade 7)
-        G - LSD Presentation (Grade 7)
+        C - G - New France History Map (Grade 7)
+        C - G - Wheel of Number Sense (Grade 7)
+        C - G - LSD Presentation (Grade 7)
     
 Other Projects
-    G - Discord Bot (Banner)
-    G - Platform Fantasy (Banner)
+    C - G - Discord Bot (Banner)
+    C - G - Platform Fantasy (Banner)
     C - D - Grade9-Study
     N - MetroWeb
-    G - TheGame
-    G - SMK-Player
-    G - Blogsquared (No Media)
+    C - G - TheGame
+    C - G - SMK-Player
+    C - G - Blogsquared (No Media)
     
 Social Icons
     - Facebook
