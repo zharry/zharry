@@ -5,7 +5,7 @@
 }
 
 .title {
-    font-weight:400;
+    font-weight: 400;
     padding-left: 12px;
 }
 .bodyElemTitle {
@@ -38,7 +38,7 @@
     background-size: cover;
     background-position: center center;
     overflow: hidden;
-    padding-top: 80px;
+    margin-top: 80px;
     border-bottom: 1px solid grey
 }
 #hookTextContainer {
@@ -50,7 +50,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 42px;
+    font-size: 42px !important;
 }
 
 #body {
@@ -115,7 +115,7 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .header {
+    #header {
         font-size: 28px;
     }
     #hookText {
@@ -123,6 +123,9 @@
     }
     .bodyElem {
         width: 88%;
+    }
+    .bodyElemTitle, .bodyElemSubTitle{
+        font-size: 28px;
     }
     .footerContent {
         width: 88%;

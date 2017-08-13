@@ -4,10 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"-->
+        <link rel="stylesheet" href="/src/modal.css">
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
-        <!--link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"-->
         <link rel="stylesheet" href="/src/style.css">
+        <link rel="shortcut icon" href="/favicon.ico" />
+        
+        <title>Harry Zhang</title>
     </head>
     <body>
         <div id="header">
@@ -54,7 +58,7 @@
                     From Winnipeg to Waterloo, I've always enjoyed the thrill of going to new places, meeting new people and discovering new innovations.
                 </p>
                 <div class="learnMoreContainer">
-                    <a class="learnMore">Learn more</a>
+                    <a href class="learnMore" data-toggle="modal" data-target="#modal-events">Learn more</a>
                 </div>
             </div>
             
@@ -65,7 +69,7 @@
                     Rarely do I get time to work on projects, but if I do, it's used to develop new skills or it's with a goal in mind to help others.
                 </p>
                 <div class="learnMoreContainer">
-                    <a class="learnMore">Learn more</a>
+                    <a href class="learnMore" data-toggle="modal" data-target="#modal-projects">Learn more</a>
                 </div>
             </div>
             
@@ -76,7 +80,7 @@
                     It's amazing, the things you can do with code. Something as plain and boring as day to day homework can be made to be so amazing, and done with such creativity.
                 </p>
                 <div class="learnMoreContainer">
-                    <a class="learnMore">Learn more</a>
+                    <a href class="learnMore" data-toggle="modal" data-target="#modal-school">Learn more</a>
                 </div>
             </div>
             
@@ -87,8 +91,8 @@
                     Random projects, some discountinued, some ongoing, ranging from bots to games.
                 </p>
                 <div class="learnMoreContainer">
-                    <a class="learnMore">Learn more</a>
-                </div>            
+                    <a href class="learnMore" data-toggle="modal" data-target="#modal-others">Learn more</a>
+                </div>           
             </div>
             
             <div id="social" class="footer">            
@@ -107,9 +111,32 @@
             </div>
         </div>
         
-        <!--script src="/bootstrap/jquery-3.2.1.min.js"></script>
-        <script src="/bootstrap/popper.min.js"></script>
-        <script src="/bootstrap/bootstrap.min.js"></script-->
+        <!--Modals-->
+            <!--Events-->
+            <div class="modal fade" id="modal-events" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                            <button type="button" class="close" data-dimodal-eventssmiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
         <script src="/src/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
     </body>
 </html>
