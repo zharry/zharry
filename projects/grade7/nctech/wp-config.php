@@ -19,7 +19,7 @@ require_once('/etc/mysql-creds/mysql-creds.php');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', "project_ntech");
+define('DB_NAME', "project_nctech");
 
 /** MySQL database username */
 define('DB_USER', $mysql_creds["user"]);
