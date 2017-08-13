@@ -2,7 +2,7 @@ Events
     - Hack The North 2016 (Banner)
     - Skills Canada 2017 (Banner) (No Learn More)
     - NASA Space Apps 2016 (Banner)
-    - Masssey Hacks II
+    - Masssey Hacks III 2016
     - Local Hack Day 2015
 
 Projects
@@ -11,29 +11,29 @@ Projects
 
 School
     - Games
-        - Scrabble (Banner)
-        - Alterforce Rising
-        - Finger Dance Revolution
-        - Treasure Hunt
-        - Seed of Nationhood
+        - Scrabble (Banner) (Grade 11)
+        - Alterforce Rising (Grade 11)
+        - Finger Dance Revolution (Grade 11)
+        - Treasure Hunt (Grade 9)
+        - Seed of Nationhood (Grade 7)
     - Websites
-        - Blog of the Flies (Banner)
-        - Biography Project
-        - NCTech
-        - Tour2000
+        D - Blog of the Flies (Banner) (Grade 9)
+        N - Biography Project (Grade 8)
+        N - NCTech (Grade 7)
+        D - Tour2000 (Grade 7)
     - Presentations
-        - Crane Presentation (Banner)
-        - Evolution of a star
-        - Take a Walk in my Shoes
-        - Patterns in Human Geography
-        - New France History Map
-        - Wheel of Number Sense
-        - LSD Presentation
+        D - Crane Presentation (Banner) (Grade 9)
+        D - Evolution of a star (Grade 9)
+        D - Take a Walk in my Shoes (Grade 7)
+        D - Patterns in Human Geography (Grade 7)
+        - New France History Map (Grade 7)
+        - Wheel of Number Sense (Grade 7)
+        - LSD Presentation (Grade 7)
     
 Other Projects
     - Discord Bot (Banner)
     - Platform Fantasy (Banner)
-    - Grade9-Study
+    D - Grade9-Study
     - MetroWeb
     - TheGame
     - SMK-Player

@@ -1,0 +1,42 @@
+html {
+	background: rgb(215, 215, 215);
+}
+body {
+	font-family: Open Sans;
+	font-weight: 600;
+}
+.res {
+	background-color: #bbbbff; 
+}
+.res:hover{
+	background-color: #9999ff; 
+}
+#left {
+	width: 10%;
+	float: left;
+}
+#right {
+	width: 10%;
+	float: left;
+}
+#center {
+	width: 80%;
+	float: left;
+}
+#header {
+	width: 100%;
+	max-height: 100px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: #aaaaff;
+}
+#header a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #ffffff;
+}
+#header a.active {
+    background-color: #8888ff
+}
