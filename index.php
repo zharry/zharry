@@ -184,7 +184,7 @@
                                             $out = "";
                                             for ($i = 0; $i < sizeof($collab); $i++) {
                                                 echo $people[$collab[$i]];
-                                                if ($i != sizeof($collab)) {
+                                                if ($i < sizeof($collab) - 1) {
                                                     echo ", ";
                                                 }
                                             }
