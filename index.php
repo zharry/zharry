@@ -182,7 +182,7 @@
                                         <h3 class="title">Collaborators:</h3>
                                         <?php
                                             $out = "";
-                                            for ($i = 0; $i < sizeof($collab); $i++) { {
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
                                                 $out .= $people[$collab] + ", ";
                                             }
                                             echo substr($out, 0, -2);
