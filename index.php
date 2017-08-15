@@ -148,11 +148,20 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
-                                        var_dump($visit);
+                                        if (is_null($visit)) {
+                                            
+                                        } else {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                    <center><a href="http://ideashare.ml">View Site</a></center>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
