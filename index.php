@@ -1,12 +1,13 @@
 <?php
 
     require_once('/etc/mysql-creds/mysql-creds.php');
+    require_once('index.defines.php');
+
     $conn = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry");
 
     if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
+        die("Error establishing database connection, please contact Harry if you see this message");
     }
-    echo "Connected successfully";
 
 ?>
 
@@ -138,22 +139,27 @@
                         </div>
                         <div class="modal-body">
                             <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 0;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
                             ?>
-                            <div class="learnMore-row">
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
-                                    <img class="learnMore-left-content" src="content/gallery/IdeaShare.jpg">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
                                     <center><a href="http://ideashare.ml">View Site</a></center>
                                 </div>
                                 <div class="learnMore-right">
-                                    <div class="learnMore-Title">IdeaShare</div>
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
                                     <div class="learnMore-content learnMore-desc">
                                         <p>
-                                            Developed for (and won) during the Hack The North 2016 hackathon, IdeaShare is a platform for users to share and distribute ideas. It featured a Natural Language Processing engine to interpret submissions and added them to a tag cloud, where other users can search for them.
+                                            <?=$row["description"]?>
                                         </p>
                                     </div>
                                     <div class="learnMore-content learnMore-tech">
                                         <h3 class="title">Made with:</h3>
-                                        JS, Java, MySQL
+                                        <?=$row["tech"]?>
                                     </div>
                                     <div class="learnMore-content learnMore-collab">
                                         <h3 class="title">Collaborators:</h3>
@@ -165,123 +171,13 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <hr class="learnMoreBreak"/>
-                            <div class="learnMore-row">
-                                <div class="learnMore-left">
-                                    <img class="learnMore-left-content" src="content/gallery/Aircheck-NG.png">
-                                </div>
-                                <div class="learnMore-right">
-                                    <div class="learnMore-Title">Aircheck-NG</div>
-                                    <div class="learnMore-content learnMore-desc">
-                                        <p>
-                                            Made during the Space Apps 2016 Hackathon in Toronto, Aircheck-NG is a air quality and public health tracking tool. The application neatly displays a collection of crowd-soursed health data and severity to compare it against live environmental factors.
-                                        </p>
-                                    </div>
-                                    <div class="learnMore-content learnMore-tech">
-                                        <h3 class="title">Made with:</h3>
-                                        JS, PHP, Java, MySQL
-                                    </div>
-                                    <div class="learnMore-content learnMore-collab">
-                                        <h3 class="title">Collaborators:</h3>
-                                        <a class="collab-link" href="https://jackyliao123.tk">Jacky Liao</a>, 
-                                        <a class="collab-link" href="https://jimgao.tk">Jim Gao</a>, 
-                                        <a class="collab-link" href="https://guhenry3.tk">Henry Gu</a>, 
-                                        <a class="collab-link" href="https://bcheng.cf">Benjamin Cheng</a>, 
-                                        <a class="collab-link" href="javascript:;">Aaron Du</a>
-                                    </div>
-                                    <div class="learnMore-content learnMore-links">
-                                        <a href="https://2016.spaceappschallenge.org/challenges/earth/aircheck/projects/aircheck-ng"><img src="content/social/SpaceApps-Custom.png" class="learnMoreIcon" title="Official NASA Space Apps Submission page"></a>
-                                        <a href="https://github.com/HackenDoz/aircheck-client"><img src="content/social/GitHub-Mark-120px-plus.png" class="learnMoreIcon" title="GitHub for Aircheck frontend client"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <hr class="learnMoreBreak"/>
-                            <div class="learnMore-row">
-                                <div class="learnMore-left">
-                                    <img class="learnMore-left-content" src="content/gallery/SkillsCanada.png">
-                                    <center><a href="https://zharry.tk/projects/others/skills2017/canada/module-c/">Skills Canada (C)</a></center>
-                                    <center><a href="https://zharry.tk/projects/others/skills2017/canada/module-b/">Skills Canada (B)</a></center>
-                                    <center><a href="https://zharry.tk/projects/others/skills2017/ontario">Skills Ontario</a></center>
-                                    <center><a href="https://zharry.tk/projects/others/skills2017/tdsb">TDSB Skills</a></center>
-                                </div>
-                                <div class="learnMore-right">
-                                    <div class="learnMore-Title">Skills Competition 2017</div>
-                                    <div class="learnMore-content learnMore-desc">
-                                        <p>
-                                            Earning a Gold medal in the national competition, my time at Canada's largest vocational skills competition was an experience of a lifetime. But to reach the national level, I frist had to go through the provincial and school board level. The requirements where quite simple, given a set task and set resources, design and create the specified website under the given time constraints (8-12 hours) without internet access. For the board level contest, the objective was to create a website to showcase the Canada 150 event. The provincial level contest was aimed at creating an portfolio with an administrative panel for editing and creating projects. Finally, in the national level the goal was to create a website for the Winnipeg Railway Museum. It was split into 3 modules; module a for the drawing and design of the website, module b for the html, css and js side, then module c for the backend events and tickets purchasing engine. My creations are listed below the image, but it's not the prize that I'll remember, it's the people I met, the teachers that got me to this event and the wonderful food I had in Winnipeg that will keep this memory alive.
-                                        </p>
-                                    </div>
-                                    <div class="learnMore-content learnMore-tech">
-                                        <h3 class="title">Made with:</h3>
-                                        JS, PHP, MySQL
-                                    </div>
-                                    <div class="learnMore-content learnMore-collab">
-                                    </div>
-                                    <div class="learnMore-content learnMore-links">
-                                        <a href="http://skillscompetencescanada.com/en/skills-canada-national-competition/scnc-winnipeg-2017/">Skills Canada Contest Website, </a>
-                                        <a href="http://skillscompetencescanada.com/en/skills-canada-national-competition/scnc-2017-results/">Results Listing</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <hr class="learnMoreBreak"/>
-                            <div class="learnMore-row">
-                                <div class="learnMore-left">
-                                    <img class="learnMore-left-content" src="content/gallery/LaFi.jpg">
-                                </div>
-                                <div class="learnMore-right">
-                                    <div class="learnMore-Title">LaFi</div>
-                                    <div class="learnMore-content learnMore-desc">
-                                        <p>
-                                            Inspired by the state-of-art fibre optics technology, LaFi is engineered to transmit data between two computers through the use of lasers. A set of two Raspberry Pi's are used to transfer any binary based information by blinking on and off. to represent bits. This project was submitted to and won frist place at Massey Hacks III (2017).
-                                        </p>
-                                    </div>
-                                    <div class="learnMore-content learnMore-tech">
-                                        <h3 class="title">Made with:</h3>
-                                        C++, Raspberry-Pi
-                                    </div>
-                                    <div class="learnMore-content learnMore-collab">
-                                        <h3 class="title">Collaborators:</h3>
-                                        <a class="collab-link" href="https://guhenry3.tk">Henry Gu</a>, 
-                                        <a class="collab-link" href="javascript:;">Jaden Wang</a>, 
-                                        <a class="collab-link" href="javascript:;">Andy Huang</a>
-                                    </div>
-                                    <div class="learnMore-content learnMore-links">
-                                        <a href="https://devpost.com/software/la-fi"><img src="content/social/DevPost.png" class="learnMoreIcon" title="Project on DevPost"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <hr class="learnMoreBreak"/>
-                            <div class="learnMore-row">
-                                <div class="learnMore-left">
-                                    <img class="learnMore-left-content" src="content/gallery/localhackday-2015.png">
-                                    <center><a href="https://jackyliao123.tk/projects/hackathon-oct15/">View Site</a></center>
-                                </div>
-                                <div class="learnMore-right">
-                                    <div class="learnMore-Title">Local Hack Day, October 2015</div>
-                                    <div class="learnMore-content learnMore-desc">
-                                        <p>
-                                            Based on agar.io, we made a "fortress defense" game where players were able to shoot others and place barriers. The goal of the game was to stay alive the longest by outlasting and killing all other players. 
-                                        </p>
-                                    </div>
-                                    <div class="learnMore-content learnMore-tech">
-                                        <h3 class="title">Made with:</h3>
-                                        JS, Java
-                                    </div>
-                                    <div class="learnMore-content learnMore-collab">
-                                        <h3 class="title">Collaborators:</h3>
-                                        <a class="collab-link" href="https://jackyliao123.tk">Jacky Liao</a>, 
-                                        <a class="collab-link" href="javascript:;">Eric Li</a>
-                                    </div>
-                                    <div class="learnMore-content learnMore-links">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>                        
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
