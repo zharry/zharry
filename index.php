@@ -235,7 +235,84 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            Under Construction
+                           <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 1;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
+                            ?>
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
+                                <div class="learnMore-left">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
+                                    <?php
+                                        $visit = json_decode($row["visit"], true);
+                                        if (!is_null($visit)) {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
+                                    ?>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
+                                </div>
+                                <div class="learnMore-right">
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
+                                    <div class="learnMore-content learnMore-desc">
+                                        <p>
+                                            <?=$row["description"]?>
+                                        </p>
+                                    </div>
+                                    <div class="learnMore-content learnMore-tech">
+                                        <h3 class="title">Made with:</h3>
+                                        <?=$row["tech"]?>
+                                    </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-collab">
+                                        <h3 class="title">Collaborators:</h3>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $people[$collab[$i]];
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
+                                                }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <hr class="learnMoreBreak"/>
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -254,8 +331,85 @@
                             <span>&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            Under Construction
+                        <div class="modal-body">                           
+                            <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 3;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
+                            ?>
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
+                                <div class="learnMore-left">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
+                                    <?php
+                                        $visit = json_decode($row["visit"], true);
+                                        if (!is_null($visit)) {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
+                                    ?>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
+                                </div>
+                                <div class="learnMore-right">
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
+                                    <div class="learnMore-content learnMore-desc">
+                                        <p>
+                                            <?=$row["description"]?>
+                                        </p>
+                                    </div>
+                                    <div class="learnMore-content learnMore-tech">
+                                        <h3 class="title">Made with:</h3>
+                                        <?=$row["tech"]?>
+                                    </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-collab">
+                                        <h3 class="title">Collaborators:</h3>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $people[$collab[$i]];
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
+                                                }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <hr class="learnMoreBreak"/>
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -273,8 +427,85 @@
                             <span>&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            Under Construction
+                        <div class="modal-body">                           
+                            <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 2;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
+                            ?>
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
+                                <div class="learnMore-left">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
+                                    <?php
+                                        $visit = json_decode($row["visit"], true);
+                                        if (!is_null($visit)) {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
+                                    ?>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
+                                </div>
+                                <div class="learnMore-right">
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
+                                    <div class="learnMore-content learnMore-desc">
+                                        <p>
+                                            <?=$row["description"]?>
+                                        </p>
+                                    </div>
+                                    <div class="learnMore-content learnMore-tech">
+                                        <h3 class="title">Made with:</h3>
+                                        <?=$row["tech"]?>
+                                    </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-collab">
+                                        <h3 class="title">Collaborators:</h3>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $people[$collab[$i]];
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
+                                                }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <hr class="learnMoreBreak"/>
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -292,8 +523,85 @@
                             <span>&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            Under Construction
+                        <div class="modal-body">                           
+                            <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 4;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
+                            ?>
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
+                                <div class="learnMore-left">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
+                                    <?php
+                                        $visit = json_decode($row["visit"], true);
+                                        if (!is_null($visit)) {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
+                                    ?>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
+                                </div>
+                                <div class="learnMore-right">
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
+                                    <div class="learnMore-content learnMore-desc">
+                                        <p>
+                                            <?=$row["description"]?>
+                                        </p>
+                                    </div>
+                                    <div class="learnMore-content learnMore-tech">
+                                        <h3 class="title">Made with:</h3>
+                                        <?=$row["tech"]?>
+                                    </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-collab">
+                                        <h3 class="title">Collaborators:</h3>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $people[$collab[$i]];
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
+                                                }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <hr class="learnMoreBreak"/>
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -312,8 +620,85 @@
                             <span>&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            Under Construction
+                        <div class="modal-body">                           
+                            <?php
+                                $query = "SELECT * FROM `projects` WHERE `type` = 5;";
+                                $events = mysqli_query($conn, $query);
+                            
+                                if (mysqli_num_rows($events) > 0) {
+                                    while($row = mysqli_fetch_assoc($events)) {
+                            ?>
+                            <div class="learnMore-row" id="project-<?=$row["id"]?>">
+                                <div class="learnMore-left">
+                                    <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
+                                    <center>
+                                    <?php
+                                        $visit = json_decode($row["visit"], true);
+                                        if (!is_null($visit)) {
+                                            for ($i = 0; $i < sizeof($visit); $i++) {
+                                    ?>
+                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                    <?
+                                            }
+                                        }
+                                    ?>
+                                    </center>
+                                </div>
+                                <div class="learnMore-right">
+                                    <div class="learnMore-Title"><?=$row["name"]?></div>
+                                    <div class="learnMore-content learnMore-desc">
+                                        <p>
+                                            <?=$row["description"]?>
+                                        </p>
+                                    </div>
+                                    <div class="learnMore-content learnMore-tech">
+                                        <h3 class="title">Made with:</h3>
+                                        <?=$row["tech"]?>
+                                    </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-collab">
+                                        <h3 class="title">Collaborators:</h3>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $people[$collab[$i]];
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
+                                                }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                            <hr class="learnMoreBreak"/>
+                            <?php
+                                    }
+                                } else {
+                                    echo "Under Construction!";
+                                }
+                            ?>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
