@@ -151,9 +151,7 @@
                                     <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
-                                        if (is_null($visit)) {
-                                            
-                                        } else {
+                                        if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
                                         <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
@@ -184,8 +182,24 @@
                                             $out = "";
                                             for ($i = 0; $i < sizeof($collab); $i++) {
                                                 echo $people[$collab[$i]];
-                                                if ($i < sizeof($collab) - 1) {
-                                                    echo ", ";
+                                                if ($i < sizeof($collab) - 1) { echo ", "; }
+                                            }
+                                        ?>
+                                    </div>
+                                    <?php
+                                        }
+                                        
+                                        $links = json_decode($row["links"], true);
+                                        if (!is_null($links)) {
+                                    ?>
+                                    <div class="learnMore-content learnMore-links">
+                                        <?php
+                                            for ($i = 0; $i < sizeof($links); $i++) {
+                                                echo '<a href="' . $links[$i]["Link"] . '">';
+                                                if ($links[$i]["Type"] == "Text") {
+                                                    echo $links[$i]["Desc"] . "</a>";
+                                                } else {
+                                                    echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="learnMoreIcon" title="' . $links[$i]["Desc"] . '"></a>';
                                                 }
                                             }
                                         ?>
@@ -193,10 +207,6 @@
                                     <?php
                                         }
                                     ?>
-                                    <div class="learnMore-content learnMore-links">
-                                        <a href="https://github.com/zharry/ideashare-frontend"><img src="content/social/GitHub-Mark-120px-plus.png" class="learnMoreIcon" title="GitHub for Frontend development"></a>
-                                        <a href="https://devpost.com/software/ideashare"><img src="content/social/DevPost.png" class="learnMoreIcon" title="DevPost"></a>
-                                    </div>
                                 </div>
                             </div>
                             <hr class="learnMoreBreak"/>

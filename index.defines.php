@@ -8,6 +8,12 @@
         "Jaden" => 'Jaden Wang',
         "Andy" => 'Andy Huang',
         "Jim" => '<a class="collab-link" href="https://jimgao.tk">Jim Gao</a>'
-    )
+    );
+
+    $linksImgs = array(
+        "GitHub" => "content/social/GitHub-Mark-120px-plus.png",
+        "DevPost" => "content/social/DevPost.png",
+        "SpaceApps" => "content/social/SpaceApps-Custom.png"
+    );
     
 ?>
