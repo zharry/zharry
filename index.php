@@ -149,7 +149,7 @@
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
                                     <?php
-                                        $visit = json_decode($json, true);
+                                        $visit = json_decode($row["visit"], true);
                                         var_dump($visit);
                                     ?>
                                     <center><a href="http://ideashare.ml">View Site</a></center>
