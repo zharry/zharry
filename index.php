@@ -177,13 +177,14 @@
                                     <?php
                                         $collab = json_decode($row["collab"], true);
                                         if (!is_null($collab)) {
-                                            var_dump($collab);
                                     ?>
                                     <div class="learnMore-content learnMore-collab">
                                         <h3 class="title">Collaborators:</h3>
                                         <?php
                                             $out = "";
                                             for ($i = 0; $i < sizeof($collab); $i++) {
+                                                echo $collab[$i];
+                                                echo $people[$collab[$i]];
                                                 $out .= $people[$collab[$i]] + ", ";
                                             }
                                             echo $out;
