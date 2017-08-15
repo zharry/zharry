@@ -1,6 +1,12 @@
 <?php
 
-    
+    require_once('/etc/mysql-cred/mysql-creds.php');
+    $conn = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry");
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully";
 
 ?>
 
@@ -131,6 +137,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
+                            <?php
                             <div class="learnMore-row">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/IdeaShare.jpg">
