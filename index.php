@@ -185,6 +185,7 @@
                                             for ($i = 0; $i < sizeof($collab); $i++) {
                                                 $out .= $people[$collab] + ", ";
                                             }
+                                            echo $out;
                                             echo substr($out, 0, -2);
                                         ?>
                                     </div>
