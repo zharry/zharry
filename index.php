@@ -1,6 +1,6 @@
 <?php
 
-    require_once('/etc/mysql-cred/mysql-creds.php');
+    require_once('/etc/mysql-creds/mysql-creds.php');
     $conn = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry");
 
     if (!$conn) {
