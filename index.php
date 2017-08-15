@@ -148,18 +148,16 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                        <center><a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a></center>
                                     <?
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
@@ -245,18 +243,16 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                        <center><a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a></center>
                                     <?
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
@@ -342,18 +338,16 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                        <center><a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a></center>
                                     <?
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
@@ -438,18 +432,16 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                        <center><a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a></center>
                                     <?
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
@@ -534,18 +526,16 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
                                             for ($i = 0; $i < sizeof($visit); $i++) {
                                     ?>
-                                        <a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a>
+                                        <center><a href="<?=$visit[$i]["Link"]?>"><?=$visit[$i]["Desc"]?></a></center>
                                     <?
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
@@ -631,7 +621,6 @@
                             <div class="learnMore-row" id="project-<?=$row["id"]?>">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/<?=$row["gallery"]?>">
-                                    <center>
                                     <?php
                                         $visit = json_decode($row["visit"], true);
                                         if (!is_null($visit)) {
@@ -642,7 +631,6 @@
                                             }
                                         }
                                     ?>
-                                    </center>
                                 </div>
                                 <div class="learnMore-right">
                                     <div class="learnMore-Title"><?=$row["name"]?></div>
