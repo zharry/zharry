@@ -183,9 +183,7 @@
                                         <?php
                                             $out = "";
                                             for ($i = 0; $i < sizeof($collab); $i++) {
-                                                echo $collab[$i];
-                                                echo $people[$collab[$i]];
-                                                $out .= $people[$collab[$i]] + ", ";
+                                                $out = $out + $people[$collab[$i]] + ", ";
                                             }
                                             echo $out;
                                             echo substr($out, 0, -2);
