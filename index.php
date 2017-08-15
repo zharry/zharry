@@ -138,6 +138,7 @@
                         </div>
                         <div class="modal-body">
                             <?php
+                            ?>
                             <div class="learnMore-row">
                                 <div class="learnMore-left">
                                     <img class="learnMore-left-content" src="content/gallery/IdeaShare.jpg">
