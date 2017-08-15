@@ -174,10 +174,23 @@
                                         <h3 class="title">Made with:</h3>
                                         <?=$row["tech"]?>
                                     </div>
+                                    <?php
+                                        $collab = json_decode($row["collab"], true);
+                                        if (!is_null($collab)) {
+                                    ?>
                                     <div class="learnMore-content learnMore-collab">
                                         <h3 class="title">Collaborators:</h3>
-                                        <a class="collab-link" href="https://jimgao.tk">Jim Gao</a>
+                                        <?php
+                                            $out = "";
+                                            for ($i = 0; $i < sizeof($collab); $i++) { {
+                                                $out .= $people[$collab] + ", ";
+                                            }
+                                            echo substr($out, 0, -2);
+                                        ?>
                                     </div>
+                                    <?php
+                                        }
+                                    ?>
                                     <div class="learnMore-content learnMore-links">
                                         <a href="https://github.com/zharry/ideashare-frontend"><img src="content/social/GitHub-Mark-120px-plus.png" class="learnMoreIcon" title="GitHub for Frontend development"></a>
                                         <a href="https://devpost.com/software/ideashare"><img src="content/social/DevPost.png" class="learnMoreIcon" title="DevPost"></a>
