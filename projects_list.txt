@@ -30,21 +30,21 @@ School
     - Websites
         C - D - Blog of the Flies (Banner) (Grade 9)
         C - D - Biography Project (Grade 8)
+        T - N - NCTech (Grade 7)
         C - D - Tour2000 (Grade 7)
     - Presentations
         C - D - Crane Presentation (Banner) (Grade 9)
         C - D - Evolution of a star (Grade 9)
         C - D - Take a Walk in my Shoes (Grade 7)
         C - D - Patterns in Human Geography (Grade 7)
-        C - G - New France History Map (Grade 7)
         C - G - Wheel of Number Sense (Grade 7)
+        C - G - New France History Map (Grade 7)
         C - G - LSD Presentation (Grade 7)
     
 Other Projects
     C - G - Discord Bot (Banner)
     C - G - Platform Fantasy (Banner)
     C - D - Grade9-Study
-    T - N - NCTech (Grade 7)
     N - MetroWeb
     C - G - TheGame
     C - G - SMK-Player

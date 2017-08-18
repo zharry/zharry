@@ -17,9 +17,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
-        <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"-->
         <link rel="stylesheet" href="/src/modal.css">
-
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
         <link rel="stylesheet" href="/src/style.css">
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -90,12 +88,12 @@
                 <h1 class="title bodyElemTitle">School</h1>
                 <img src="content/banner/Banner_School.png" class="bodyElemBanner" title="Blog of the Flies (Grade 9 English Project), Tower Crane Presentation (Grade 9 Tech Summative), Scrabble Game (Grade 11 Assignment)">
                 <p>
-                    It's amazing, the things you can do with code. Something as plain and boring as day to day homework can be made to be so amazing, and done with such creativity. Check them out below.
+                    It's amazing, the things you can do with code. Something as plain and boring as day to day homework can be made to be so amazing, and done with such creativity. From Grade 7 to the present day, check out all of my school projects below!
                 </p>
                 <div class="learnMoreContainer">
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-school-websites">Websites</a>
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-school-games">Games</a>
-                    <a href class="learnMore" data-toggle="modal" data-target="#modal-school-presentations">Presentation</a>
+                    <a href class="learnMore" data-toggle="modal" data-target="#modal-school-presentations">Presentations</a>
                 </div>
             </div>
             

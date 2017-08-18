@@ -50,7 +50,7 @@
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 42px !important;
+    font-size: 42px;
 }
 
 #body {
