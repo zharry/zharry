@@ -37,13 +37,13 @@
 		$userCode = $_POST["code"];
 		if ($userCode == $code["affiliate"]) {
 			echo "MA";
-		} else if ($userCode == $code["full"] {
+		} else if ($userCode == $code["full"]) {
 			echo "MF";
-		} else if ($userCode == $code["standard"] {
+		} else if ($userCode == $code["standard"]) {
 			echo "MS";
-		} else if ($userCode == $code["school"] {
+		} else if ($userCode == $code["school"]) {
 			echo "MSC";
-		} else if ($userCode == $code["early"] {
+		} else if ($userCode == $code["early"]) {
 			echo "ME";
 		}
 	}
