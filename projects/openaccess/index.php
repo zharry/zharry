@@ -1,11 +1,10 @@
 <?php
-
-	session_start();
-	// Check to see if already logged in
-	if (isset($_SESSION["username"])) {
-		Header('Location: dashboard.php');
-	} else {
-		Header('Location: landing.php');
-	}
-	
+include('includes/header.php');
+?>
+<a href="register.php">Register</a>
+<a href="login.php">Login</a>
+<hr/>
+Landing Content
+<?php
+include('includes/footer.php');
 ?>

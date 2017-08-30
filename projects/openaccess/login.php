@@ -11,16 +11,16 @@
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 		
-		$stmt = mysqli_prepare($conn, "SELECT password FROM users WHERE username = ?");
+		$stmt = mysqli_prepare($conn, "SELECT id, username, password, email, first, last, softetheruser, softetherpass, perms FROM users WHERE username = ?");
 		mysqli_stmt_bind_param($stmt, "s", $username);
 		mysqli_stmt_execute($stmt);
 		mysqli_stmt_store_result($stmt);
 		if (mysqli_stmt_num_rows($stmt) == 1) {
-			mysqli_stmt_bind_result($stmt, $userpass);
+			mysqli_stmt_bind_result($stmt, $id, $user, $userpass, $email, $first, $last, $seuser, $sepass, $perms);
 			while (mysqli_stmt_fetch($stmt))
 				if (password_verify($password, $userpass)) {
 					session_start();
-					$_SESSION["username"] = $username;
+					$_SESSION["username"] = $user;
 					header('Location: dashboard.php');
 				}
 		}

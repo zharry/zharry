@@ -11,6 +11,8 @@
 		$password = $_POST["password"];
 		$passwordConfirm = $_POST["passwordConfirm"];
 		$email = $_POST["email"];
+		$first = $_POST["first"];
+		$last = $_POST["last"];
 		
 		// Validate user information
 		// Minimum username requriements
@@ -46,8 +48,8 @@
 		// Register user if no problems have occured
 		if (!isset($error)) {
 			$passhash = password_hash($password, PASSWORD_DEFAULT);
-			$stmt = mysqli_prepare($conn, "INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
-			mysqli_stmt_bind_param($stmt, "sss", $username, $passhash, $email);
+			$stmt = mysqli_prepare($conn, "INSERT INTO users (first, last, username, password, email) VALUES (?, ?, ?, ?, ?)");
+			mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $username, $passhash, $email);
 			mysqli_stmt_execute($stmt);
 			if (mysqli_stmt_affected_rows($stmt) != 1)
 				$error[] = "Unknown error occured, please contact Harry.";
@@ -69,6 +71,10 @@
 include('includes/header.php');
 ?>
 <form method="post" action="">
+
+		<input type="text" name="first" id="first" placeholder="First Name" value="<?php if(isset($error)){ echo $_POST["first"]; } ?>">
+		
+		<input type="text" name="last" id="last" placeholder="Last Name" value="<?php if(isset($error)){ echo $_POST["last"]; } ?>">
 
 		<input type="text" name="username" id="username" placeholder="Username" value="<?php if(isset($error)){ echo $_POST["username"]; } ?>">
 
