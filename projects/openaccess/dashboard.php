@@ -35,16 +35,29 @@
 	}
 	if (!empty($_POST)) {
 		$userCode = $_POST["code"];
+		$done = False;
+		$newPerm = "";
 		if ($userCode == $code["affiliate"]) {
-			echo "MA";
+			$newPerm = "affiliate";
+			$done = True;
 		} else if ($userCode == $code["full"]) {
-			echo "MF";
-		} else if ($userCode == $code["standard"]) {
-			echo "MS";
+			$newPerm = "full";
+			$done = True;
+		} else if ($userCode == $code["general"]) {
+			$newPerm = "general";
+			$done = True;
 		} else if ($userCode == $code["school"]) {
-			echo "MSC";
+			$newPerm = "full";
+			$done = True;
 		} else if ($userCode == $code["early"]) {
-			echo "ME";
+			$newPerm = "full";
+			$done = True;
+		}
+		// Code Matches
+		if ($done) {
+			echo "New Permissions: ".$newPerm;
+		} else {
+			echo "Incorrect Code!";
 		}
 	}
 	
