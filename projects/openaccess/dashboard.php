@@ -22,6 +22,25 @@
 	require_once('includes/auth.php');
 	require_once('/etc/other-creds/creds.php');
 	
+	// Re-fetch data in case anything changed
+	$stmt = mysqli_prepare($conn, "SELECT id, username, email, first, last, softetheruser, softetherpass, perms FROM users WHERE username = ?");
+	mysqli_stmt_bind_param($stmt, "s", $_SESSION["username"]);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_store_result($stmt);
+	if (mysqli_stmt_num_rows($stmt) == 1) {
+		mysqli_stmt_bind_result($stmt, $id, $user, $email, $first, $last, $seuser, $sepass, $perms);
+		while (mysqli_stmt_fetch($stmt)) {
+			$_SESSION["userID"] = $id;
+			$_SESSION["username"] = $user;
+			$_SESSION["email"] = $email;
+			$_SESSION["firstName"] = $first;
+			$_SESSION["lastName"] = $last;
+			$_SESSION["softetherUser"] = $seuser;
+			$_SESSION["softetherPass"] = $sepass;
+			$_SESSION["perms"] = $perms;
+		}
+	}
+	
 	// Check to see if the user has updated access code
 	function rndString($keys, $length) {
 		$pass = array(); 
@@ -36,7 +55,7 @@
 	if (!empty($_POST)) {
 		$userCode = $_POST["code"];
 		$done = False;
-		$newPerm = "";
+		$newPerm = $_SESSION["perms"];
 		if ($userCode == $code["affiliate"]) {
 			$newPerm = "affiliate";
 			$done = True;
@@ -56,34 +75,16 @@
 		// Code Matches
 		if ($done) {
 			echo "New Permissions: ".$newPerm.".<br/>";
-			echo "Username: user-".sprintf("%06d", intval(rndString($project_oa_se["user_keyspace"], 6)));
-			echo "Password: ".rndString($project_oa_se["pass_keyspace"], 16);
+			$seUsername = $_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
+			$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
+			echo "Username: user-".$seUsername."<br/>";
+			echo "Password: ".$sePassword."<br/>";
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
 	}
-	
-	$stmt = mysqli_prepare($conn, "SELECT id, username, email, first, last, softetheruser, softetherpass, perms FROM users WHERE username = ?");
-	mysqli_stmt_bind_param($stmt, "s", $_SESSION["username"]);
-	mysqli_stmt_execute($stmt);
-	mysqli_stmt_store_result($stmt);
-	if (mysqli_stmt_num_rows($stmt) == 1) {
-		mysqli_stmt_bind_result($stmt, $id, $user, $email, $first, $last, $seuser, $sepass, $perms);
-		while (mysqli_stmt_fetch($stmt)) {
-			$_SESSION["userID"] = $id;
-			$_SESSION["username"] = $user;
-			$_SESSION["email"] = $email;
-			$_SESSION["firstName"] = $first;
-			$_SESSION["lastName"] = $last;
-			$_SESSION["softetherUser"] = $seuser;
-			$_SESSION["softetherPass"] = $sepass;
-			$_SESSION["perms"] = $perms;
-		}
-	}
-	
-	
-	
 ?>
+
 <?php
 include('includes/header.php');
 ?>
