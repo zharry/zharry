@@ -23,10 +23,10 @@
 	require_once('/etc/other-creds/creds.php');
 	
 	// Check to see if the user has updated access code
-	function randomPassword($keys) {
+	function rndString($keys, $length) {
 		$pass = array(); 
 		$alphaLength = strlen($keys) - 1;
-		for ($i = 0; $i < 8; $i++) {
+		for ($i = 0; $i < $length; $i++) {
 			$n = rand(0, $alphaLength);
 			$pass[] = $keys[$n];
 		}
@@ -55,9 +55,11 @@
 		}
 		// Code Matches
 		if ($done) {
-			echo "New Permissions: ".$newPerm;
+			echo "New Permissions: ".$newPerm.".<br/>";
+			echo "Username: user-".sprintf("%06d", intval(rndString($project_oa_se["user_keyspace"], 6)));
+			echo "Password: ".rndString($project_oa_se["pass_keyspace"], 16);
 		} else {
-			echo "Incorrect Code!";
+			echo "Incorrect Code!<br/>";
 		}
 	}
 	
@@ -100,6 +102,7 @@ if ($_SESSION["perms"] == "admin") {
 <h1>Admin</h1>
 <?php 
 	echo "Affiliate Code: ".$code["affiliate"]."<br/>";
+	echo "Full Access Code: ".$code["full"]."<br/>";
 	echo "School Exclusive Access Code: ".$code["school"]."<br/>";
 	echo "Early Access Code: ".$code["early"]."<br/>";
 }
@@ -108,7 +111,6 @@ if ($_SESSION["perms"] == "affiliate" || $_SESSION["perms"] == "admin") {
 <hr/>
 <h1>Affiliate</h1>
 <?php 
-	echo "Full Access Code: ".$code["full"]."<br/>";
 	echo "General Access Code: ".$code["general"]."<br/>";
 }
 if ($_SESSION["perms"] == "full" || $_SESSION["perms"] == "affiliate" || $_SESSION["perms"] == "admin") {
