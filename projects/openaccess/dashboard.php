@@ -17,11 +17,36 @@
 			- Access to Website
 	*/
 
-
 	session_start();
 	require_once('includes/connection.php');
 	require_once('includes/auth.php');
 	require_once('/etc/other-creds/creds.php');
+	
+	// Check to see if the user has updated access code
+	function randomPassword($keys) {
+		$pass = array(); 
+		$alphaLength = strlen($keys) - 1;
+		for ($i = 0; $i < 8; $i++) {
+			$n = rand(0, $alphaLength);
+			$pass[] = $keys[$n];
+		}
+		return implode($pass);
+		// Code from https://stackoverflow.com/questions/6101956/generating-a-random-password-in-php
+	}
+	if (!empty($_POST)) {
+		$userCode = $_POST["code"];
+		if ($userCode == $code["affiliate"]) {
+			echo "MA";
+		} else if ($userCode == $code["full"] {
+			echo "MF";
+		} else if ($userCode == $code["standard"] {
+			echo "MS";
+		} else if ($userCode == $code["school"] {
+			echo "MSC";
+		} else if ($userCode == $code["early"] {
+			echo "ME";
+		}
+	}
 	
 	$stmt = mysqli_prepare($conn, "SELECT id, username, email, first, last, softetheruser, softetherpass, perms FROM users WHERE username = ?");
 	mysqli_stmt_bind_param($stmt, "s", $_SESSION["username"]);
@@ -96,7 +121,6 @@ if ($_SESSION["perms"] == "general" || $_SESSION["perms"] == "full" || $_SESSION
 </form>
 <hr/>
 <h1>Account Management</h1>
-<a href="logout.php">Change Password</a><br/>
 <a href="logout.php">Logout</a>
 <?php
 include('includes/footer.php');
