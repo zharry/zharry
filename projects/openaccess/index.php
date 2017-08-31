@@ -8,7 +8,7 @@ include('includes/header.php');
 <center><br/>
 <h2>Welcome to Project: Open Access</h2><br/>
 <h4>Unlimited, Secure, Local and Free VPN Service</h4>
-<h4>Official Release Date: August 5, 2017</h4><br/>
+<h4>Official Release Date: September 5, 2017</h4><br/>
 <hr/><br/>
 <h3> Early Access </h3>
 <p>1. Create an account through <a href="register.php">account registration</a></p>
