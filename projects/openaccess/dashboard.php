@@ -78,8 +78,12 @@
 			echo "New Permissions: ".$newPerm.".<br/>";
 			// Does the user already have a Softether Account
 			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
+				
+				// Generate and assign a user and password to new account
 				$seUsername = "user-".$_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
 				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
+				$_SESSION["softetherUser"] = $seUsername;
+				$_SESSION["softetherPass"] = $sePassword;
 				
 				// Create SE Internal Account
 				$createUserOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserCreate ".$seUsername." /GROUP:none /REALNAME:none /NOTE:none");
@@ -93,8 +97,6 @@
 					$error[] = "Unknown error occured, please contact Harry.";
 				else {
 					echo "New VPN User created!<br/>";
-					echo "Username: user-".$seUsername."<br/>";
-					echo "Password: ".$sePassword."<br/>";
 				}
 			} else {
 				echo "Account permissions changed from ".$_SESSION["perms"]." to ".$newPerm."<br/>";
@@ -104,8 +106,6 @@
 			mysqli_stmt_bind_param($stmt, "ss", $newPerm, $username);
 			mysqli_stmt_execute($stmt);
 			$_SESSION["perms"] = $newPerm;
-			$_SESSION["softetherUser"] = $seUsername;
-			$_SESSION["softetherPass"] = $sePassword;
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
