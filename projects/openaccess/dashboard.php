@@ -74,10 +74,10 @@
 		}
 		// Code Matches
 		if ($done) {
+			$username = $_SESSION["username"];
 			echo "New Permissions: ".$newPerm.".<br/>";
 			// Does the user already have a Softether Account
 			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
-				$username = $_SESSION["username"];
 				$seUsername = "user-".$_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
 				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
 				
