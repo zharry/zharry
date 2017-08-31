@@ -89,7 +89,7 @@
 				
 				// Update DB about changes
 				$stmt = mysqli_prepare($conn, "UPDATE users SET softetheruser = ?, softetherpass = ? WHERE username = ?");
-				mysqli_stmt_bind_param($stmt, "ssss", $seUsername , $sePassword, $username);
+				mysqli_stmt_bind_param($stmt, "sss", $seUsername , $sePassword, $username);
 				mysqli_stmt_execute($stmt);
 				if (mysqli_stmt_affected_rows($stmt) != 1)
 					$error[] = "Unknown error occured, please contact Harry.";
