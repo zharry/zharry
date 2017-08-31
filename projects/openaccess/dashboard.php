@@ -152,8 +152,11 @@ if ($_SESSION["perms"] == "full" || $_SESSION["perms"] == "affiliate" || $_SESSI
 ?>
 <hr/>
 <h1>Shadowsocks Configuration</h1>
-
 <?php 
+	echo "Server IP: vpn.zharry.tk<br/>";
+	echo "Server Port: ".$project_oa_ss["port"]."<br/>";
+	echo "Password: ".$project_oa_ss["pass"]."<br/>";
+	echo "Encryption Method: ".$project_oa_ss["type"]."<br/>";
 }
 if ($_SESSION["perms"] == "general" || $_SESSION["perms"] == "full" || $_SESSION["perms"] == "affiliate" || $_SESSION["perms"] == "admin") {
 ?>
