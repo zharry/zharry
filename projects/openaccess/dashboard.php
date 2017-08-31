@@ -77,7 +77,7 @@
 			echo "New Permissions: ".$newPerm.".<br/>";
 			// Does the user already have a Softether Account
 			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
-				$seUsername = $_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
+				$seUsername = "user-".$_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
 				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
 				
 				// Create SE Internal Account
@@ -110,6 +110,13 @@
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
+	}
+	
+	// Displays any Errors
+	if(isset($error)){
+	  foreach($error as $e){
+		echo "<p>".$e."</p>";
+	  }
 	}
 ?>
 <hr/>
