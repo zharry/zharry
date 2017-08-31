@@ -81,8 +81,8 @@
 				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
 				
 				// Create SE Internal Account
-				$createUserOutput = shell_exec("vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserCreate ".$seUsername." /GROUP:none /REALNAME:none /NOTE:none");
-				$changePassOutput = shell_exec("vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserPassWord ".$seUsername." /PASSWORD:".$sePassword);
+				$createUserOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserCreate ".$seUsername." /GROUP:none /REALNAME:none /NOTE:none");
+				$changePassOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserPassWord ".$seUsername." /PASSWORD:".$sePassword);
 				
 				echo $createUserOutput;
 				echo $changePassOutput;
