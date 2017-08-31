@@ -26,8 +26,7 @@
 		}
 		$error[] = "User/Password combination incorrect!";
 	}
-?>
-<?php
+	
 include('includes/header.php');
 ?>
 

@@ -111,8 +111,7 @@
 			$error[] = "Incorrect Code!<br/>";
 		}
 	}
-?>
-<?php
+	
 include('includes/header.php');
 ?>
 
