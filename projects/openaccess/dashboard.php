@@ -75,10 +75,16 @@
 		// Code Matches
 		if ($done) {
 			echo "New Permissions: ".$newPerm.".<br/>";
-			$seUsername = $_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
-			$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
-			echo "Username: user-".$seUsername."<br/>";
-			echo "Password: ".$sePassword."<br/>";
+			// Does the user already have a Softether Account
+			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
+				$seUsername = $_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
+				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
+				echo "New VPN User created!<br/>";
+				echo "Username: user-".$seUsername."<br/>";
+				echo "Password: ".$sePassword."<br/>";
+			} else {
+				echo "Account permissions changed from ".$_SESSION["perms"]." to ".$newPerm."<br/>";
+			}
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
