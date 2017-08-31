@@ -79,18 +79,40 @@
 			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
 				$seUsername = $_SESSION["userID"]."".sprintf("%05d", intval(rndString($project_oa_se["user_keyspace"], 5)));
 				$sePassword = rndString($project_oa_se["pass_keyspace"], 8);
-				echo "New VPN User created!<br/>";
-				echo "Username: user-".$seUsername."<br/>";
-				echo "Password: ".$sePassword."<br/>";
+				
+				// Create SE Internal Account
+				$createUserOutput = shell_exec("vpncmd {$project_oa_se["host"]}:{$project_oa_se["port"]}} /SERVER /HUB:{$project_oa_se["hub"]}} /PASSWORD:$project_oa_se["pass"]} /CMD UserCreate {$seUsername} /GROUP:none /REALNAME:none /NOTE:none");
+				$changePassOutput = shell_exec("vpncmd {$project_oa_se["host"]}:{$project_oa_se["port"]}} /SERVER /HUB:{$project_oa_se["hub"]}} /PASSWORD:$project_oa_se["pass"]} /CMD UserPassWord {$seUsername} /PASSWORD:{$sePassword }");
+				
+				echo $createUserOutput;
+				echo $changePassOutput;
+				
+				// Update DB about changes
+				$stmt = mysqli_prepare($conn, "UPDATE users SET softetheruser = ?, softetherpass = ? WHERE username = ?");
+				mysqli_stmt_bind_param($stmt, "ssss", $seUsername , $sePassword, $username);
+				mysqli_stmt_execute($stmt);
+				if (mysqli_stmt_affected_rows($stmt) != 1)
+					$error[] = "Unknown error occured, please contact Harry.";
+				else {
+					echo "New VPN User created!<br/>";
+					echo "Username: user-".$seUsername."<br/>";
+					echo "Password: ".$sePassword."<br/>";
+				}
 			} else {
 				echo "Account permissions changed from ".$_SESSION["perms"]." to ".$newPerm."<br/>";
 			}
+			// Update DB about permission
+			$stmt = mysqli_prepare($conn, "UPDATE users SET perms = ? WHERE username = ?");
+			mysqli_stmt_bind_param($stmt, "ssss", $newPerm, $username);
+			mysqli_stmt_execute($stmt);
+			if (mysqli_stmt_affected_rows($stmt) != 1)
+				$error[] = "Unknown error occured, please contact Harry.";
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
 	}
 ?>
-
+<hr/>
 <?php
 include('includes/header.php');
 ?>
