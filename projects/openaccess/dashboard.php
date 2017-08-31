@@ -20,6 +20,7 @@
 	session_start();
 	require_once('includes/connection.php');
 	require_once('includes/auth.php');
+	//require_once('includes/creds.php');
 	require_once('/etc/other-creds/creds.php');
 	
 	// Re-fetch data in case anything changed
@@ -75,7 +76,7 @@
 		// Code Matches
 		if ($done) {
 			$username = $_SESSION["username"];
-			echo "New Permissions: ".$newPerm.".<br/>";
+			$status[] = "New Permissions: ".$newPerm.".<br/>";
 			// Does the user already have a Softether Account
 			if (is_null($_SESSION["softetherUser"]) && is_null($_SESSION["softetherPass"])) {
 				
@@ -96,10 +97,10 @@
 				if (mysqli_stmt_affected_rows($stmt) != 1)
 					$error[] = "Unknown error occured, please contact Harry.";
 				else {
-					echo "New VPN User created!<br/>";
+					$status[] = "New VPN User created!<br/>";
 				}
 			} else {
-				echo "Account permissions changed from ".$_SESSION["perms"]." to ".$newPerm."<br/>";
+				$status[] = "Account permissions changed from ".$_SESSION["perms"]." to ".$newPerm."<br/>";
 			}
 			// Update DB about permission
 			$stmt = mysqli_prepare($conn, "UPDATE users SET perms = ? WHERE username = ?");
@@ -107,34 +108,53 @@
 			mysqli_stmt_execute($stmt);
 			$_SESSION["perms"] = $newPerm;
 		} else {
-			echo "Incorrect Code!<br/>";
+			$error[] = "Incorrect Code!<br/>";
 		}
 	}
-	
-	// Displays any Errors
-	if(isset($error)){
-	  foreach($error as $e){
-		echo "<p>".$e."</p>";
-	  }
-	}
 ?>
-<hr/>
 <?php
 include('includes/header.php');
 ?>
+
+<?php
+	// Displays any Errors
+	if(isset($error)){
+	  foreach($error as $e){
+		?>
+		<div class="alert alert-danger">
+			<strong>Error!</strong> <?=$e?>
+		</div>
+		<?php
+	  }
+	}	
+	// Displays any messages
+	if(isset($status)){
+	  foreach($status as $stat){
+		?>
+		<div class="alert alert-success">
+			<strong>Success!</strong> <?=$stat?>
+		</div>
+		<?php
+	  }
+	}
+?>
+
+<hr/>
+Hello, <?=$_SESSION["firstName"]?> <?=$_SESSION["lastName"]?>
+<hr/>
 UserID: <?=$_SESSION["userID"]?><br/>
 Username: <?=$_SESSION["username"]?><br/>
 Email: <?=$_SESSION["email"]?><br/>
 Perms Rank: <?=$_SESSION["perms"]?><br/>
-
-<hr/>
-Hello, <?=$_SESSION["firstName"]?> <?=$_SESSION["lastName"]?>
 
 <?php 
 if ($_SESSION["perms"] == "admin") {
 ?>
 <hr/>
 <h1>Admin</h1>
+<div class="alert alert-danger">
+  <strong>Error!</strong> If you see this please direct message Harry immediately.
+</div>
 <?php 
 	echo "Affiliate Code: ".$code["affiliate"]."<br/>";
 	echo "Full Access Code: ".$code["full"]."<br/>";
@@ -145,6 +165,9 @@ if ($_SESSION["perms"] == "affiliate" || $_SESSION["perms"] == "admin") {
 ?>
 <hr/>
 <h1>Affiliate</h1>
+<div class="alert alert-info">
+  As an affiliate, you are allowed to give access codes to your friends!
+</div>
 <?php 
 	echo "General Access Code: ".$code["general"]."<br/>";
 }
@@ -152,6 +175,11 @@ if ($_SESSION["perms"] == "full" || $_SESSION["perms"] == "affiliate" || $_SESSI
 ?>
 <hr/>
 <h1>Shadowsocks Configuration</h1>
+<div class="alert alert-warning">
+  Please note that the Shadowsocks and Softether software are different, and thus have different login information!
+</div>
+<strong>See the <a href="usage.php?active=usage">Usage</a> tab for how to connect!</strong>
+<br/>
 <?php 
 	echo "Server IP: vpn.zharry.tk<br/>";
 	echo "Server Port: ".$project_oa_ss["port"]."<br/>";
@@ -162,6 +190,11 @@ if ($_SESSION["perms"] == "general" || $_SESSION["perms"] == "full" || $_SESSION
 ?>
 <hr/>
 <h1>Softether Configuration</h1>
+<div class="alert alert-warning">
+  <strong>Alert!</strong> VPN accounts are not connected to user accounts on the site! They have a server-side generated Username and Password!
+</div>
+<strong>See the <a href="usage.php?active=usage">Usage</a> tab for how to connect!</strong>
+<br/>
 <?php 
 	echo "Username: ".$_SESSION["softetherUser"]."<br/>";
 	echo "Password: ".$_SESSION["softetherPass"]."<br/>";
@@ -176,8 +209,6 @@ if ($_SESSION["perms"] == "general" || $_SESSION["perms"] == "full" || $_SESSION
 		<input type="submit" name="submit" value="<?php if ($_SESSION["perms"] != "registered") { echo "Update Access Code"; } else { echo "Activate Account"; }?>">
 </form>
 <hr/>
-<h1>Account Management</h1>
-<a href="logout.php">Logout</a>
 <?php
 include('includes/footer.php');
 ?>
