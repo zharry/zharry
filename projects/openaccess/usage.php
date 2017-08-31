@@ -90,16 +90,17 @@ include('includes/header.php');
         1. Install Shadowsocks from the Google Play Store<br/>
 		2. Open App<br/>
 		3. Tap the "Create Profile" (+) button in the top right<br/>
-		4. Enter the following settings that match the credentials from your dashboard<br/>
+		4. Then click on "Manual Settings"<br/>
+		5. Enter the following settings that match the credentials from your dashboard<br/>
 		&nbsp a. "Server" is the Server IP<br/>
 		&nbsp b. "Remote Port" is the Server Port<br/>
 		&nbsp c. "Local Port" should remain unchanged (1080)<br/>
 		&nbsp d. "Password" is the password<br/>
 		&nbsp e. "Encrypt Method" is the Ecryption Method<br/>
 		&nbsp f. Leave everything else as is<br/>
-		5. Click the checkmark in the top right to finish the configuration<br/>
-		6. Tap the new Profile and Click the paper airplane icon (bottom right) to connect!<br/>
-		7. To disconnect and reconnect just reopen the app and tap the paper airplane button. (Green=On, Grey=Off)<br/>
+		6. Click the checkmark in the top right to finish the configuration<br/>
+		7. Tap the new Profile and Click the paper airplane icon (bottom right) to connect!<br/>
+		8. To disconnect and reconnect just reopen the app and tap the paper airplane button. (Green=On, Grey=Off)<br/>
 	  </div>
     </div>
   </div>
