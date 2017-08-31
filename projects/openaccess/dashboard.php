@@ -103,13 +103,9 @@
 			$stmt = mysqli_prepare($conn, "UPDATE users SET perms = ? WHERE username = ?");
 			mysqli_stmt_bind_param($stmt, "ss", $newPerm, $username);
 			mysqli_stmt_execute($stmt);
-			if (mysqli_stmt_affected_rows($stmt) != 1)
-				$error[] = "Unknown error occured, please contact Harry.";
-			else {
-				$_SESSION["perms"] = $newPerm;
-				$_SESSION["softetherUser"] = $seUsername;
-				$_SESSION["softetherPass"] = $sePassword;
-			}
+			$_SESSION["perms"] = $newPerm;
+			$_SESSION["softetherUser"] = $seUsername;
+			$_SESSION["softetherPass"] = $sePassword;
 		} else {
 			echo "Incorrect Code!<br/>";
 		}
