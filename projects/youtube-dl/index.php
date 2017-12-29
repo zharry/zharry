@@ -28,12 +28,12 @@ if ($data["action"] == "createTask") {
 	$uuid = uniqid("YDL_", true);
 		
 	// Escape Args
-	$data["url"] = escapeshellarg($data["url"]);
-	$data["title"] = escapeshellarg($data["title"]);
-	$data["artist"] = escapeshellarg($data["artist"]);
-	$data["album"] = escapeshellarg($data["album"]);
-	$data["albumArtist"] = escapeshellarg($data["albumArtist"]);
-	$data["genre"] = escapeshellarg($data["genre"]);
+	$data["url"] = escapeshellcmd($data["url"]);
+	$data["title"] = escapeshellcmd($data["title"]);
+	$data["artist"] = escapeshellcmd($data["artist"]);
+	$data["album"] = escapeshellcmd($data["album"]);
+	$data["albumArtist"] = escapeshellcmd($data["albumArtist"]);
+	$data["genre"] = escapeshellcmd($data["genre"]);
 	$data["bitrate"] = escapeshellcmd($data["bitrate"]);
 	
 	$thumbnail = "default_thumbnail.png";
