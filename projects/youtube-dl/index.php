@@ -57,7 +57,7 @@ if ($data["action"] == "createTask") {
 		$createStatus = "touch status/{$uuid}.downloading";
 		
 		// FFMPEG Command
-		$ffm_args = "\"bin/ffmpeg\" ";
+		$ffm_args = "\"ffmpeg\" ";
 		$ffm_args .= "-i \"temp/{$uuid}.mp3\" ";
 		$ffm_args .= "-i \"{$thumbnail}\" ";
 		$ffm_args .= "-map 0:0 -map 1:0 -c copy ";
@@ -89,7 +89,7 @@ if ($data["action"] == "createTask") {
 		if ($DEBUG) {
 			$ydl_args = "-v " . $ydl_args;
 		}
-		$ydl = "\"bin/youtubedl.exe\" " . $ydl_args . " > logs/{$uuid}.txt";
+		$ydl = "\"bin/youtubedl\" " . $ydl_args . " > logs/{$uuid}.txt";
 		
 		// Run Command
 		bexec("PHP-CreateStatus-{$uuid}", $createStatus);
