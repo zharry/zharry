@@ -1,5 +1,5 @@
-logs/*
-output/*
-status/*
-temp/*
-thumbnails/*
+logs/*.*
+output/*.*
+status/*.*
+temp/*.*
+thumbnails/*.*
