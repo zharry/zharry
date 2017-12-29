@@ -56,15 +56,15 @@ if ($data["action"] == "createTask") {
 	$ffm_args .= "-map 0:0 -map 1:0 -c copy ";
 	$ffm_args .= "-id3v2_version 3 ";
 	$ffm_args .= "-metadata:s:v comment=\"Cover (Front)\" ";
-	$ffm_args .= "-metadata title={$data["title"]} ";
-	$ffm_args .= "-metadata artist={$data["artist"]} ";
-	$ffm_args .= "-metadata album_artist={$data["albumArtist"]} ";
-	$ffm_args .= "-metadata album={$data["album"]} ";
+	$ffm_args .= "-metadata title=\"{$data["title"]}\" ";
+	$ffm_args .= "-metadata artist=\"{$data["artist"]}\" ";
+	$ffm_args .= "-metadata album_artist=\"{$data["albumArtist"]}\" ";
+	$ffm_args .= "-metadata album=\"{$data["album"]}\" ";
 	if (isset($data["track"])) {
 		$data["track"] = escapeshellcmd($data["track"]);
-		$ffm_args .= "-metadata track={$data["track"]} ";
+		$ffm_args .= "-metadata track=\"{$data["track"]}\" ";
 	}
-	$ffm_args .= "-metadata genre={$data["genre"]} ";
+	$ffm_args .= "-metadata genre=\"{$data["genre"]}\" ";
 	$ffm_args .= "\"output/{$uuid}.mp3\"";
 	
 	// YDL Command
