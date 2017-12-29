@@ -3,8 +3,6 @@
 // Allow access from Chrome Extension
 header("Access-Control-Allow-Origin: *");
 
-// MySQL Connection
-require_once 'connection.php';
 
 // Debug Vars
 $DEBUG = false;
@@ -21,11 +19,12 @@ if ($data["action"] == "createTask") {
 	$uuid = uniqid("YDL_", true);
 	
 	// Insert to SQL
-	$stmt = mysqli_prepare($conn, "INSERT INTO `tasks` (`uuid`, `url`, `title`, `artist`, `album`, `album_artist`, `track`, `genre`, `bitrate`, `thumbnail`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
-	if ($stmt) {
-		mysqli_stmt_bind_param($stmt, "ssssssisis", $uuid ,$data["url"], $data["title"], $data["artist"], $data["album"], $data["albumArtist"], $data["track"], $data["genre"], $data["bitrate"], $data["thumbnail"]);
-		mysqli_stmt_execute($stmt);
-		mysqli_stmt_close($stmt);
+	//$stmt = mysqli_prepare($conn, "INSERT INTO `tasks` (`uuid`, `url`, `title`, `artist`, `album`, `album_artist`, `track`, `genre`, `bitrate`, `thumbnail`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+	//if ($stmt) {
+	if (true) {
+		//mysqli_stmt_bind_param($stmt, "ssssssisis", $uuid ,$data["url"], $data["title"], $data["artist"], $data["album"], $data["albumArtist"], $data["track"], $data["genre"], $data["bitrate"], $data["thumbnail"]);
+		//mysqli_stmt_execute($stmt);
+		//mysqli_stmt_close($stmt);
 		
 		// Escape Args
 		$data["url"] = escapeshellarg($data["url"]);
