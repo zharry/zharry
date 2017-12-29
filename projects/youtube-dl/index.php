@@ -3,7 +3,15 @@
 // Allow access from Chrome Extension
 header("Access-Control-Allow-Origin: *");
 
-
+// Helper Function
+function bexec($name, $cmd) {
+	if (substr(php_uname(), 0, 7) == "Windows"){
+		pclose(popen("start /B \"{$name}\" {$cmd} 2>&1", "r"));
+	} else {
+		shell_exec("{$cmd} 2>&1 &");
+	}
+}
+ 
 // Debug Vars
 $DEBUG = false;
 
