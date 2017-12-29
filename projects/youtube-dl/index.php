@@ -2,7 +2,7 @@
 
 // Allow access from Chrome Extension
 header("Access-Control-Allow-Origin: *");
-putenv('PATH=/usr/local/bin:/usr/bin');
+putenv('PATH=/usr/local/bin:/usr/bin:/bin');
 
 // Helper Function
 function bexec($name, $cmd) {
