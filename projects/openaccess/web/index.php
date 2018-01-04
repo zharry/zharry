@@ -1,5 +1,5 @@
 <?php
 	
-	header('Location: ../miniProxy.php');
+	header('Location: ../web.php');
 
 ?>

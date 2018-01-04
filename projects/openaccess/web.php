@@ -289,7 +289,6 @@ if (empty($url)) {
 			<h2>Welcome to Open Access: Web</h2><br/>
 			<h4>Open internet access, powered by <a target="_blank" href="https://github.com/joshdick/miniProxy">miniProxy</a></h4><br/>
 			<hr/><br/>
-			<h3> Early Access </h3>
 				<div>
 				<h4>Quick Links</h4>
 				<?php
@@ -298,16 +297,17 @@ if (empty($url)) {
 				</div>
 				<br/><hr/><br/>
 				<div>
-				<h4>Custom Web Address</h4>
+				<h4>Custom Web Address</h4><p>If the Custom Web Address does not work, use the Double Layered Proxy as linked above!</p>
 				<?php
 					echo "<form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form>";
 				?>
+				
 				</div>
 			<br/><hr/>
 		</center>
 		<?php
 		include('includes/footer.php');
-      die("<html><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form></body></html>");
+      die();
     } else {
       $url = $startURL;
     }
