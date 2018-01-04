@@ -29,10 +29,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link <?php if ($_GET["active"] != "usage") { echo "active"; } ?>" href="index.php?active=home">Home</a>
+            <a class="nav-link <?php if ($_GET["active"] == "home") { echo "active"; } ?>" href="index.php?active=home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?php if ($_GET["active"] == "usage") { echo "active"; } ?>" href="usage.php?active=usage">Usage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <?php if ($_GET["active"] == "web") { echo "active"; } ?>" href="usage.php?active=web">Web Proxy</a>
           </li>
         </ul>
 		<?php
