@@ -27,12 +27,15 @@ $anonymize = false;
 
 //Start/default URL that that will be proxied when miniProxy is first loaded in a browser/accessed directly with no URL to proxy.
 //If empty, miniProxy will show its own landing page.
-$startURL = "https://webproxy.to";
+$startURL = "";
 
 //When no $startURL is configured above, miniProxy will show its own landing page with a URL form field
 //and the configured example URL. The example URL appears in the instructional text on the miniProxy landing page,
 //and is proxied when pressing the 'Proxy It!' button on the landing page if its URL form is left blank.
-$landingExampleURL = "https://example.net";
+$landingExampleURL = "https://webproxy.to";
+
+// miniProxy Location URL
+define("PROXY_PREFIX", "https://zharry.ca/projects/openaccess/web.php?");
 
 /****************************** END CONFIGURATION ******************************/
 
@@ -88,13 +91,12 @@ if (!function_exists("getallheaders")) {
   }
 }
 
-$usingDefaultPort =  (!isset($_SERVER["HTTPS"]) && $_SERVER["SERVER_PORT"] === 80) || (isset($_SERVER["HTTPS"]) && $_SERVER["SERVER_PORT"] === 443);
+/*$usingDefaultPort =  (!isset($_SERVER["HTTPS"]) && $_SERVER["SERVER_PORT"] === 80) || (isset($_SERVER["HTTPS"]) && $_SERVER["SERVER_PORT"] === 443);
 $prefixPort = $usingDefaultPort ? "" : ":" . $_SERVER["SERVER_PORT"];
 //Use HTTP_HOST to support client-configured DNS (instead of SERVER_NAME), but remove the port if one is present
 $prefixHost = $_SERVER["HTTP_HOST"];
-$prefixHost = strpos($prefixHost, ":") ? implode(":", explode(":", $_SERVER["HTTP_HOST"], -1)) : $prefixHost;
+$prefixHost = strpos($prefixHost, ":") ? implode(":", explode(":", $_SERVER["HTTP_HOST"], -1)) : $prefixHost;*/
 
-define("PROXY_PREFIX", "https://zharry.ca/projects/openaccess/miniproxy/miniProxy.php?");
 //define("PROXY_PREFIX", "http" . (isset($_SERVER["HTTPS"]) ? "s" : "") . "://" . $prefixHost . $prefixPort . $_SERVER["SCRIPT_NAME"] . "?");
 
 //Makes an HTTP request via cURL, using request data that was passed directly to this script.
@@ -277,7 +279,35 @@ if (isset($_POST["miniProxyFormAction"])) {
 }
 if (empty($url)) {
     if (empty($startURL)) {
-      die("<html><head><title>miniProxy</title></head><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form></body></html>");
+		// Load Open Access: Web contents
+		include('includes/header.php');
+		?>
+		<div class="alert alert-warning">
+		  <strong>Notice!</strong> Project: Open Access is currently still in it's early development phases. If you encounter any problems please direct message Harry.
+		</div>
+		<center><br/>
+			<h2>Welcome to Open Access: Web</h2><br/>
+			<h4>Open internet access, powered by <a target="_blank" href="https://github.com/joshdick/miniProxy">miniProxy</a></h4><br/>
+			<hr/><br/>
+			<h3> Early Access </h3>
+				<div>
+				<h4>Quick Links</h4>
+				<?php
+					echo "<a href=\"" . PROXY_PREFIX . "https://webproxy.to/\">Double Layed Proxy, powered by WebProxy.to</a>";
+				?>
+				</div>
+				<br/><hr/><br/>
+				<div>
+				<h4>Custom Web Address</h4>
+				<?php
+					echo "<form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form>";
+				?>
+				</div>
+			<br/><hr/>
+		</center>
+		<?php
+		include('includes/footer.php');
+      die("<html><body><h1>Welcome to miniProxy!</h1>miniProxy can be directly invoked like this: <a href=\"" . PROXY_PREFIX . $landingExampleURL . "\">" . PROXY_PREFIX . $landingExampleURL . "</a><br /><br />Or, you can simply enter a URL below:<br /><br /><form onsubmit=\"if (document.getElementById('site').value) { window.location.href='" . PROXY_PREFIX . "' + document.getElementById('site').value; return false; } else { window.location.href='" . PROXY_PREFIX . $landingExampleURL . "'; return false; }\" autocomplete=\"off\"><input id=\"site\" type=\"text\" size=\"50\" /><input type=\"submit\" value=\"Proxy It!\" /></form></body></html>");
     } else {
       $url = $startURL;
     }
