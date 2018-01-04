@@ -280,6 +280,7 @@ if (isset($_POST["miniProxyFormAction"])) {
 if (empty($url)) {
     if (empty($startURL)) {
 		// Load Open Access: Web contents
+		$active = "web";
 		include('includes/header.php');
 		?>
 		<div class="alert alert-warning">

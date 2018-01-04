@@ -1,4 +1,5 @@
 <?php
+$active = "home";
 include('includes/header.php');
 ?>
 <div class="alert alert-warning">
