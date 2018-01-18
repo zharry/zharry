@@ -1,0 +1,58 @@
+<html>
+
+<head>
+	<title>Fraternize</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<style>
+	* {
+		font-family: 'Lato', sans-serif;
+	}
+	body {
+		text-align: center;
+	}
+	h1 {
+		font-size: 48px;
+		line-height: 200px;
+	}
+	button {
+		border: 1px solid black;
+		font-size: 18px;
+		border-radius: 12px;
+	}
+	#header {
+		height: 200px;
+		line-height: 200px;
+	}
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Fraternize</h1>
+	</div>
+	<hr/>
+	<br/>
+	<br/>
+	<div id="download">
+		<button type="button" class="btn btn-success" onclick="loadPage('https://raw.githubusercontent.com/zharry/Fraternize/master/Builds/Fraternize.jar')">Download Client Here</button>
+	</div>
+	<br/>
+	<div id="source">
+		<button type="button" class="btn btn-info" href="loadPage('https://github.com/zharry/Fraternize')">View Source Code</button>
+	</div>
+	<br/>
+	<br/>
+	<hr/>
+	<br/>
+	<p>By <a href="https://jackyliao.me">Jacky Liao</a> and <a href="https://zharry.ca">Harry Zhang</a></p>
+	
+	<script>
+	function loadPage(page) {
+		location.href=page;
+	}
+	</script>
+</body>
+
+</html>
