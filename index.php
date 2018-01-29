@@ -44,10 +44,19 @@
             <div id="about" class="bodyElem">
                 <h1 class="title bodyElemTitle">About Me</h1>
                 <hr/>
-                <p>My name is Harry Zhang and I'm a 17 year old high school student at Don Mills Collegiate Institute. I have a passion for technology and an unending thrist for new and creative ideas. Ever since grade 6, I have always wanted to learn more, create more and explore everything in technology.</p>
+                <p>My name is Harry Zhang and I'm a 17 year old high school student at Don Mills Collegiate Institute. 
+                I have a passion for technology and an unending thirst for new and creative ideas. 
+                Ever since grade 5, I have always yearned to learn more, do more and explore of our developing world.</p>
                 <hr/>
                 <h2 class="title bodyElemSubTitle">Skills and Experience</h2>
-                <p style="font-size: 14px"><i>One can never be the best, for there is always more to do and more to learn...</i></p>
+                <p style="font-size: 14px">
+                    <i>"Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning."</i><br>
+                    <i style="  float: right;
+                                padding-right: 15px;">
+                        - Albert Einstein
+                    </i>
+                    <div style="clear: both"></div>
+                </p>
                 <p style="  padding: 0;
                             text-indent: 0;
                             text-align: center;">
@@ -66,7 +75,7 @@
                 <h1 class="title bodyElemTitle">Events and Competitions</h1>
                 <img src="content/banner/Banner_Event.png" class="bodyElemBanner" title="Hack The North 2016, Skills Canada 2017, NASA Space Apps 2016">
                 <p>
-                    From Winnipeg to Waterloo, I've always enjoyed the thrill of going to new places, meeting new people and discovering new innovations.
+                    From Waterloo to Winnipeg, I've always enjoyed the thrill of going to new places, meeting new people and learning new things.
                 </p>
                 <div class="learnMoreContainer">
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-events">Learn more</a>
@@ -77,7 +86,7 @@
                 <h1 class="title bodyElemTitle">Projects and Extracurriculars</h1>
                 <img src="content/banner/Banner_Projects.png" class="bodyElemBanner" title="StudyHub, DMCI Robtoics">
                 <p>
-                    Rarely do I get time to work on projects, but if I do, it's used to develop new skills or it's with a goal in mind to help others.
+                    I rarely get the time to work on projects. But when I do, it's with a goal to develop new skills and improve our day to day lives.
                 </p>
                 <div class="learnMoreContainer">
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-projects">Learn more</a>
@@ -88,7 +97,8 @@
                 <h1 class="title bodyElemTitle">School</h1>
                 <img src="content/banner/Banner_School.png" class="bodyElemBanner" title="Blog of the Flies (Grade 9 English Project), Tower Crane Presentation (Grade 9 Tech Summative), Scrabble Game (Grade 11 Assignment)">
                 <p>
-                    It's amazing, the things you can do with code. Something as plain and boring as day to day homework can be made to be so amazing, and done with such creativity. From Grade 7 to the present day, check out all of my school projects below!
+                    It's amazing, the things you can do with code. Something as plain as homework can be made to be so amazing, and done with such creativity. 
+                    From Grade 7 to the present day, check out all of my school projects below!
                 </p>
                 <div class="learnMoreContainer">
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-school-websites">Websites</a>
@@ -114,10 +124,10 @@
                     <p style="  padding: 0;
                             text-indent: 0;
                             text-align: center;">
-                        <a href="https://www.facebook.com/zh.harry"><img src="content/social/Facebook-512.png" class="socialIcon" title="Facebook"></a>
                         <a href="https://github.com/zharry"><img src="content/social/GitHub-Mark-120px-plus.png" class="socialIcon" title="GitHub"></a>
                         <a href="https://devpost.com/zharry"><img src="content/social/DevPost.png" class="socialIcon" title="Devpost"></a>
                         <a href="https://www.linkedin.com/in/zhharry/"><img src="content/social/LinkedIn-512.png" class="socialIcon" title="LinkedIn"></a>
+                        <a href="https://www.facebook.com/zh.harry"><img src="content/social/Facebook-512.png" class="socialIcon" title="Facebook"></a>
                         <a href="mailto:zh.harry@yahoo.ca?subject=Hello!"><img src="content/social/email.png" class="socialIcon" title="Email"></a>
                 </p>
                 </div>

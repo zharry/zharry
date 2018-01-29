@@ -171,16 +171,6 @@
 }
 
 @media only screen and (max-width: 990px) {
-    .learnMore-left {
-        width: 100%;
-    }
-    .learnMore-right {
-        width: 100%;
-		margin-left: -15px;
-    }
-}
-
-@media only screen and (max-width: 720px) {
     .learnMore-Title {
         text-align: center;
         padding-left: 0;
@@ -191,6 +181,16 @@
     .learnMore-desc {
         text-align: left;
     }
+    .learnMore-left {
+        width: 100%;
+    }
+    .learnMore-right {
+        width: 100%;
+        margin-left: -15px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
     #header {
         font-size: 28px;
     }
