@@ -181,16 +181,16 @@
 }
 
 @media only screen and (max-width: 720px) {
-	.learnMore-Title {
-		text-align: center;
-		padding-left: 0;
-	}
-	.learnMore-content {
-		text-align: center;
-	}
-	.learnMore-desc {
-			text-align: left;
-	}
+    .learnMore-Title {
+        text-align: center;
+        padding-left: 0;
+    }
+    .learnMore-content {
+        text-align: center;
+    }
+    .learnMore-desc {
+        text-align: left;
+    }
     #header {
         font-size: 28px;
     }
