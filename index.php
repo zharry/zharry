@@ -204,6 +204,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
@@ -299,6 +300,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
@@ -394,6 +396,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
@@ -488,6 +491,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
@@ -582,6 +586,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
@@ -677,6 +682,7 @@
                                         }
                                     ?>
                                 </div>
+								<div style="clear:both;"></div> 
                             </div>
                             <hr class="learnMoreBreak"/>
                             <?php
