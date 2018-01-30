@@ -23,8 +23,8 @@
     $categories = array(
         array("events", "Events and Competitions"),
         array("projects", "Projects and Extracurriculars"),
-        array("school-games", "School Work - Games"),
         array("school-websites", "School Work - Websites"),
+        array("school-games", "School Work - Games"),
         array("school-presentations", "School Work - Presentations"),
         array("others", "Other Projects")
     );
