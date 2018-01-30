@@ -1,59 +1,67 @@
 LEGEND:
-D - Uploaded to zharry.tk
-N - Not uploaded, still need to
-G - Not uploaded, on GitHub
-S - Seperate Website
-P - No website available
+Category 1: (Status)
+N - Need to start
+I - In Progress
+D - Done
+F - Final
 
-C - Checked
-T - Temp Done (Site Exists, Not Working)
-F - Done on Homepage
+Category 2: (Media)
+N - Not Done
+A - Art Done
+W - Written Done
+F - Media Completed
 
-Events (NEW!!!) 
-    F - T - S - Hack The North 2016 (Banner)
-    F - C - T - Skills Canada 2017 (Banner) (No Learn More)
-    F - T - P - NASA Space Apps 2016 (Banner)
-    F - C - P - Masssey Hacks III 2017
-    F - C - S - Local Hack Day 2015
-    (NEW!!!) P3 Pointer
-    (NEW!!!) Circular
+Category 3: (Item)
+N - Not Done
+T - Site Up, not working
+F - Not Available or Site Up
 
-Projects (NEW!!!) 
-    S - StudyHub (Banner)
-    C - S - DMCI Robotics (Banner)
-    (NEW!!!) Open Access
+Events (Type 0)
+    F - F - T - Hack The North 2016 (Banner)
+    F - F - F - Skills Canada 2017 (Banner) (No Learn More)
+    F - F - F - NASA Space Apps 2016 (Banner)
+    F - F - F - Masssey Hacks III 2017
+    F - F - F - Local Hack Day 2015
+    F - F - F - P3 Pointer
+    F - F - F - Circular
+
+Projects (Type 1)
+    N - A - F - StudyHub (Banner)
+    N - A - F - DMCI Robotics (Banner)
+    N - A - F - Open Access
 
 School
-    - Games (NEW!!!) 
-        C - G - Scrabble (Banner) (Grade 11)
-        C - G - Alterforce Rising (Grade 11)
-        C - G - Finger Dance Revolution (Grade 11)
-        (NEW!!!) Fraternize (Grade 12)
-        C - G - Treasure Hunt (Grade 9)
-        C - G - Seed of Nationhood (Grade 7)
-    - Websites
-        C - D - Blog of the Flies (Banner) (Grade 9)
-        C - D - Biography Project (Grade 8)
-        T - N - NCTech (Grade 7)
-        C - D - Tour2000 (Grade 7)
-    - Presentations
-        C - D - Crane Presentation (Banner) (Grade 9)
-        C - D - Evolution of a star (Grade 9)
-        C - D - Take a Walk in my Shoes (Grade 7)
-        C - D - Patterns in Human Geography (Grade 7)
-        C - G - Wheel of Number Sense (Grade 7)
-        C - G - New France History Map (Grade 7)
-        C - G - LSD Presentation (Grade 7)
+    - Games (Type 3)
+        N - A - F - Fraternize (Grade 12)
+        N - A - F - Scrabble (Banner) (Grade 11)
+        N - A - F - Alterforce Rising (Grade 11)
+        N - A - F - Finger Dance Revolution (Grade 11)
+        N - A - F - Treasure Hunt (Grade 9)
+        N - A - F - Seed of Nationhood (Grade 7)
+    - Websites (Type 2)
+        N - A - F - Blog of the Flies (Banner) (Grade 9)
+        N - A - F - Biography Project (Grade 8)
+        N - A - T - NCTech (Grade 7)
+        N - A - F - Tour2000 (Grade 7)
+    - Presentations (Type 4)
+        N - A - F - Crane Presentation (Banner) (Grade 9)
+        N - A - F - Evolution of a star (Grade 9)
+        N - A - F - Take a Walk in my Shoes (Grade 7)
+        N - A - F - GameMaker Presentations
+                        - Patterns in Human Geography (Grade 7)
+                        - Wheel of Number Sense (Grade 7)
+                        - New France History Map (Grade 7)
+                        - Presentation (Grade 7)
     
-Other Projects (NEW!!!) 
-    C - G - Discord Bot (Banner)
-    C - G - Platform Fantasy (Banner)
-    C - D - Grade9-Study
-    (Potential Removal) N - MetroWeb
-    C - G - TheGame
-    C - G - SMK-Player
-    (Potential Removal) C - G - Blogsquared (No Media)
-    (NEW!!!) AQWBot
+Other Projects (Type 5)
+    N - A - F - Discord Bot (Banner)
+    N - A - F - Platform Fantasy (Banner)
+    N - A - F - Grade9-Study
+    N - A - F - TheGame
+    N - A - F - SMK-Player
+    N - A - F - AQWBot
+    (Potential Removal) Blogsquared
+    (Potential Removal) MetroWeb
     
 Social Icons
     - Facebook

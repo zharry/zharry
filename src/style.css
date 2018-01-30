@@ -169,6 +169,9 @@
     width: auto;
     padding: 2px;
 }
+.learnMore-row {
+    padding-top: 15px;
+}
 
 @media only screen and (max-width: 990px) {
     .learnMore-Title {

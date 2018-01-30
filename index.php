@@ -127,9 +127,9 @@
                         <a href="https://github.com/zharry"><img src="content/social/GitHub-Mark-120px-plus.png" class="socialIcon" title="GitHub"></a>
                         <a href="https://devpost.com/zharry"><img src="content/social/DevPost.png" class="socialIcon" title="Devpost"></a>
                         <a href="https://www.linkedin.com/in/zhharry/"><img src="content/social/LinkedIn-512.png" class="socialIcon" title="LinkedIn"></a>
-                        <a href="https://www.facebook.com/zh.harry"><img src="content/social/Facebook-512.png" class="socialIcon" title="Facebook"></a>
                         <a href="mailto:zh.harry@yahoo.ca?subject=Hello!"><img src="content/social/email.png" class="socialIcon" title="Email"></a>
-                </p>
+                        <a href="https://www.facebook.com/zh.harry"><img src="content/social/Facebook-512.png" class="socialIcon" title="Facebook"></a>
+                    </p>
                 </div>
             </div>
         </div>
