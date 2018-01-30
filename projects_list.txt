@@ -44,11 +44,11 @@ School
         F - F - F - Treasure Hunt (Grade 10)
         F - F - F - Seed of Nationhood (Grade 7)
     - Presentations (Type 4)
-        N - A - F - Crane Presentation (Banner) (Grade 9)
-        N - A - F - Evolution of a star (Grade 9)
-        N - A - F - Patterns in Human Geography (Grade 8)
-        N - A - F - Take a Walk in my Shoes (Grade 8)
-        N - A - F - GameMaker Presentations
+        F - F - F - Crane Presentation (Banner) (Grade 9)
+        F - F - F - Evolution of a star (Grade 9)
+        F - F - F - Patterns in Human Geography (Grade 8)
+        F - F - F - Take a Walk in my Shoes (Grade 8)
+        I - F - F - GameMaker Presentations
                         - Wheel of Number Sense (Grade 7)
                         - New France History Map (Grade 7)
                         - Presentation (Grade 7)
