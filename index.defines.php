@@ -21,12 +21,13 @@
     );
     
     $categories = array(
-        array("events", "Events and Competitions"),
-        array("projects", "Projects and Extracurriculars"),
-        array("school-websites", "School Work - Websites"),
-        array("school-games", "School Work - Games"),
-        array("school-presentations", "School Work - Presentations"),
-        array("others", "Other Projects")
+                                                                        // Type
+        array("events", "Events and Competitions"),                     // 0
+        array("projects", "Projects and Extracurriculars"),             // 1
+        array("school-websites", "School Work - Websites"),             // 2
+        array("school-games", "School Work - Games"),                   // 3
+        array("school-presentations", "School Work - Presentations"),   // 4
+        array("others", "Other Projects")                               // 5
     );
     
 ?>

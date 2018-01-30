@@ -60,14 +60,14 @@
                 <p style="  padding: 0;
                             text-indent: 0;
                             text-align: center;">
-                    <img src="content/skills/Skill_HTML.png" class="skillIcon" title="HTML 5 Markup">
-                    <img src="content/skills/Skill_CSS.png" class="skillIcon" title="CSS Language">
-                    <img src="content/skills/Skill_JS.png" class="skillIcon" title="Javascript Programming Language">
-                    <img src="content/skills/Skill_PHP.png" class="skillIcon" title="PHP Programming Language">
-                    <img src="content/skills/Skill_MySQL.png" class="skillIcon" title="MySQL Database and SQL Language">
-                    <img src="content/skills/Skill_Java.png" class="skillIcon" title="Java Programming Language">
-                    <img src="content/skills/Skill_Unity.png" class="skillIcon" title="Unity3D Game Engine">
-                    <img src="content/skills/Skill_Linux.png" class="skillIcon" title="Linux and Linux Server Operating Systems">
+                    <img src="content/skills/Skill_HTML.png" class="skillIcon" title="HTML 5">
+                    <img src="content/skills/Skill_CSS.png" class="skillIcon" title="CSS">
+                    <img src="content/skills/Skill_JS.png" class="skillIcon" title="JavaScript">
+                    <img src="content/skills/Skill_PHP.png" class="skillIcon" title="PHP">
+                    <img src="content/skills/Skill_MySQL.png" class="skillIcon" title="MySQL">
+                    <img src="content/skills/Skill_Java.png" class="skillIcon" title="Java">
+                    <img src="content/skills/Skill_Unity.png" class="skillIcon" title="Unity3D">
+                    <img src="content/skills/Skill_Linux.png" class="skillIcon" title="Linux">
                 </p>
             </div>
             

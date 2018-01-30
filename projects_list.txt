@@ -26,9 +26,10 @@ Events (Type 0)
     F - F - F - Circular
 
 Projects (Type 1)
+    F - F - F - Open Access
     F - F - F - StudyHub (Banner)
     F - F - F - DMCI Robotics (Banner)
-    F - F - F - Open Access
+    (Future)  - Youtube-DL
 
 School
     - Websites (Type 2)
@@ -48,20 +49,20 @@ School
         F - F - F - Evolution of a star (Grade 9)
         F - F - F - Patterns in Human Geography (Grade 8)
         F - F - F - Take a Walk in my Shoes (Grade 8)
-        I - F - F - GameMaker Presentations
+        F - F - F - GameMaker Presentations
                         - Wheel of Number Sense (Grade 7)
                         - New France History Map (Grade 7)
                         - Presentation (Grade 7)
     
 Other Projects (Type 5)
-    N - A - F - Discord Bot (Banner)
-    N - A - F - Platform Fantasy (Banner)
-    N - A - F - Grade9-Study
-    N - A - F - TheGame
-    N - A - F - SMK-Player
-    N - A - F - AQWBot
-    (Potential Removal) Blogsquared
-    (Potential Removal) MetroWeb
+    F - F - F - AQWBot
+    F - F - F - Discord Bot (Banner)
+    F - F - F - Grade9-Study
+    F - F - F - Platform Fantasy (Banner)
+    F - F - F - SMK-Player
+    F - F - F - TheGame
+    (Removed) - Blogsquared
+    (Removed) - MetroWeb
     
 Social Icons
     - Facebook
