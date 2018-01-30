@@ -44,7 +44,7 @@
             <div id="about" class="bodyElem">
                 <h1 class="title bodyElemTitle">About Me</h1>
                 <hr/>
-                <p>My name is Harry Zhang and I'm a 17 year old high school student at Don Mills Collegiate Institute. 
+                <p>My name is Harry Zhang and I'm a 17-year-old high school student at Don Mills Collegiate Institute. 
                 I have a passion for technology and an unending thirst for new and creative ideas. 
                 Ever since grade 6, I have always yearned to learn more, do more and explore more of our digital world.</p>
                 <hr/>
@@ -97,7 +97,7 @@
                 <h1 class="title bodyElemTitle">School</h1>
                 <img src="content/banner/Banner_School.png" class="bodyElemBanner" title="Blog of the Flies (Grade 9 English Project), Tower Crane Presentation (Grade 9 Tech Summative), Scrabble Game (Grade 11 Assignment)">
                 <p>
-                    It's amazing, the things you can do with code. Something as plain as homework can be made to be so amazing, and done with such creativity. 
+                    It's amazing, the things you can do with code. Even something as plain as homework can be with creativity and elegance. 
                     From Grade 7 to the present day, check out all of my school projects below!
                 </p>
                 <div class="learnMoreContainer">
@@ -111,7 +111,7 @@
                 <h1 class="title bodyElemTitle">Other Projects</h1>
                 <img src="content/banner/Banner_Others.png" class="bodyElemBanner" title="Paragon Discord Bot, Platform Fantasy Game">
                 <p>
-                    Random projects, some discountinued, some ongoing, ranging from bots to games.
+                    Here are some of my random projects, some discontinued, some ongoing, ranging from bots to games.
                 </p>
                 <div class="learnMoreContainer">
                     <a href class="learnMore" data-toggle="modal" data-target="#modal-others">Learn more</a>
