@@ -10,7 +10,8 @@
         "Andy" => '<a class="collab-link" href="https://devpost.com/ele7087">Andy Huang</a>',
         "Eric" => 'Eric Li',
         "Roger" => '<a class="collab-link" href="https://github.com/kiritofeng">Roger Fu</a>',
-        "Sunny" => '<a class="collab-link" href="http://sunnylan.tk/">Sunny Lan</a>'
+        "Sunny" => '<a class="collab-link" href="http://sunnylan.tk/">Sunny Lan</a>',
+        "Avery" => 'Avery Shum'
     );
 
     $linksImgs = array(

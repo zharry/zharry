@@ -18,7 +18,7 @@ F - Not Available or Site Up
 
 Events (Type 0)
     F - F - T - Hack The North 2016 (Banner)
-    F - F - F - Skills Canada 2017 (Banner) (No Learn More)
+    F - F - F - Skills Canada 2017 (Banner)
     F - F - F - NASA Space Apps 2016 (Banner)
     F - F - F - Masssey Hacks III 2017
     F - F - F - Local Hack Day 2015
@@ -26,29 +26,29 @@ Events (Type 0)
     F - F - F - Circular
 
 Projects (Type 1)
-    N - A - F - StudyHub (Banner)
-    N - A - F - DMCI Robotics (Banner)
-    N - A - F - Open Access
+    F - F - F - StudyHub (Banner)
+    F - F - F - DMCI Robotics (Banner)
+    F - F - F - Open Access
 
 School
-    - Games (Type 3)
-        N - A - F - Fraternize (Grade 12)
-        N - A - F - Scrabble (Banner) (Grade 11)
-        N - A - F - Alterforce Rising (Grade 11)
-        N - A - F - Finger Dance Revolution (Grade 11)
-        N - A - F - Treasure Hunt (Grade 9)
-        N - A - F - Seed of Nationhood (Grade 7)
     - Websites (Type 2)
-        N - A - F - Blog of the Flies (Banner) (Grade 9)
-        N - A - F - Biography Project (Grade 8)
-        N - A - T - NCTech (Grade 7)
-        N - A - F - Tour2000 (Grade 7)
+        F - F - F - Blog of the Flies (Banner) (Grade 9)
+        F - F - F - Biography Project (Grade 8)
+        F - F - F - NCTech (Grade 7)
+        F - F - F - Tour2000 (Grade 7)
+    - Games (Type 3)
+        F - F - F - Fraternize (Grade 12)
+        F - F - F - Alterforce Rising (Grade 11)
+        F - F - F - Finger Dance Revolution (Grade 11)
+        F - F - F - Scrabble (Banner) (Grade 11)
+        F - F - F - Treasure Hunt (Grade 10)
+        F - F - F - Seed of Nationhood (Grade 7)
     - Presentations (Type 4)
         N - A - F - Crane Presentation (Banner) (Grade 9)
         N - A - F - Evolution of a star (Grade 9)
-        N - A - F - Take a Walk in my Shoes (Grade 7)
+        N - A - F - Patterns in Human Geography (Grade 8)
+        N - A - F - Take a Walk in my Shoes (Grade 8)
         N - A - F - GameMaker Presentations
-                        - Patterns in Human Geography (Grade 7)
                         - Wheel of Number Sense (Grade 7)
                         - New France History Map (Grade 7)
                         - Presentation (Grade 7)

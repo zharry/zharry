@@ -46,7 +46,7 @@
                 <hr/>
                 <p>My name is Harry Zhang and I'm a 17 year old high school student at Don Mills Collegiate Institute. 
                 I have a passion for technology and an unending thirst for new and creative ideas. 
-                Ever since grade 5, I have always yearned to learn more, do more and explore of our developing world.</p>
+                Ever since grade 6, I have always yearned to learn more, do more and explore more of our digital world.</p>
                 <hr/>
                 <h2 class="title bodyElemSubTitle">Skills and Experience</h2>
                 <p style="font-size: 14px">
