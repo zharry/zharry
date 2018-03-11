@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Industrial Magic 2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    .disabled {
+        pointer-events: none;
+        cursor: default;
+        color: #ddd !important;
+    }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#navbar-top">
+  
+	<nav class="navbar navbar-default navbar-fixed-top navbar-top" id="navbar-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="http://getbootstrap.com/components/#">Industrial Magic</a>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#home">Home</a></li>
+					<li><a href="#download">Download</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#mods">Mods</a></li>
+					<li><a href="#status">Status</a></li>
+					<li><a href="#bugs">Bugs</a></li>
+					<li><a href="minimap.php" class="disabled">Minimap</a></li>
+					<li><a href="overviwer.php" class="disabled">View World</a></li>
+				</ul>
+			</div>
+		</div>
+    </nav>
+
+	<div id="body-container">
+
+		<div class="parallax-container p-c-one" data-parallax="scroll" data-image-src="images/pic3.png" data-natural-width="1024" data-natural-height="400" id="home">
+			<div class="jumbotron jumbo-name">
+					<h1>Industrial Magic 2</h1>
+			</div>
+		</div>
+		
+		<div class="container" id="download" style="height: 172px; padding-top: 32px;">
+			<button type="button" class="btn btn-default btn-lg">
+				<span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download Now!
+			</button><br/>
+			<!--a href="#about">Instructions</a-->
+		</div>
+
+		<div class="parallax-container" data-parallax="scroll" data-image-src="images/pic1.png" data-natural-width="1024" data-natural-height="400" id="about">
+			<div class="jumbotron jumbo-subtitle">
+					<h2>About the Pack</h2>
+			</div>
+		</div>
+		
+		<div class="container container-text">
+			<div class="row">
+				<div class="col-sm-4"><center>
+					<h3>Auto Updating</h3>
+					<p>
+						Our launcher is auto-updating, that means everytime
+						we make a mod update, the launcher would do everything
+						by itself.
+					</p></center>
+				</div>
+				<div class="col-sm-4"><center>
+					<h3>All the best</h3>
+					<p>
+						Mod instability? Maybe, but we get every single feature
+						the mod developers have to offer. <br/>
+						Mod compatability issues? Maybe, but we try to jam the most
+						fun into the smallest package.
+					</p></center>
+				</div>
+				<div class="col-sm-4"><center>
+					<h3>Geared towards fun!</h3>
+					<p>
+						Industrial Magic 2 not only includes the best of the mods,
+						you get from other experiances, execpt some of us got bored.<br/>
+						So now, there are more to explore, more to play and more to do.
+					<p></p></center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6"><center>
+					<h3>Online Server Minimap <sup class="planned">Planned</sup></h3>
+					<p>
+						See a minimap of the server online, updating in real-time,
+						powered by JourneyMap - Unlimited!
+					</p></center>
+				</div>
+				<div class="col-sm-6"><center>
+					<h3>Online World Viewer <sup class="planned">Planned</sup></h3>
+					<p>
+						Because <a href="http://overviewer.org/">Minecraft Overviewer</a> is a vanilla program,
+						we are not certain if it will work, but if it does, a 3D map of the world will be
+						online!
+					<p></p></center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6"><center>
+					<h3>More to come!</h3>
+					<p>
+						We are still in the progess of making the modpack,
+						but this page will continue to reflect all the changes we
+						make, even though you can't see it! More of those fun mods will be
+						added and some of the unused mods from the last server will be removed.
+					</p></center>
+				</div>
+				<div class="col-sm-6"><center>
+					<h3>Official Start Date</h3>
+					<p>
+						It's really up to how fast Harry can get things done, but expect the official
+						opening to be around the end of September to the start of October. Remeber, it takes
+						time to configure our <a href="#status">custom server</a> and make the modpack.
+					<p></p></center>
+				</div>
+			</div>
+		</div>
+
+		<div class="parallax-container" data-parallax="scroll" data-image-src="images/pic7.png" data-natural-width="1024" data-natural-height="400" id="mods">
+			<div class="jumbotron jumbo-subtitle">
+					<h2>Current Mods</h2>
+			</div>
+		</div>
+		
+		<div class="container container-text">
+			<div class="col-sm-3">
+				<ul>
+					<li>Ars Magica 2</li>
+					<li>Gravity Gun <sup class="new">NEW!</sup></li>
+					<li>Portal Gun <sup class="new">NEW!</sup></li>
+					<li>Hats</li>
+					<li>Morph</li>
+					<li>Practicalities</li>
+					<li>Applied Energistics</li>
+					<li>Biomes O Plenty</li>
+					<li>Blood Magic</li>
+					<li>BuildCraft</li>
+					<li>Chisel</li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<ul>
+					<li>Compact Machines</li>
+					<li>ComputerCraft</li>
+					<li>Draconic Evolution <sup class="new">NEW!</sup></li>
+					<li>EnderIO</li>
+					<li>Ex Nihilo</li>
+					<li>FastCraft <sup class="new">NEW!</sup></li>
+					<li>Forbidden Magic</li>
+					<li>Forestry</li>
+					<li>Hardcore Ender Expansion</li>
+					<li>Industrial Craft 2</li>
+					<li>Simply Jetpacks</li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<ul>
+					<li>IronChests</li>
+					<li>Journey Map <sup class="new">NEW!</sup></li>
+					<li>Mekanism</li>
+					<li>Metallurgy</li>
+					<li>Minefactory Reloaded</li>
+					<li>Natura</li>
+					<li>Not Enough Items</li>
+					<li>Project E <sup class="new">NEW!</sup></li>
+					<li>Project Red</li>
+					<li>Railcraft</li>
+					<li>Recurrent Complex</li>
+					<li>Wireless Redstone</li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<ul>
+					<li>RFTools <sup class="new">NEW!</sup></li>
+					<li>Soul Shards Reborn</li>
+					<li>Steves's Cart and Factory Manager</li>
+					<li>Tinkers Construct</li>
+					<li>Thermal Dynamics, Expansion <sup class="revamp">Revamped!</sup></li>
+					<li>Thermal Smeltery, Recycling <sup class="new">NEW!</sup></li>
+					<li>Veinminer</li>
+					<li>Wawla</li>
+					<li>Witchery</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="parallax-container" data-parallax="scroll" data-image-src="images/pic2.png" data-natural-width="1024" data-natural-height="400" id="status">
+			<div class="jumbotron jumbo-subtitle">
+					<h2>Server Specs and Status</h2>
+			</div>
+		</div>
+		
+		<div class="container container-text">
+			<div class="col-sm-5">
+				<p><center>
+				<h3>Custom Server!</h3>
+					Instead of using one of the server players as our host,
+					this time we are using a dedicated Xeon Server, donated by Shuochen Yao.</center><br/>
+					<ol>
+						<li>Dual Xeon 5150 (2 Cores) @ 2.66GHz</li>
+						<li>4GB DDR2 ECC Memory, 8GB Swap</li>
+						<li>3x 60GB HDD in Raid 0</li>
+						<li>Ubuntu Server</li>
+					</ol><center>
+				</p></center>
+			</div>
+			<div class="col-sm-7">
+				<h3>Server Status</h3>
+				<div id="server-ip">Server IP: <div style="color: blue;">industrialmagic.tk</div></div><br>
+				<div id="server-status">
+				Computer status: <div style="color: red;">Off</div>
+				Minecraft Server status: <div style="color: red;">Down</div>
+				Online Minimap status: <div style="color: red;">Failed</div>
+				Last World Save: <div style="color: red;">Never</div>
+				</div><br/>
+			</div>
+		</div>
+
+		<div class="parallax-container" data-parallax="scroll" data-image-src="images/pic4.png" data-natural-width="1024" data-natural-height="400"id="bugs">
+			<div class="jumbotron jumbo-subtitle">
+				<h2>Report Bugs</h2>
+			</div>
+		</div>
+	
+		
+		<div class="container container-text">
+			<form method="POST" action="">
+				<h2>Bug Report</h2>
+				<div class="input-group">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+					<span><input class="form-control" placeholder="First Name" style="margin-bottom: -1px; border-top-right-radius: 4px;" name="first" type="text"></span>
+					<span><input class="form-control" placeholder="Last Name" style="border-bottom-right-radius: 4px;" name="last" type="text"></span>
+				</div>
+				<div class="input-group login-input">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-globe" aria-hidden="true"></i></span>
+					<input class="form-control" placeholder="Email" name="email" type="email">
+				</div>
+				<div class="input-group login-input">
+					<span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+					<textarea class="form-control" placeholder="Content, describe how to duplicate and what the issue is." name="text" cols="40" rows="10"></textarea>
+				</div>
+				<div class="login-input">
+					<input class="btn btn-primary form-control" value="Submit"><!--type="submit"-->
+				</div>
+			</form>
+		</div>
+
+		<div class="parallax-container" data-parallax="scroll" data-image-src="images/pic5.png" data-natural-width="1024" data-natural-height="400">
+		</div>
+
+		<div class="parallax-container p-c-last" data-parallax="scroll" data-image-src="images/pic6.png" data-natural-width="1024" data-natural-height="400">
+			<div class="jumbotron jumbo-footer">
+				<center><h2>Who are we?</h2></center>
+				<div class="container container-nothing">
+					<div class="col-sm-5">
+						<h3>Website and Server</h3>
+						<ul>
+							<li>Harry - Web and Server Admin</li>
+							<li>Shuochen - Server provider and Host</li>
+						</ul>
+					</div>
+					<div class="col-sm-7">
+						<h3>Launcher and Modpack</h3>
+						<h4>Hacken Doz Team</h4>
+						<ul>
+							<li>Jacky - Launcher and Modpack Developer</li>
+							<li>Benjamin - Launcher Developer</li>
+							<li>Harry - Modpack Developer</li>
+						</ul>
+					</div>			
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- Paralax.js -->
+    <script src="js/parallax.min.js"></script>
+	<!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

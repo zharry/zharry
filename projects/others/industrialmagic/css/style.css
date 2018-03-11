@@ -1,0 +1,89 @@
+body {
+	font-family: "Trebuchet MS","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.new {
+    color: green;
+}
+.revamp {
+    color: orange;
+}
+.planned {
+    color: orange;
+}
+.navbar > .container {
+	width: 100%;
+}
+.container {
+    background-color: white;
+}
+.container-text {
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+.container-nothing {
+	background-color: rgba(255, 255, 255, 0);
+}
+@media (min-width: 768px) {
+	.navbar-nav {
+		left: calc(50% - 300px);
+		position: relative;
+	}
+	.navbar-brand {
+		display: none;
+	}
+}
+#body-container {
+	width: 100%;
+}
+.jumbo-name {
+	background-color: rgba(238, 238, 238, 0.25);
+	text-align: center;
+    top: calc(69vh - 97px);
+    position: relative;
+	color: white;
+}
+.jumbo-subtitle {
+	background-color: rgba(238, 238, 238, 0.17);
+    text-align: center;
+	height: 100%;
+    position: relative;
+	padding-top: 210px;
+    color: black;
+}
+.jumbo-footer {
+	background-color: rgba(238, 238, 238, 0.4);
+	height: 100%;
+    position: relative;
+    color: black;
+	margin-bottom: 0;
+}
+#download:before {
+    display: block;
+    height: 50px;
+	text-align: center;
+    content: " ";
+}
+#download {
+	width: 100%;
+    background-color: #DCDCC8;
+	text-align: center;
+}
+.container.footer {
+	width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #352A1B;
+	color: white;
+	text-align: center;
+}
+.parallax-container {
+    height: 300px;
+    background: transparent;
+}
+.p-c-one {
+    min-height: 100vh;
+}
+.p-c-last {
+	height: auto;
+	min-height: 300px;
+}
