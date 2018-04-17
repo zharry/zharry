@@ -1,4 +1,4 @@
-LEGEND:
+LEGEND: 
 Category 1: (Status)
 N - Need to start
 I - In Progress
