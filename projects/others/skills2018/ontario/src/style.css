@@ -1,0 +1,148 @@
+/* Stylesheet
+For: The Hunton Collection Website
+*/
+
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Garamond, serif !important;
+}
+textarea {
+	height: 200px;
+}
+label {
+	font-size:20px;
+}
+
+.topnav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 50px;
+	border-bottom: 1px solid black;
+	line-height: 50px;
+	font-size: 24px;
+	z-index: 99;
+	background-color: white;
+	box-shadow: 0px 5px 12px #b5b5b5;
+}
+#title {
+	float: left;
+	width: calc(100% - 50px);
+	text-align:center;
+}
+#menuIcon {
+	float: left;
+	width: 50px;
+	text-align:right;
+	padding-right: 35px;
+	cursor: pointer;
+	font-size: 32px;
+}
+#navContainer {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	z-index: 100;
+	box-shadow: 0px 5px 12px #b5b5b5;
+}
+.navItem {
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	border-bottom: 1px solid lightgray;
+}
+.navItem > a {
+	text-decoration: none;
+	color: black;
+}
+
+#body {
+	margin-top: 50px;
+}
+.movieCard {
+	height: 500px;
+}
+.movieMedia {
+	height: 400px;
+	text-align: center;
+}
+.media {
+	height: 400px;
+	width: auto;
+	margin: auto;
+	max-width: 100%;
+}
+.movieContent {
+	text-align: center;
+}
+.movieTitle {
+	font-size: 28px;
+}
+
+#searchfield {
+	width: calc(100% - 120px);
+}
+#searchbutton {
+	width: 112px;
+}
+
+#searchedMovies {
+	margin-top: 25px;
+}
+.movieListing > .row {
+	height: 100%;
+}
+.movieListing {
+	min-height: 180px;
+	margin-bottom: 24px;
+}
+.movieListingImg {
+	text-align: center;
+}
+.movieListingImg > img {
+	height: auto;
+	width: 100%;
+	max-width: 260px;
+}
+.movieListingTitle {
+	font-size: 24px;
+}
+#moviesList td {
+	font-size: 20px;
+	padding: 3px;
+}
+
+#footer {
+	border-top: 1px solid black;
+    background-color: #efefef;
+    padding-top: 12px;
+	box-shadow: -10px 5px 40px grey;
+}	
+
+#history td {
+	padding: 12px;
+}
+.historyTitle, .historyDate {
+	font-weight: bold;
+	font-size: 22px;
+}
+.contactTitle > h5{
+	font-weight: bold;
+}
+
+@media screen and (max-width: 991px) {
+	.movieListingData {
+		text-align: center;
+	}
+}
+
+/*Admin Page Styles*/
+.deleteButton {
+	width: 140px;
+}
