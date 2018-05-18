@@ -1,5 +1,5 @@
 <?php
-
+ 
     require_once('/etc/mysql-creds/mysql-creds.php');
     require_once('index.defines.php');
 
