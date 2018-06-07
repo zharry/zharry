@@ -1,6 +1,8 @@
 <?php
 
-	$conn = mysqli_connect("localhost", "root", "", "on_moduleb");
+	require_once('/etc/mysql-creds/mysql-creds.php');
+
+	$conn = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "skills2018_canada");
 	if (!$conn) { 
 		die("Failed to connect to database!");
 	}
@@ -8,7 +10,7 @@
 	if (isset($_POST["score"])) {
 		$score = mysqli_real_escape_string($conn, $_POST["score"]);
 		$name = mysqli_real_escape_string($conn, $_POST["name"]);
-		$query = "INSERT INTO `highscores` (`name`, `score`) VALUES ('{$name}', '{$score}');";
+		$query = "INSERT INTO `snake_highscores` (`name`, `score`) VALUES ('{$name}', '{$score}');";
 		mysqli_query($conn, $query);
 		unset($_POST);
 	}	
@@ -26,7 +28,7 @@
 			<?php
 				$width = "";
 				$height = "";
-				$query = "SELECT * FROM `size`";
+				$query = "SELECT * FROM `snake_size`";
 				$res = mysqli_query($conn, $query);
 				while ($row = mysqli_fetch_assoc($res)) {
 					$width = $row["width"];
@@ -37,7 +39,7 @@
 			<div id="gameHeight"><?=$height?></div>
 			
 			<?php
-				$query = "SELECT * FROM `walls`";
+				$query = "SELECT * FROM `snake_walls`";
 				$res = mysqli_query($conn, $query);
 				$walls = array();
 				while ($row = mysqli_fetch_assoc($res)) {
@@ -56,7 +58,7 @@
 				<h1 style="padding: 12px;">Highscores: </h1>
 				<button onclick="showScreen(0)" style="width: 175px; margin-bottom: 12px;">Return to Game</button><hr style="margin-bottom: 12px;">
 				<?php
-					$query = "SELECT * FROM `highscores` ORDER BY `highscores`.`score` DESC";
+					$query = "SELECT * FROM `snake_highscores` ORDER BY `highscores`.`score` DESC";
 					$res = mysqli_query($conn, $query);
 					while ($row = mysqli_fetch_assoc($res)) {
 						echo htmlentities($row["name"]) . "-" . htmlentities($row["score"]) . "<br/>";

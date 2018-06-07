@@ -1,4 +1,7 @@
 <?php
+
+require_once('/etc/mysql-creds/mysql-creds.php');
+
 /**
  * The base configuration for WordPress
  *
@@ -20,16 +23,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'on_modulea-part2');
+define('DB_NAME', 'skills2018_canada');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $mysql_creds["user"]);
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', $mysql_creds["pass"]);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $mysql_creds["host"]);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
