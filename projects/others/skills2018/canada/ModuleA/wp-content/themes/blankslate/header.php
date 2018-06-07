@@ -38,10 +38,10 @@
 					<div class="moveIndicator indicator" onclick="moveBanner(1);">&gt;</div>
 				</div>
 				<div id="bannerText">
-					<a class="bannerDesc" href="http://localhost/skills/ModuleA-Part2/stores/">Attractions</a>
-					<a class="bannerDesc" href="http://localhost/skills/ModuleA-Part2/contact-us/">Contact Us</a>
-					<a class="bannerDesc" href="http://localhost/skills/ModuleA-Part2/2018/06/04/sea-life-caverns/">Sea Life Caverns</a>
-					<a class="bannerDesc" href="http://localhost/skills/ModuleA-Part2/2018/06/04/dragons-tale-blacklight-mini-golf-crystal-labyrinth-mirror-maze/">Dragon's Tale</a>
+					<a class="bannerDesc" href="https://zharry.ca/projects/others/skills2018/canada/ModuleA/stores/">Attractions</a>
+					<a class="bannerDesc" href="https://zharry.ca/projects/others/skills2018/canada/ModuleA/contact-us/">Contact Us</a>
+					<a class="bannerDesc" href="https://zharry.ca/projects/others/skills2018/canada/ModuleA/2018/06/04/sea-life-caverns/">Sea Life Caverns</a>
+					<a class="bannerDesc" href="https://zharry.ca/projects/others/skills2018/canada/ModuleA/2018/06/04/dragons-tale-blacklight-mini-golf-crystal-labyrinth-mirror-maze/">Dragon's Tale</a>
 				</div>
 			</div>
 		<?php } else { ?>

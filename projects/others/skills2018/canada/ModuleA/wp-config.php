@@ -1,6 +1,9 @@
 <?php
 
 require_once('/etc/mysql-creds/mysql-creds.php');
+define('WP_SITEURL','https://zharry.ca/projects/others/skills2018/canada/ModuleA/');
+define('WP_HOME','https://zharry.ca/projects/others/skills2018/canada/ModuleA/');
+define('FORCE_SSL_ADMIN', false);
 
 /**
  * The base configuration for WordPress
