@@ -1,0 +1,33 @@
+* {
+	font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	margin: 0;
+	padding: 0;
+}
+#body {
+	height: 100vh;
+	width: 100vw;
+}
+
+#canvas {
+	display: none;
+}
+#highscores {
+	display: none;
+}
+#submit {
+	display: none;
+}
+
+#canvas, #highscores, #submit {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border: 1px solid black;
+}
+#highscores, #submit {
+	width: 500px;
+	height: 500px;
+	overflow-y: scroll;
+}
