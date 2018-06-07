@@ -58,7 +58,7 @@
 				<h1 style="padding: 12px;">Highscores: </h1>
 				<button onclick="showScreen(0)" style="width: 175px; margin-bottom: 12px;">Return to Game</button><hr style="margin-bottom: 12px;">
 				<?php
-					$query = "SELECT * FROM `snake_highscores` ORDER BY `highscores`.`score` DESC";
+					$query = "SELECT * FROM `snake_highscores` ORDER BY `snake_highscores`.`score` DESC";
 					$res = mysqli_query($conn, $query);
 					while ($row = mysqli_fetch_assoc($res)) {
 						echo htmlentities($row["name"]) . "-" . htmlentities($row["score"]) . "<br/>";
