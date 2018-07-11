@@ -28,14 +28,20 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Page Styles */
 #header {
-	position: relative;
-	width: 100%;
-	height: 200px;
-	background-color: #374458;
+    position: relative;
+    width: 100%;
+    height: 275px;
+    background-color: #374458;
+    max-height: 60vh;
+    min-height: 200px;
+    display: table;
+}
+#header-container {
+	vertical-align: middle;
+    display: table-cell;
 }
 #header-name, #header-desc {
 	color: white;
-	width: 100%;
 	text-align: center;
 }
 #header-name {
@@ -67,10 +73,14 @@ h1, h2, h3, h4, h5, h6 {
 #about td {
 	vertical-align: middle;
 	padding: 4px 8px 4px 0;
+	line-height: 1.3em;
 }
 #about-projects {
 	padding-top: 14px;
 	text-align: center;
+}
+#projects-title {
+	padding-top: 1em;
 }
 #projects-button {
 	font-size: 32px;
@@ -82,6 +92,23 @@ h1, h2, h3, h4, h5, h6 {
 	margin:auto;
 	cursor: pointer;
 	display: inline-block;
+}
+.project-result {
+	font-size: 80%;
+    margin-left: 6px;
+}
+.project-icon {
+	margin-right: 4px;
+}
+.project-location {
+	margin-top: 6px !important;
+}
+.project-summary {
+	margin-top: -0.5em !important;
+}
+#projects-viewall {
+	padding-top:4px;
+	text-align: center;
 }
 
 /* Responsive */
@@ -99,6 +126,15 @@ h1, h2, h3, h4, h5, h6 {
 		height: 60px;
 		font-size: 16px;
 	}
+	#projects-title {
+		padding-top: 0.5em;
+	}
+}
+@media only screen and (max-width: 1170px) {
+	#projects-viewall {
+		text-align: left;
+		padding-left: 20px;
+	}
 }
 
 /* Change typewriter color */
@@ -112,26 +148,29 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 1px 3px 10px #c4d4de;
 }
 .cd-timeline__content:before {
-    top: calc(30px - 7px);
+    top: calc(35px - 7px);
 }
 .cd-timeline__content {
-	margin-left: 65px;
+	margin-left: 75px;
 	transition: box-shadow 0.25s ease-in-out;
 }
 .cd-timeline__img {
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	margin-left: -15px;
 	overflow: hidden;
 	background-color: white;
 }
 .cd-timeline__img img {
-	width: 60px;
-	height: 60px;
-	margin-left: -30px;
-	margin-top: -30px;
+	width: 70px;
+	height: 70px;
+	margin-left: -35px;
+	margin-top: -35px;
 }
 @media only screen and (min-width: 1170px) {
+	.cd-timeline {
+		margin-top: 2em;
+	}
 	.cd-timeline__img {
 		width: 100px;
 		height: 100px;
