@@ -19,7 +19,6 @@
         "Sunny" => 'Sunny Lan',
         "Avery" => 'Avery Shum'
     );
-
     $linksImgs = array(
         "GitHub" => "img/social/GitHub.svg",
         "DevPost" => "img/social/DevPost.svg",
@@ -33,6 +32,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Harry Zhang</title>
+	<link rel="shortcut icon" href="favicon.ico" />
 	<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="css/reset.css">
@@ -72,10 +72,10 @@
 							$res = mysqli_query($conn, $query);
 							if (mysqli_num_rows($res) > 0) {
 								while($row = mysqli_fetch_assoc($res)) { ?>
-										<tr>
-											<td class="center"><i class="dark fas <?php echo $row["icon"]; ?> about-icon"></i></td>
-											<td><?php echo $row["description"]; ?></td>
-										 </tr>
+									<tr>
+										<td class="center"><i class="dark fas <?php echo $row["icon"]; ?> about-icon"></i></td>
+										<td><?php echo $row["description"]; ?></td>
+									 </tr>
 								<?php }
 							}
 						?>
