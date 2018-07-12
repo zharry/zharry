@@ -6,11 +6,11 @@
         "Ben" => '<a class="collab-link" href="https://bcheng.cf">Benjamin Cheng</a>',
         "Jim" => '<a class="collab-link" href="https://jimgao.tk">Jim Gao</a>',
         "Aaron" => 'Aaron Du',
-        "Jaden" => '<a class="collab-link" href="https://jadenyjw.github.io/">Jaden Wang</a>',
-        "Andy" => '<a class="collab-link" href="https://devpost.com/ele7087">Andy Huang</a>',
+        "Jaden" => '<a class="collab-link" href="https://jadenyjw.ml/">Jaden Wang</a>',
+        "Andy" => 'Andy Huang',
         "Eric" => 'Eric Li',
-        "Roger" => '<a class="collab-link" href="https://github.com/kiritofeng">Roger Fu</a>',
-        "Sunny" => '<a class="collab-link" href="http://sunnylan.tk/">Sunny Lan</a>',
+        "Roger" => 'Roger Fu',
+        "Sunny" => 'Sunny Lan',
         "Avery" => 'Avery Shum'
     );
 

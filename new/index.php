@@ -3,6 +3,27 @@
 	if (!$conn) {
 		die("Error establishing database connection!");
 	}
+	
+	// Backend Definitions    
+	$people = array(
+        "Jacky" => '<a class="collab-link" href="https://jackyliao.me" target="_blank">Jacky Liao</a>',
+        "Henry" => '<a class="collab-link" href="https://guhenry3.tk" target="_blank">Henry Gu</a>',
+        "Ben" => '<a class="collab-link" href="https://bcheng.cf" target="_blank">Benjamin Cheng</a>',
+        "Jim" => '<a class="collab-link" href="https://jimgao.tk" target="_blank">Jim Gao</a>',
+        "Aaron" => 'Aaron Du',
+        "Jaden" => '<a class="collab-link" href="https://jadenyjw.ml/" target="_blank">Jaden Wang</a>',
+        "Andy" => 'Andy Huang',
+        "Eric" => 'Eric Li',
+        "Roger" => '<a class="collab-link" href="https://kiritofeng.tk" target="_blank">Roger Fu',
+        "Sunny" => 'Sunny Lan',
+        "Avery" => 'Avery Shum'
+    );
+
+    $linksImgs = array(
+        "GitHub" => "img/social/GitHub.svg",
+        "DevPost" => "img/social/DevPost.svg",
+        "SpaceApps" => "img/social/SpaceApps.svg"
+    );
 ?>
 
 <!doctype html>
@@ -10,20 +31,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<title>Harry Zhang</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="css/reset.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<!-- Vertical Timeline -->
 	<link rel="stylesheet" href="css/verticalTimeline.css">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   	<!-- Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
-	<title>Harry Zhang</title>
 </head>
 <body>
 	<div id="header">
@@ -43,7 +62,7 @@
 				<div class="col col-xl-2 blank-col">
 				</div>
 				<div class="col-md-auto">
-					<h2 id="about-title">
+					<h2 class="section-title">
 						About Me
 					</h2>
 					<table>
@@ -73,7 +92,7 @@
 	</div>
 	
 	<div id="projects" class="cd-timeline js-cd-timeline">
-		<h2 id="projects-title">
+		<h2 class="section-title">
 			Things I've Done
 		</h2>
 		<div class="cd-timeline__container">
@@ -102,10 +121,89 @@
 								<p class="project-summary">
 									<?php echo $row["summary"]; ?>
 								</p>
-								<!--a class="cd-timeline__read-more">Read more</a-->
+								<a data-toggle="modal" data-target="#project-<?php echo $row["id"]; ?>" class="cd-timeline__read-more">Read more</a>
 								<span class="cd-timeline__date"><?php echo $date; ?></span>
 							</div>
+							
+							<div class="modal fade" id="project-<?php echo $row["id"]; ?>" tabindex="-1" role="dialog">
+								<div class="modal-dialog modal-dialog-centered modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title section-title modal-title" id="exampleModalLabel"><?php echo $row["name"]; ?></h5>
+											<button type="button" class="close" data-dismiss="modal">
+												<span>&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div class="container">
+												<div class="row">
+													<div class="col-lg-6">
+														<img class="gallery" src="img/gallery/<?php echo $row["gallery"]; ?>">
+														<div class="visit-links">
+															<?php
+																$visit = json_decode($row["visit"], true);
+																if (!empty($visit)) {
+																	for ($i = 0; $i < sizeof($visit); $i++) {
+															?>
+																	<div><a href="<?php echo $visit[$i]["Link"]; ?>" target="_blank"><?php echo $visit[$i]["Desc"]; ?></a></div>
+																
+															<?php
+																	}
+																}
+															?>
+														</div>
+														<div class="other-links">
+															<?php
+																$links = json_decode($row["links"], true);
+																if (!empty($links)) {
+																	for ($i = 0; $i < sizeof($links); $i++) {
+																		echo '<a href="' . $links[$i]["Link"] . '" target="_blank">';
+																		if ($links[$i]["Type"] == "Text") {
+																			echo $links[$i]["Desc"] . "</a>";
+																		} else {
+																			echo '<img src="' . $linksImgs[$links[$i]["Type"]] . '" class="social-icon" title="' . $links[$i]["Desc"] . '"></a>';
+																		}
+																	}
+																}
+															?>
+														</div>
+													</div>
+													<div class="col-lg-6">
+														<hr class="modal-divider"/>
+														<div class="description">
+															<p><?php echo $row["description"]; ?></p>
+														</div>
+														<div class="desc-tech">
+															<h3 class="desc-title">Made with:</h3>
+															<?php echo $row["tech"]; ?>
+														</div>
+														<?php
+															$collab = json_decode($row["collab"], true);
+															if (!empty($collab)) {
+																?>
+																<div class="desc-collab">
+																	<h3 class="desc-title">Collaborators:</h3>
+																<?php
+																	$out = "";
+																	for ($i = 0; $i < sizeof($collab); $i++) {
+																		echo $people[$collab[$i]];
+																		if ($i < sizeof($collab) - 1) { echo ", "; }
+																	}
+																echo "</div>";
+															}
+															?>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<a class="cd-timeline__read-more" data-dismiss="modal">Close</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+						
 					<?php }
 				}
 			?>
@@ -116,6 +214,20 @@
 	</div>
 	
 	<div id="social">
+		<div class="container">
+			<h2 class="section-title">
+				Get In Touch!
+			</h2>
+			<p>
+				You can find me here...
+			</p>
+			<div id="social-icons">
+				<a href="https://github.com/zharry" alt="GitHub" target="_blank"><i class="light fab fa-github"></i></a>
+				<a href="https://www.facebook.com/zh.harry" alt="Facebook" target="_blank"><i class="light fab fa-facebook-square"></i></a>
+				<a href="https://www.linkedin.com/in/zhharry/" alt="LinkedIn" target="_blank"><i class="light fab fa-linkedin"></i></a>
+			</div>
+			<p>Or by email at <a id="social-email" href="mailto:me@zharry.ca">me@zharry.ca</a></p>
+		</div>
 	</div>
 
 	<!-- Vertical Timeline JavaScript -->

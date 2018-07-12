@@ -25,6 +25,11 @@ h1, h2, h3, h4, h5, h6 {
 .center {
 	text-align: center;
 }
+.section-title {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 0.8em;
+}
 
 /* Page Styles */
 #header {
@@ -57,11 +62,6 @@ h1, h2, h3, h4, h5, h6 {
 #about {
 	background-color: white;
 	padding: 2em 0;
-}
-#about-title, #projects-title {
-	font-size: 24px;
-	text-align: center;
-	padding-bottom: 0.8em;
 }
 #about table {
 	margin-left: 12px;
@@ -111,6 +111,70 @@ h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 }
 
+#social {
+	background-color: rgba(55, 68, 88, 0.9);
+	color: white;
+	text-align: center;
+}
+#social > .container {
+	padding-top: 3em;
+	padding-bottom: 4.5em;
+}
+#social .section-title {
+	color: white;
+}
+#social-icons {
+    line-height: 2em;
+    font-size: 3.5em;
+}
+#social-email:hover {
+	color: white;
+}
+
+.modal a { 
+	color: black;
+}
+.modal-title {
+	padding-bottom: 0;
+	padding-left: 12px;
+	width: 100%;
+	text-align: center;
+}
+.modal-divider {
+	display: none;
+}
+.gallery {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.25);
+}
+.visit-links {
+	text-align: center;
+	padding: 1em;
+	padding-bottom: 0.5em;
+}
+.visit-links {	
+	width: 100%;
+}
+.other-links {
+	text-align: center;
+}
+.social-icon {
+	height: 40px;
+	width: auto;
+	padding: 2px;
+}
+.description {
+	text-indent: 16px;
+}
+.desc-title {
+	text-indent: 16px;
+}
+.desc-tech, .desc-collab {
+	margin-bottom: 1rem;
+}
+	
+
 /* Responsive */
 @media only screen and (max-width: 768px) {
 	#header {
@@ -129,6 +193,21 @@ h1, h2, h3, h4, h5, h6 {
 	#projects-title {
 		padding-top: 0.5em;
 	}
+	#social > .container {
+		padding-top: 2em;
+		padding-bottom: 2.75em;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.modal-divider {
+		display: block;
+	}
+	.desc-title {
+		text-indent: 0;
+	}
+	.desc-tech, .desc-collab {
+		text-align: center;
+	}
 }
 @media only screen and (max-width: 1170px) {
 	#projects-viewall {
@@ -144,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Edits from Vertical Timeline CSS */
+.cd-timeline__read-more {
+	cursor: pointer;
+	color: white !important;
+}
 .cd-timeline__content:hover {
     box-shadow: 1px 3px 10px #c4d4de;
 }

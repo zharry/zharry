@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="73.915123"
+   height="64"
+   viewBox="0 0 19.556709 16.933333"
+   version="1.1"
+   id="svg4861"
+   sodipodi:docname="devpost.svg"
+   inkscape:version="0.92.1 r">
+  <defs
+     id="defs4855" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.7339246"
+     inkscape:cx="25.447495"
+     inkscape:cy="51.648184"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="950"
+     inkscape:window-height="1056"
+     inkscape:window-x="2650"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     units="px"
+     inkscape:pagecheckerboard="false" />
+  <metadata
+     id="metadata4858">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-83.267152,-122.18454)">
+    <g
+       id="XMLID_126_"
+       transform="matrix(0.06977064,0,0,0.06977064,83.267152,122.18454)">
+      <polygon
+         points="0,121.4 70.1,0 210.2,0 280.3,121.4 210.2,242.7 70.1,242.7 "
+         id="XMLID_3_"
+         style="fill:#003e54" />
+      <path
+         d="m 132.7,195 h -44 V 47.7 h 46.1 c 42.1,0 73.3,19.8 73.3,73.7 0,51.8 -37.5,73.6 -75.4,73.6 z m 1,-118.7 h -15.6 v 90.1 h 14.5 c 30.9,0 45.1,-18.1 45.1,-45.1 0.1,-30 -12.8,-45 -44,-45 z"
+         id="XMLID_2_"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+</svg>
