@@ -61,9 +61,9 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#374458">
+	<meta name="msapplication-TileColor" content="#e9f0f5">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#374458">
+	<meta name="theme-color" content="#e9f0f5">
 </head>
 <body>
 	<div id="header">
