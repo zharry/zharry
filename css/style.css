@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 24px;
 	text-align: center;
 	padding-bottom: 0.8em;
+	padding-top: 0.5em;
 }
 
 /* Page Styles */
@@ -78,9 +79,6 @@ h1, h2, h3, h4, h5, h6 {
 #about-projects {
 	padding-top: 14px;
 	text-align: center;
-}
-#projects-title {
-	padding-top: 1em;
 }
 #projects-button {
 	font-size: 32px;
@@ -189,9 +187,6 @@ h1, h2, h3, h4, h5, h6 {
 	#header-desc {
 		height: 60px;
 		font-size: 16px;
-	}
-	#projects-title {
-		padding-top: 0.5em;
 	}
 	#social > .container {
 		padding-top: 2em;
