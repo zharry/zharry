@@ -1,0 +1,28 @@
+#site-works {
+	padding: 80px 0;
+}
+.categories { 
+	padding: 10px 0;
+}
+ul.cat li {
+	display: inline-block;
+}
+#site-works li.pull-right {
+	padding-top: 10px;
+}
+ol.type li {
+	padding-left: 15px;
+}
+ol.type li:after {
+	content: '|';
+	padding-left: 15px;
+}
+ol.type li a { 
+    color: #224080;
+}
+ol.type li a.active { 
+    font-weight: 900; 
+}
+.gallery-item{
+	padding-bottom: 30px;
+}

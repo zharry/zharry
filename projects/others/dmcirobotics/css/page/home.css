@@ -1,0 +1,13 @@
+#site-home {
+	background: url(../../img/Background1.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #CFCFCF;
+    height: 720px;
+}
+.content {
+	position: relative;
+	padding-top: 160px;
+}

@@ -1,0 +1,37 @@
+.col { /*Navbar Colapse*/
+	background-color: #224080 !important;
+	padding: 0 !important;
+}
+#site-menu {
+	padding: 40px;
+	transition: all 0.8s;
+}
+.navbar-default {
+	background-color: rgba(248, 248, 248, 0);
+	border: rgba(248, 248, 248, 0);
+}
+.navbar-brand {
+    font-size: 30px;
+    color: #FFFFFF !important;
+    font-weight: 900;
+}
+.icon-bar {
+	background-color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #FFFFFF;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.navbar-default .navbar-nav > li > a:hover, .active > a, .active > a:hover, .active > a:focus {
+	color: #538CB7 !important;
+	background-color: transparent !important;
+	font-weight: 700;
+}
+.navbar-toggle {
+	border-radius: 0;
+}
+.navbar-toggle:hover, .navbar-toggle:focus {
+	background-color: #538CB7 !important;
+	border-color: #538CB7 !important;
+}

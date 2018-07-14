@@ -1,0 +1,21 @@
+@media (max-width: 768px){
+  label{
+    float: none;
+  }
+}
+#site-contact{
+    background-color: #b9dbff;
+    color: black;
+	padding: 80px 0;
+}
+label {
+	font-size: 13px;
+	font-weight: 400;
+	float: left;
+}
+button.btn.site-btn.btn-default {
+	padding: 10px 40px;
+	color: #FFFFFF;
+	float: right;
+	background: #538CB7;
+}

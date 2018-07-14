@@ -1,0 +1,82 @@
+/*@import url("responsive.css");*/
+
+@import url("page/home.css");
+@import url("page/about.css");
+@import url("page/teams.css");
+@import url("page/achievements.css");
+@import url("page/gallery.css");
+@import url("page/contact.css");
+
+@import url("page/navbar.css");
+@import url("page/footer.css");
+
+@media (max-width: 767px){
+  #site-menu.navbar-default {
+	background-color: #224080 !important;
+  }
+  li.pull-right, li.pull-left {
+    margin-top: 10px;
+    float: none !important;
+    text-align: center;
+    display: block;
+  }
+  #site-team #placeholderspace.section-title {
+  	display: none;
+  }
+}
+body, html {
+	font-family: 'open sans', sans-serif;
+	color: #5a5a5a;
+}
+.gradient {
+	background: -moz-linear-gradient(top, rgba(34,64,128,0.2) 0%, rgba(34,64,128,0.35) 17%, rgba(34,64,128,0.5) 35%, rgba(34,64,128,0.65) 62%, rgba(34,64,128,0.8) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(34,64,128,0.2)), color-stop(17%,rgba(34,64,128,0.35)), color-stop(35%,rgba(34,64,128,0.5)), color-stop(62%,rgba(34,64,128,0.65)), color-stop(100%,rgba(34,64,128,0.8)));
+    background: -webkit-linear-gradient(top, rgba(34,64,128,0.2) 0%, rgba(34,64,128,0.35) 17%, rgba(34,64,128,0.5) 35%, rgba(34,64,128,0.65) 62%, rgba(34,64,128,0.8) 100%);
+    background: -o-linear-gradient(top, rgba(34,64,128,0.2) 0%, rgba(34,64,128,0.35) 17%, rgba(34,64,128,0.5) 35%, rgba(34,64,128,0.65) 62%, rgba(34,64,128,0.8) 100%);
+    background: -ms-linear-gradient(top, rgba(34,64,128,0.2) 0%, rgba(34,64,128,0.35) 17%, rgba(34,64,128,0.5) 35%, rgba(34,64,128,0.65) 62%, rgba(34,64,128,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(34,64,128,0.2) 0%, rgba(34,64,128,0.35) 17%, rgba(34,64,128,0.5) 35%, rgba(34,64,128,0.65) 62%, rgba(34,64,128,0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 );
+	height: 100%;
+	background-attachment: fixed;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+.colorStrong {
+	color: #ffffff;
+	font-weight: 900;
+}
+h1 strong {
+	font-weight: 900;
+}
+h2 {
+	font-weight: 300;
+	line-height: 25px;
+	margin:  0;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 900;
+}
+h5 {
+	font-weight: 700;
+	line-height: 20px;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+.section-title {
+	padding: 30px 0;
+}
+a { 
+    color: #538CB7;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	color: #538CB7;
+}
+ul, ol {
+	padding: 0;
+	webkit-padding: 0;
+	moz-padding: 0;
+}

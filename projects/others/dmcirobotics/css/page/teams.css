@@ -1,0 +1,26 @@
+#site-team {
+	background: url(../../img/Background2.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+.team-img {
+	width: 120px;
+	height: 120px;
+}
+.thumbnail {
+	background: transparent;
+	border: 0;
+}
+.owl-theme .owl-controls .owl-page span {
+    background: #FFFFFF;
+    border-radius: 0;
+}
+.col-md-3 div li {
+	text-align: left !important;
+}
+#site-team li {
+	list-style: none;
+}
