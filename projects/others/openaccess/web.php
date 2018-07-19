@@ -35,7 +35,7 @@ $startURL = "";
 $landingExampleURL = "https://webproxy.to";
 
 // miniProxy Location URL
-define("PROXY_PREFIX", "https://zharry.ca/projects/openaccess/web.php?");
+define("PROXY_PREFIX", "https://zharry.ca/projects/others/openaccess/web.php?");
 
 /****************************** END CONFIGURATION ******************************/
 
