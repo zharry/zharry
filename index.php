@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_PASS'), getenv('MYSQL_PASS'), "zharry");
+    $conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), "zharry");
 	if (!$conn) {
 		die("Error establishing database connection!");
 	}
