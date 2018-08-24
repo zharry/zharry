@@ -1,4 +1,42 @@
 <?php
+
+    /* Code from /etc/other-creds/creds.php */
+    
+    // SERVER INFORMATION FOR PROJECT:OPENACCESS
+    $project_oa_se = array(
+            "host" => "SE_IP",
+            "port" => "SE-PORT",
+            "hub" => "SE-HUB",
+            "pass" => "SE-PASS",
+            "pass_keyspace" => "abcdefhjkmnpqrstuwxyz2345678",
+            "user_keyspace" => "0123456789",
+            "openVPNConfig" => "Config.ovpn"
+    );
+    // LOGIN INFORMATION FOR PROJECT:OPENACCESS
+    $project_oa_ss = array(
+            "port" => "SS-PORT",
+            "pass" => "SS-PASS",
+            "type" => "SS_ENCRYPTION"
+    );
+    // ACCESS CODE GENERATION FOR PROJECT:OPENACCESS
+    $curtime = (date("H") * 6) + floor(date("i") /10);
+    $curdate = date("d") * date("m");
+    $precalc = ($curtime/$curdate) * 100;
+    $format = number_format($precalc, 3) * 1000;
+    $padded = sprintf("%05d", $format);
+    $digits = str_split($padded);
+    $one = $digits[0] + 10;
+    $two = $digits[1] + 10;
+    $three = $digits[2] + 10;
+    $four = $digits[3] + 10;
+    $five = $digits[4] + 10;
+    $code = array(
+            "general" => chr(65 + $one + 4)."".chr(65 + $two - 2)."".chr(65 + $three + 5)."".chr(65 + $four + 1)."".chr(65 + $five - 6),
+            "full" => chr(65 + $one - 2)."".chr(65 + $two + 3)."".chr(65 + $three + 2)."".chr(65 + $four + 5)."".chr(65 + $five - 1),
+            "affiliate" => chr(65 + $one + 5)."".chr(65 + $two - 5)."".chr(65 + $three - 6)."".chr(65 + $four - 6)."".chr(65 + $five),
+            "school" => "SCHPD",
+            "early" => "EARLY"
+    );
 	
 	/* 
 	Note on Permission Grades
@@ -21,7 +59,6 @@
 	require_once('includes/connection.php');
 	require_once('includes/auth.php');
 	//require_once('includes/creds.php');
-	require_once('/etc/other-creds/creds.php');
 	
 	// Re-fetch data in case anything changed
 	$stmt = mysqli_prepare($conn, "SELECT id, username, email, first, last, softetheruser, softetherpass, perms FROM users WHERE username = ?");

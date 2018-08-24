@@ -1,8 +1,5 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-$GLOBALS["CREDS"] = $mysql_creds;
-
 class CMySQL {
 	
 
@@ -16,10 +13,10 @@ class CMySQL {
 
     // constructor
     function CMySQL() {
-        $this->sDbHost = $GLOBALS["CREDS"]["host"];
-        $this->sDbName = "project_bioproject";
-        $this->sDbUser = $GLOBALS["CREDS"]["user"];
-        $this->sDbPass = $GLOBALS["CREDS"]["pass"];
+        $this->sDbHost = getenv('MYSQL_HOST');
+        $this->sDbName = "school_bioproject";
+        $this->sDbUser = getenv('MYSQL_USER_SCHOOL');
+        $this->sDbPass = getenv('MYSQL_PASS_SCHOOL');
 
         // create db link
         $this->vLink = mysqli_connect($this->sDbHost, $this->sDbUser, $this->sDbPass);

@@ -1,13 +1,11 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
 	date_default_timezone_set('America/Toronto');
 	$dtime = date("Y-m-d", time());
 	$currentDate = strtotime($dtime);
-	$user = $mysql_creds["user"]; 
-	$pass = $mysql_creds["pass"];
-	$host = $mysql_creds["host"];
+	$user = getenv('MYSQL_USER_PROJECT'); 
+	$pass = getenv('MYSQL_PASS_PROJECT');
+	$host = getenv('MYSQL_HOST');
 	$dbname = "project_grade9-study";
 	$connection = mysqli_connect($host,$user,$pass,$dbname);
 	if (!$connection) {

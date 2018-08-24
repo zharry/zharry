@@ -1,9 +1,7 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
-define('WP_HOME','https://zharry.tk/projects/grade7/nctech/');
-define('WP_SITEURL','https://zharry.tk/projects/grade7/nctech/');
+define('WP_HOME','https://zharry.ca/projects/grade7/nctech/');
+define('WP_SITEURL','https://zharry.ca/projects/grade7/nctech/');
 
 /**
  * The base configurations of the WordPress.
@@ -22,16 +20,16 @@ define('WP_SITEURL','https://zharry.tk/projects/grade7/nctech/');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', "project_nctech");
+define('DB_NAME', "school_nctech");
 
 /** MySQL database username */
-define('DB_USER', $mysql_creds["user"]);
+define('DB_USER', getenv('MYSQL_USER_SCHOOL'));
 
 /** MySQL database password */
-define('DB_PASSWORD', $mysql_creds["pass"]);
+define('DB_PASSWORD', getenv('MYSQL_PASS_SCHOOL'));
 
 /** MySQL hostname */
-define('DB_HOST', $mysql_creds["host"]);
+define('DB_HOST', getenv('MYSQL_HOST'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

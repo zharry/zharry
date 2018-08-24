@@ -1,6 +1,10 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
+$mysql_creds = array(
+    'host' => getenv('MYSQL_HOST'),
+    'user' => getenv('MYSQL_USER_PROJECT'),
+    'pass' => getenv('MYSQL_PASS_PROJECT')
+);
 
 session_start();
 

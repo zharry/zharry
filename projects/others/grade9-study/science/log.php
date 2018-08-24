@@ -1,7 +1,5 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
 	if (isset($_SERVER['HTTP_CF_CONNECTING_IP']))
 		$ClientIP = $_SERVER['HTTP_CF_CONNECTING_IP'];
 	else
@@ -19,9 +17,9 @@ require_once('/etc/mysql-creds/mysql-creds.php');
 	$coordlog = $details->loc;
 	$isplog = $details->org;
 
-	$user = $mysql_creds["user"]; 
-	$pass = $mysql_creds["pass"];
-	$host = $mysql_creds["host"];
+	$user = getenv('MYSQL_USER_PROJECT'); 
+	$pass = getenv('MYSQL_PASS_PROJECT');
+	$host = getenv('MYSQL_HOST');
 	$dbname = "project_grade9-study"; 
 	$connection = mysqli_connect($host,$user,$pass,$dbname);
 	if ($connection) {

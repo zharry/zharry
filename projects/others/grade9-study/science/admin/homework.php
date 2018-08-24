@@ -1,7 +1,5 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
 require "../auth.php";
 requireAdmin("SNC1D6-02");
 
@@ -13,9 +11,9 @@ if($_POST != null){
 		$table = 'HOMEWORK';
 	else
 		$table = 'EVENTS';
-	$user = $mysql_creds["user"]; 
-	$pass = $mysql_creds["pass"];
-	$host = $mysql_creds["host"];
+	$user = getenv('MYSQL_USER_PROJECT'); 
+	$pass = getenv('MYSQL_PASS_PROJECT');
+	$host = getenv('MYSQL_HOST');
 	$dbname = "project_grade9-study";
 	$connection = mysqli_connect($host,$user,$pass,$dbname);
 	if (!$connection) {

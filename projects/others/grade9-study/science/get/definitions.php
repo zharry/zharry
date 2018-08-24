@@ -1,11 +1,9 @@
 <br/>
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
 	$query = $_GET["query"];
 	$query = strtolower($query);
-	$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+	$connection = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), "project_grade9-study");
 	$sql = mysqli_prepare($connection, "SELECT * FROM SCIENCE_DEF WHERE KEYWORD LIKE ? UNION SELECT * FROM SCIENCE_DEF WHERE KEYWORD LIKE ?");
 	$que = "{$query}%";
 	$quer = "%{$query}%";
