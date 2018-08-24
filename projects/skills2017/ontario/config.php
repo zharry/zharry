@@ -1,6 +1,6 @@
 <?php
 
-$DIR = "/projects/others/skills2017/ontario/";
+$DIR = "/projects/skills2017/ontario/";
 $NAME = "James Johnson";
 
 $HOST = getenv('MYSQL_HOST');
