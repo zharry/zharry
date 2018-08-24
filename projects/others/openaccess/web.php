@@ -293,7 +293,7 @@ if (empty($url)) {
 				<div>
 				<h4>Quick Links</h4>
 				<?php
-					echo "<a href=\"" . PROXY_PREFIX . "https://webproxy.to/\">Double Layed Proxy, powered by WebProxy.to</a>";
+					echo "<a href=\"" . PROXY_PREFIX . "http://webproxy.to/\">Double Layed Proxy, powered by WebProxy.to</a>";
 				?>
 				</div>
 				<br/><hr/><br/>

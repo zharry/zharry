@@ -4,7 +4,7 @@
     
     // SERVER INFORMATION FOR PROJECT:OPENACCESS
     $project_oa_se = array(
-            "host" => "SE_IP",
+            "host" => "SE-IP",
             "port" => "SE-PORT",
             "hub" => "SE-HUB",
             "pass" => "SE-PASS",
@@ -16,7 +16,7 @@
     $project_oa_ss = array(
             "port" => "SS-PORT",
             "pass" => "SS-PASS",
-            "type" => "SS_ENCRYPTION"
+            "type" => "SS-ENCRYPTION"
     );
     // ACCESS CODE GENERATION FOR PROJECT:OPENACCESS
     $curtime = (date("H") * 6) + floor(date("i") /10);

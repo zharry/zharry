@@ -3,13 +3,20 @@ $active = "home";
 include('includes/header.php');
 ?>
 <div class="alert alert-warning">
-  <strong>Notice!</strong> Project: Open Access is currently still in it's early development phases. If you encounter any problems please direct message Harry.
+  <strong>Notice!</strong> Project: Open Access is now closed, registration is now disabled and the VPN service is no longer active. For more information please direct message Harry.
 </div>
 <hr/>
 <center><br/>
 <h2>Welcome to Project: Open Access</h2><br/>
 <h4>Unlimited, Secure, Local and Free VPN Service</h4>
-<h4>Service Opened: September 2017!</h4><br/>
+<h4>Service Opened: September 2017</h4><br/>
+<h4>Service Closed: August 2018</h4><br/>
+<hr/><br/>
+<h3>Usage Statistics:</h3>
+<p>Total Bandwidth Used: 2.3TB</p>
+<p>Average Speed per Month: 1.18Mbit/s</p>
+<p>Usage Peak: 01/19/2018 - 42.6GB</p>
+<p>Registered Users: 27</p>
 <hr/><br/>
 <h3> Early Access </h3>
 <p>1. Create an account through <a href="register.php">account registration</a></p>
