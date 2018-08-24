@@ -42,7 +42,7 @@
 		<a href="activities_berkshire.php" style="text-decoration: none"> &nbsp &nbsp &nbsp Berkshire Activities</a><br/><br/><hr/><br/>
 
 		<div class="php-date">
-		<?
+		<?php
 			//Creates Today's Date
 			function EnglishDate($date) {
 			$arrDay = array("Today is: Sunday","Today is: Monday","Today is: Tuesday","Today is: Wednesday","Today is: Thursday","Today is: Friday","Today is: Saturday");
