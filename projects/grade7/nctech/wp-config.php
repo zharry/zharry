@@ -1,6 +1,5 @@
 <?php
 
-define('FORCE_SSL_ADMIN', true);
 define('WP_HOME','https://zharry.ca/projects/grade7/nctech');
 define('WP_SITEURL','https://zharry.ca/projects/grade7/nctech');
 
