@@ -1,6 +1,5 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
 define('WP_SITEURL','https://zharry.ca/projects/others/skills2018/canada/ModuleA/');
 define('WP_HOME','https://zharry.ca/projects/others/skills2018/canada/ModuleA/');
 define('FORCE_SSL_ADMIN', false);
@@ -26,16 +25,16 @@ define('FORCE_SSL_ADMIN', false);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'skills2018_canada');
+define('DB_NAME', 'skills_canada-2018');
 
 /** MySQL database username */
-define('DB_USER', $mysql_creds["user"]);
+define('DB_USER', getenv('MYSQL_USER_SKILLS'));
 
 /** MySQL database password */
-define('DB_PASSWORD', $mysql_creds["pass"]);
+define('DB_PASSWORD', getenv('MYSQL_PASS_SKILLS'));
 
 /** MySQL hostname */
-define('DB_HOST', $mysql_creds["host"]);
+define('DB_HOST', getenv('MYSQL_HOST'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

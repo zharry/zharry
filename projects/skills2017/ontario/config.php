@@ -1,13 +1,11 @@
 <?php
 
-require_once('/etc/mysql-creds/mysql-creds.php');
-
 $DIR = "/projects/others/skills2017/ontario/";
 $NAME = "James Johnson";
 
-$HOST = $mysql_creds["host"];
-$USER = $mysql_creds["user"];
-$PASS = $mysql_creds["pass"];
-$DB = "skills2017_ontario";
+$HOST = getenv('MYSQL_HOST');
+$USER = getenv('MYSQL_USER_SKILLS');
+$PASS = getenv('MYSQL_PASS_SKILLS');
+$DB = "skills_ontario-2017";
 
 ?>

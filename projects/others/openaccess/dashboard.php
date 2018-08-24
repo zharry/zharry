@@ -124,8 +124,8 @@
 				$_SESSION["softetherPass"] = $sePassword;
 				
 				// Create SE Internal Account
-				$createUserOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserCreate ".$seUsername." /GROUP:none /REALNAME:none /NOTE:none");
-				$changePassOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserPassWord ".$seUsername." /PASSWORD:".$sePassword);
+				// $createUserOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserCreate ".$seUsername." /GROUP:none /REALNAME:none /NOTE:none");
+				// $changePassOutput = shell_exec("/etc/other-creds/vpncmd/vpncmd ".$project_oa_se["host"].":".$project_oa_se["port"]." /SERVER /HUB:".$project_oa_se["hub"]." /PASSWORD:".$project_oa_se["pass"]." /CMD UserPassWord ".$seUsername." /PASSWORD:".$sePassword);
 		
 				// Update DB about changes
 				$stmt = mysqli_prepare($conn, "UPDATE users SET softetheruser = ?, softetherpass = ? WHERE username = ?");
