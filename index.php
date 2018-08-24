@@ -229,7 +229,7 @@
 			?>
 		</div>
 		<div id="projects-viewall">
-			<!--a href="projects">See All Projects</a-->
+			<a href="projects">See All Projects</a>
 		</div>
 	</div>
 	
