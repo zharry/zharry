@@ -82,6 +82,7 @@
                     <select class="form-control" form="form" name="type" id="type" required>
                         <option>Raw</option>
                         <option>Idea</option>
+                        <option>Note</option>
                         <option>URL</option>
                     </select>
                 </div>
