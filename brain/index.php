@@ -26,8 +26,10 @@
             <br/>
             <div class="row" id="topsearch">
                 <div class="input-group">
-                    <input id="topsearchquery" type="text" class="tsg form-control" placeholder="Find ideas, ramblings, urls, and just some really random things. (By Tag)">
-                    <span class="tsg input-group-addon" id="searchButton" onclick="search();">Search</span>
+                    <input form="search" id="topsearchquery" type="text" class="tsg form-control" placeholder="Find ideas, ramblings, urls, and just some really random things. (By Tag)">
+                    <form action="get" id="search">
+                        <span class="tsg input-group-addon" id="searchButton">Search</span>
+                    </form>
                 </div><br/>
             </div>
             <p style="margin-top: -24px; margin-bottom: 24px; margin-left: 4px;">ie. hackathon, game, tutorial, etc...</p>
