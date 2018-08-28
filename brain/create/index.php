@@ -8,8 +8,8 @@
     if (isset($_POST["name"])) {
         $name = mysqli_real_escape_string($conn, $_POST["name"]);
         $data = mysqli_real_escape_string($conn, $_POST["data"]);
-        $tags = mysqli_real_escape_string($conn, $_POST["tags"]);
         $type = mysqli_real_escape_string($conn, $_POST["type"]);
+        $tags = mysqli_real_escape_string($conn, $_POST["tags"]).",".$type;
         $access = mysqli_real_escape_string($conn, $_POST["access"]);
         
         $id = 0;
