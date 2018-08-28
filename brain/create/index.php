@@ -83,6 +83,7 @@
                         <option>Raw</option>
                         <option>Idea</option>
                         <option>Note</option>
+                        <option>Knowledge</option>
                         <option>URL</option>
                     </select>
                 </div>
