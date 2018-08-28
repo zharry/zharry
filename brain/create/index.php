@@ -9,7 +9,7 @@
         $name = mysqli_real_escape_string($conn, $_POST["name"]);
         $data = mysqli_real_escape_string($conn, $_POST["data"]);
         $type = mysqli_real_escape_string($conn, $_POST["type"]);
-        $tags = mysqli_real_escape_string($conn, $_POST["tags"]).",".$type;
+        $tags = mysqli_real_escape_string($conn, $_POST["tags"]).",".strtolower($type);
         $access = mysqli_real_escape_string($conn, $_POST["access"]);
         
         $id = 0;
