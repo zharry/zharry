@@ -24,6 +24,6 @@
             $return["content"]["messages"][0]["text"] = "123 Address Ave.";
     }
     
-    echo $json_encode($return);
+    echo json_encode($return);
 
 ?>
