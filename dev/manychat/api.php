@@ -3,7 +3,7 @@
     $data = json_decode(file_get_contents('php://input'), true);
     
     
-    $return = json_decode('{"version": "v2","content": {"messages": [{"type": "text","text": "Auth Token invalid!"}]}}');
+    $return = json_decode('{"version": "v2","content": {"messages": [{"type": "text","text": "Auth Token invalid!"}]}}', true);
     
     if($data["authToken"] == "abc123") {
         $req = $data["req"];
