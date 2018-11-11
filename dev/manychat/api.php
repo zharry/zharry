@@ -1,18 +1,29 @@
 <?php
 
     $data = json_decode(file_get_contents('php://input'), true);
-    var_dump($data);
-    var_dump($_POST);
+    
+    $return = json_decode('{
+        "version": "v2",
+        "content": {
+            "messages": [
+                {
+                   "type": "text",
+                   "text": "Auth Token invalid!"    
+                }
+            ]
+        }
+    }');
+    
     if($data["authToken"] == "abc123") {
         $req = $data["req"];
         if ($req == "weather")
-            echo "Waterloo, ON: 11/11/2018 - 3 Degrees, Feels Like 0. 70% POP, Light Snow";
+            $return["content"]["messages"][0]["text"] = "Waterloo, ON: 11/11/2018 - 3 Degrees, Feels Like 0. 70% POP, Light Snow";
         else if ($req == "phone")
-            echo "123-456-7890";
+            $return["content"]["messages"][0]["text"] = "123-456-7890";
         else if ($req == "address")
-            echo "123 Address Ave.";
-    } else {
-        echo "Auth Token invalid!";
+            $return["content"]["messages"][0]["text"] = "123 Address Ave.";
     }
+    
+    echo $json_encode($return);
 
 ?>
