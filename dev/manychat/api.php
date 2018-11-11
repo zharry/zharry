@@ -14,11 +14,6 @@
         else if ($req == "address")
             $return["content"]["messages"][0]["text"] = "123 Address Ave.";
     }
-    
-    var_dump($data);
-    var_dump($return);
-    var_dump($_POST);
-    
     echo json_encode($return);
 
 ?>
