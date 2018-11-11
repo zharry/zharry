@@ -1,7 +1,8 @@
 <?php
 
     $data = json_decode($_POST);
-
+    var_dump($data);
+    var_dump($_POST);
     if($data["authToken"] == "abc123") {
         $req = $data["req"];
         if ($req == "weather")
