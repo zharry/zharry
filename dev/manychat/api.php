@@ -1,6 +1,6 @@
 <?php
 
-    $data = json_decode($_POST);
+    $data = json_decode(file_get_contents('php://input'), true);
     var_dump($data);
     var_dump($_POST);
     if($data["authToken"] == "abc123") {
