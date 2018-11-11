@@ -1,7 +1,9 @@
 <?php
 
-    if($_POST["authToken"] == "abc123") {
-        $req = $_POST["req"];
+    $data = json_decode($_POST);
+
+    if($data["authToken"] == "abc123") {
+        $req = $data["req"];
         if ($req == "weather")
             echo "Waterloo, ON: 11/11/2018 - 3 Degrees, Feels Like 0. 70% POP, Light Snow";
         else if ($req == "phone")
