@@ -26,6 +26,10 @@
                 "action": "set_field_value",
                 "field_name": "email",
                 "value": "john.smith@gmail.com"
+            },{
+                "action": "set_field_value",
+                "field_name": "error",
+                "value": "NO_ERROR"
             }]
         }
     }', true);
