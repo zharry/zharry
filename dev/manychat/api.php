@@ -14,6 +14,10 @@
     $setUserInfo = json_decode('{
         "version": "v2",
         "content": {
+            "messages": [{
+                "type": "text",
+                "text": "Give me a sec while I look you up in our database..."
+            }],
             "actions": [{
                 "action": "set_field_value",
                 "tag_name": "full_name",
@@ -28,6 +32,10 @@
     $setError = json_decode('{
         "version": "v2",
         "content": {
+            "messages": [{
+                "type": "text",
+                "text": "One small problem..."
+            }],
             "actions": [{
                 "action": "set_field_value",
                 "tag_name": "error",
