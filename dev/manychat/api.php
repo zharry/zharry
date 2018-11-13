@@ -53,8 +53,8 @@
         if ($req == "weather")
             $return["content"]["messages"][0]["text"] 
                 = "Waterloo, ON: 11/11/2018 - 
-                   3 Degrees, Feels Like 0, 
-                   70% POP, Light Snow";
+3 Degrees, Feels Like 0, 
+70% POP, Light Snow";
         else if ($req == "phone")
             $return["content"]["messages"][0]["text"] 
                 = "123-456-7890";
