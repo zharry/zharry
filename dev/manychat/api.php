@@ -38,7 +38,7 @@
     }', true);
     
     $req = $data["req"];
-    if($data["auth"] == "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hbnljaGF0IiwicGVybXMiOlsiQm90Il0sImNsaWVudF9pZCI6WyIwMDAwMDAwMDAwIl0sImlhdCI6MTU0MjA2ODg1MX0.7-6tsYVtbvYLJqTnhB4jUKTvJYEHKF2QZkoSIU7dBdo2pxwgIpi1zS9xkQ4kx9R6DBSSxFbgx_ylFdeQSAedKw") {
+    if($data["auth"] == "abc123") {
         if ($req == "weather")
             $return["content"]["messages"][0]["text"] 
                 = "Waterloo, ON: 11/11/2018 - 
