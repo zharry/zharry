@@ -54,10 +54,11 @@
     }
     if ($req != "userinfo")
         echo json_encode($return);
-    else
-        if ($req["room"] == "Room-101" || $req["room"] == "101")
+    else {
+        if ($data["room"] == "Room-101" || $data["room"] == "101")
             echo json_encode($setUserInfo);
         else
             echo json_encode($setError);
+    }
 
 ?>
