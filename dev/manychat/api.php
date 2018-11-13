@@ -13,28 +13,27 @@
     }', true);
     $setUserInfo = json_decode('{
         "version": "v2",
-        "actions": [
-            {
+        "content": {
+            "actions": [{
                 "action": "set_field_value",
                 "tag_name": "full_name",
                 "value": "John Smith"
-            },
-            {
+            }, {
                 "action": "set_field_value",
                 "tag_name": "email",
                 "value": "john.smith@gmail.com"
-            }
-        ]
+            }]
+        }
     }', true);
     $setError = json_decode('{
         "version": "v2",
-        "actions": [
-            {
+        "content": {
+            "actions": [{
                 "action": "set_field_value",
                 "tag_name": "error",
                 "value": "WRONG_ROOM"
-            }
-        ]
+            }]
+        }
     }', true);
     
     $req = $data["req"];
