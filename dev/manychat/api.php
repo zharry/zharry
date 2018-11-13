@@ -20,11 +20,11 @@
             }],
             "actions": [{
                 "action": "set_field_value",
-                "tag_name": "full_name",
+                "field_name": "full_name",
                 "value": "John Smith"
             }, {
                 "action": "set_field_value",
-                "tag_name": "email",
+                "field_name": "email",
                 "value": "john.smith@gmail.com"
             }]
         }
@@ -38,7 +38,7 @@
             }],
             "actions": [{
                 "action": "set_field_value",
-                "tag_name": "error",
+                "field_name": "error",
                 "value": "WRONG_ROOM"
             }]
         }
