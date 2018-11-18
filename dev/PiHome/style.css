@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#body {
+    width: 800px;
+    height: 480px;
+    margin: auto;
+}
+
+#icon {
+    text-align: right;
+    width: 48%;
+    float: left;
+    height: 100%;
+}
+
+#iconImg {
+    height: auto;
+    width: 75%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#desc {
+    text-align: left;
+    width: 52%;
+    float: right;
+    height: 100%;
+    position: relative;
+}
+
+#temp {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    font-size: 72px;
+    padding-left: 48px;
+}
+
+#weather {
+    padding-left: 24px;
+    text-transform:capitalize;
+    position: absolute;
+    font-size: 24px;
+    top: 55%;
+    left: 0;
+}
