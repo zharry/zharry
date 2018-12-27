@@ -123,7 +123,8 @@ include('includes/header.php');
 			<input class="form-control" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirm Password">
 	    </div>
 	</div>
-	<button type="submit" class="btn btn-default">Register</button>
+	<div><i>Registration is disabled for achived projects!</i></div>
+	<button type="submit" disabled="disabled" class="btn btn-default">Register</button>
 </form>
 <hr/>
 

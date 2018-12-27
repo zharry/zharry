@@ -67,6 +67,7 @@ include('includes/header.php');
 			<input class="form-control" type="password" name="password" id="password" placeholder="Password">
 	    </div>
 	</div>
+	<div><i>Registered accounts can still login, but the dashboard has been disabled!</i></div>
 	<button type="submit" class="btn btn-default">Login</button>
 </form>
 <hr/>

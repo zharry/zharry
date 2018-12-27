@@ -234,7 +234,7 @@ if ($_SESSION["perms"] == "general" || $_SESSION["perms"] == "full" || $_SESSION
 <?php 
 	echo "Username: ".$_SESSION["softetherUser"]."<br/>";
 	echo "Password: ".$_SESSION["softetherPass"]."<br/>";
-	echo "OpenVPN Configuration: <a href='".$project_oa_se["openVPNConfig"]."' download>Download link</a><br/>";
+	//echo "OpenVPN Configuration: <a href='".$project_oa_se["openVPNConfig"]."' download>Download link</a><br/>";
 }
 ?>
 
