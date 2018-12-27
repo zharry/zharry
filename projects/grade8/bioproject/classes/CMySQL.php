@@ -47,7 +47,7 @@ class CMySQL {
             return false;
         $res = mysqli_query($this->vLink, $query);
         if (!$res)
-            $this->error('Database query error', false, $query);
+            $this->error('Database editing is disabled for archived projects!', false, $query);
         return $res;
     }
 
