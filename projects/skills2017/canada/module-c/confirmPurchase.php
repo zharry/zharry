@@ -50,7 +50,7 @@
 				$resultContent .= "Senior Ticket for " . $eventName . " purchased!<br/>";
 			}
 		}
-		
+		$resultContent .= "Database manipulation is disabled for security purposes!";
 		$resultContent .= "Return to the <a href='index.php'>home page</a></p>";
 	}
 	

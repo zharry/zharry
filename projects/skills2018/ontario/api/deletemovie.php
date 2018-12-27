@@ -12,7 +12,7 @@ For: The Hunton Collection API
 		$query = "DELETE FROM `skills13`.`film` WHERE `film`.`id` = {$id}";
 		$res = mysqli_query($conn, $query);
 		if (!$res) {
-			echo "Failed!";
+			echo "Database manipulation is disabled for security purposes!";
 		}
 	}
 ?>

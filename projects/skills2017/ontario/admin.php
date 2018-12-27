@@ -24,7 +24,7 @@
 			if ($res) {
 				echo "<script>alert('Project Created!');</script>";
 			} else {
-				echo "<script>alert('Failed!');</script>";
+				echo "<script>alert('Database manipulation is disabled for security purposes!');</script>";
 			}
 		} else if ($_POST["submit"] == "edit") {
 			if ($_POST["id"] != "-1") {
@@ -37,7 +37,7 @@
 				if ($res) {
 					echo "<script>alert('Project Updated!');</script>";
 				} else {
-					echo "<script>alert('Failed!');</script>";
+					echo "<script>alert('Database manipulation is disabled for security purposes!');</script>";
 				}
 			} else {
 				echo "<script>alert('Please Select a Project!');</script>";
@@ -50,7 +50,7 @@
 				if ($res) {
 					echo "<script>alert('Project Deleted!');</script>";
 				} else {
-					echo "<script>alert('Failed!');</script>";
+					echo "<script>alert('Database manipulation is disabled for security purposes!');</script>";
 				}
 			} else {
 				echo "<script>alert('Please Select a Project!');</script>";

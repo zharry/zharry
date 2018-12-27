@@ -19,7 +19,9 @@
 			echo " event(s) updated!<br/>";
 			echo "Return to the <a href='events.php'>events page</a>";
 		} else {
-			echo "Error: Failed to update!";
+			echo "Database manipulation is disabled for security purposes!";
+			echo "Return to the <a href='events.php'>events page</a>";
+			//echo "Error: Failed to update!";
 		}
 		
 	} else {

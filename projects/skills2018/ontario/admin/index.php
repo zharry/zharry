@@ -21,7 +21,7 @@ For: The Hunton Collection Admin Panel
 			if ($res) {
 				echo "<script>alert('Successfully added Movie!')</script>";
 			} else {
-				echo "<script>alert('Failed to add Movie!')</script>";
+				echo "<script>alert('Database manipulation is disabled for security purposes!')</script>";
 			}
 		} else if ($_POST["action"] == "edit"){
 			$id = mysqli_real_escape_string($conn, $_POST["editID"]);
@@ -34,7 +34,7 @@ For: The Hunton Collection Admin Panel
 			if ($res) {
 				echo "<script>alert('Successfully edited Movie!')</script>";
 			} else {
-				echo "<script>alert('Failed to add Movie!')</script>";
+				echo "<script>alert('Database manipulation is disabled for security purposes!')</script>";
 			}
 		}
 	}
