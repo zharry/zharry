@@ -5,7 +5,7 @@ For: The Hunton Collection API
 
 	require_once("../connection.php");
 	session_start();
-	if (!isset($_SESSION["username"])) {
+	if (!isset($_SESSION["skills2018-ontario_username"])) {
 		echo "Permission Denied!";
 	} else {
 		$id = mysqli_real_escape_string($conn, $_POST["id"]);		

@@ -1,7 +1,7 @@
 <?php
 	require_once('includes/connection.php');
 	// Check to see if already logged in
-	if (isset($_SESSION['username'])) {
+	if (isset($_SESSION['openaccess_username'])) {
 		header('Location: dashboard.php');
 	}
 	// Check to see if form is submitted

@@ -5,7 +5,7 @@ For: The Hunton Collection Admin Panel
 
 	require_once("../connection.php");
 	session_start();
-	if (isset($_SESSION["username"])) {
+	if (isset($_SESSION["skills2018-ontario_username"])) {
 		header("Location: index.php");
 	}
 	if (isset($_POST["username"])) {
@@ -25,7 +25,7 @@ For: The Hunton Collection Admin Panel
 			}
 			if (password_verify($password, $hash)) {
 				// Login Sucess
-				$_SESSION["username"] = htmlentities($_POST["username"]);
+				$_SESSION["skills2018-ontario_username"] = htmlentities($_POST["username"]);
 				header("Location: index.php");
 			} else {
 				// Login Failed

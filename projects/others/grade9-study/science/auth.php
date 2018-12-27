@@ -19,10 +19,10 @@ function requireView($req) {
 	$reqv = "v$req";
 	$reqa = "a$req";
 	$found = false;
-	if ($_SESSION["permission"] == null) {
+	if ($_SESSION["g9s_permission"] == null) {
 		die();
 	}
-	foreach($_SESSION["permission"] as $permission) {
+	foreach($_SESSION["g9s_permission"] as $permission) {
 		if ($permission === $reqv || $permission === $reqa || $permission === 'a*') {
 			$found = true;
 		}
@@ -34,7 +34,7 @@ function requireView($req) {
 
 function requireOPAdmin() {
 	$found = false;
-	foreach($_SESSION["permission"] as $permission) {
+	foreach($_SESSION["g9s_permission"] as $permission) {
 		if ($permission === 'a*') {
 			$found = true;
 		}
@@ -46,7 +46,7 @@ function requireOPAdmin() {
 
 function requireAnyAdmin() {
 	$found = false;
-	foreach($_SESSION["permission"] as $permission) {
+	foreach($_SESSION["g9s_permission"] as $permission) {
 		if (substr($permission, 0, 1) === 'a') {
 			$found = true;
 		}
@@ -59,7 +59,7 @@ function requireAnyAdmin() {
 function requireAdmin($subject) {
 	$req = "a$subject";
 	$found = false;
-	foreach($_SESSION["permission"] as $permission) {
+	foreach($_SESSION["g9s_permission"] as $permission) {
 		if ($permission === $req || $permission === 'a*') {
 			$found = true;
 		}
@@ -81,7 +81,7 @@ if($_POST != NULL){
 			echo "invtok";
 			die();
 		}
-		$_SESSION['username'] = $username;
+		$_SESSION['g9s_username'] = $username;
 		echo 'successful';
 		die();
 	}
@@ -185,7 +185,7 @@ if($_POST != NULL){
 			echo 'Invalid Username/Password';
 			die();
 		}
-		$_SESSION['username'] = $username;
+		$_SESSION['g9s_username'] = $username;
 		echo 's';
 		if($check == "true"){
 			$token = mcrypt_create_iv(16, MCRYPT_DEV_URANDOM);
@@ -198,8 +198,8 @@ if($_POST != NULL){
 		die();
 	}
 }
-if($_SESSION != NULL && $_SESSION['username'] != null){
-	$user = $_SESSION['username'];
+if($_SESSION != NULL && $_SESSION['g9s_username'] != null){
+	$user = $_SESSION['g9s_username'];
 	$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 	$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE USERNAME = ?");
 	mysqli_stmt_bind_param($sql, 's', $user);
@@ -210,14 +210,14 @@ if($_SESSION != NULL && $_SESSION['username'] != null){
 		session_destroy();
 	}
 	else{
-		$_SESSION["first"] = $qfirst;
-		$_SESSION["last"] = $qlast;
-		$_SESSION["email"] = $qemail;
-		$_SESSION["perm"] = $perm;
-		$_SESSION["permission"] = explode(",", $perm);
+		$_SESSION["g9s_first"] = $qfirst;
+		$_SESSION["g9s_last"] = $qlast;
+		$_SESSION["g9s_email"] = $qemail;
+		$_SESSION["g9s_perm"] = $perm;
+		$_SESSION["g9s_permission"] = explode(",", $perm);
 	}
 }
-if($_SESSION == NULL || $_SESSION['username'] == null){
+if($_SESSION == NULL || $_SESSION['g9s_username'] == null){
 ?>
 
 <!DOCTYPE HTML>

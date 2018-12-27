@@ -54,7 +54,7 @@
 	
 <hr/>
 	<div style="text-align: center; font-size: 26px;">
-	<?="Welcome back, " . $_SESSION["username"]?>
+	<?="Welcome back, " . $_SESSION["skills2017-canada_username"]?>
 	</div>
 	<br/>
 	<div style="text-align: center; font-size: 22px;">

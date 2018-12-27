@@ -4,7 +4,7 @@
     session_start();
     
     $level = 0;
-    if (isset($_SESSION["username"]))
+    if (isset($_SESSION["brain_username"]))
         $level = 1;
     $msg = "Authentication Required";
 
@@ -14,7 +14,7 @@
         if (mysqli_num_rows($user) == 1) {
             while($row = mysqli_fetch_assoc($user)) {
                 if (password_verify($_POST["password"], $row["password"])) {
-                    $_SESSION["username"] = htmlentities($_POST["username"]);
+                    $_SESSION["brain_username"] = htmlentities($_POST["username"]);
                     $level = 1;
                 } else {
                     $msg = "Incorrect Credentials!";

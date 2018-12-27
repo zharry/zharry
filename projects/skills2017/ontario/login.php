@@ -3,7 +3,7 @@
 	require("connection.php");
 
 	session_start();
-	if (isset($_SESSION["username"])) {
+	if (isset($_SESSION["skills2017-ontario_username"])) {
 		Header("Location: admin.php");
 	} else {
 		if (isset($_POST["username"])) {
@@ -12,7 +12,7 @@
 			$query = "SELECT * FROM `users` WHERE username='{$user}' AND password='{$pass}'";
 			$res = mysqli_query($conn, $query);
 			if (mysqli_num_rows($res) == 1) {
-				$_SESSION["username"] = htmlentities($_POST["username"]);
+				$_SESSION["skills2017-ontario_username"] = htmlentities($_POST["username"]);
 				Header("Location: admin.php");
 			} else {
 				echo "Username or Password Incorrect!";

@@ -5,7 +5,7 @@ For: The Hunton Collection Admin Panel
 
 	require_once("../connection.php");
 	session_start();
-	if (!isset($_SESSION["username"])) {
+	if (!isset($_SESSION["skills2018-ontario_username"])) {
 		header("Location: login.php");
 	}
 	

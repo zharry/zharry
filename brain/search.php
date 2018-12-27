@@ -6,7 +6,7 @@
         // Setup Query
         $req = mysqli_real_escape_string($conn, $_GET["query"]);
         $sql = "SELECT * FROM `contents` WHERE `tags` LIKE '%$req%' AND `access` != 'Protected' AND `access` != 'Private';";
-        if (isset($_SESSION["username"])) {
+        if (isset($_SESSION["brain_username"])) {
             $sql = "SELECT * FROM `contents` WHERE `tags` LIKE '%$req%';";
         }
         $ret = array();

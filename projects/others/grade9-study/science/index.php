@@ -18,7 +18,7 @@
 				SNC1D6-02
 			</div>
 			<div id="user">
-				Hello, FristName LastName<?php /*echo $_SESSION['first'] . ' ' . $_SESSION['last']; */?>
+				Hello, FristName LastName<?php /*echo $_SESSION['g9s_first'] . ' ' . $_SESSION['g9s_last']; */?>
 			</div>
 		</div>
 		<div id="body" onmouseover="hideMenu()">
@@ -223,7 +223,7 @@
 			<div style="height: 2.3em; cursor:pointer;" onclick="homework()">Homework</div>
 			<!--div style="height: 2.3em; cursor:pointer;" onclick="chat()">Chat</div--> 
 			<!--<div  onclick="chat()">Chat</div>-->
-			<!--<div style="bottom: 3em; position: absolute;">Hello, <?php echo htmlentities($_SESSION['username']); ?></div>-->
+			<!--<div style="bottom: 3em; position: absolute;">Hello, <?php echo htmlentities($_SESSION['g9s_username']); ?></div>-->
 			<!--div style="height: 36px; cursor:pointer;" onclick="ptable()">PTable</div-->
 		</div>
 		
@@ -252,8 +252,8 @@
 		<link rel="stylesheet" href="assets/includes/style.css">
 		<?php
 			$url = 'https://study-chat.herokuapp.com/auth';
-			$hash = hash('sha256', $_SESSION['username'].$_SESSION['first'].$_SESSION['last'].$_SESSION['email'].$_SESSION['perm'].session_id().'622r5ac4jxpQJagL083BwHy3bQSZVlQhVlnXKE5AzWKqu5zBzLAHys+zDZxbT+OP2StVL/vz+l6xpw7s6MyiNg==');
-			$data = array('user' => $_SESSION['username'], 'first' => $_SESSION['first'], 'last' => $_SESSION['last'], 'email' => $_SESSION['email'], 'perm' => $_SESSION['perm'], 'sessionCookie' => session_id(), 'hash' => $hash);
+			$hash = hash('sha256', $_SESSION['g9s_username'].$_SESSION['g9s_first'].$_SESSION['g9s_last'].$_SESSION['g9s_email'].$_SESSION['g9s_perm'].session_id().'622r5ac4jxpQJagL083BwHy3bQSZVlQhVlnXKE5AzWKqu5zBzLAHys+zDZxbT+OP2StVL/vz+l6xpw7s6MyiNg==');
+			$data = array('user' => $_SESSION['g9s_username'], 'first' => $_SESSION['g9s_first'], 'last' => $_SESSION['g9s_last'], 'email' => $_SESSION['g9s_email'], 'perm' => $_SESSION['g9s_perm'], 'sessionCookie' => session_id(), 'hash' => $hash);
 
 			$options = array(
 				'http' => array(
@@ -266,7 +266,7 @@
 			$result = file_get_contents($url, false, $context);
 		?>
 		<script>
-			var nananananana = "<?php //echo $_SESSION['username']; ?>";
+			var nananananana = "<?php //echo $_SESSION['g9s_username']; ?>";
 			var nanananananab = "<?php// echo session_id(); ?>";
 			function archive() {
 				alert("This is an archived site. Due to copyright reasons, PTable and all other textbook pages have been disabled. Every other functions remain.");

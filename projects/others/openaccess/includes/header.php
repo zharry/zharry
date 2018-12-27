@@ -39,7 +39,7 @@
           </li>
         </ul>
 		<?php
-			if (!isset($_SESSION['username'])) {
+			if (!isset($_SESSION['openaccess_username'])) {
 		?>
         <a class="btn btn-outline-success my-2 my-sm-0" style="color: white;" href="login.php">Login</a>
         &nbsp <a class="btn btn-outline-success my-2 my-sm-0" style="color: white;" href="register.php">Register</a>

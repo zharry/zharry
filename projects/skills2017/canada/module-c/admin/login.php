@@ -3,7 +3,7 @@
 	require "connection.php";
 	
 	session_start();
-	if (isset($_SESSION["username"])) {
+	if (isset($_SESSION["skills2017-canada_username"])) {
 		Header("Location: index.php");
 	}
 	
@@ -16,7 +16,7 @@
 		$res = mysqli_query($conn, $query) or die();
 		$rows = mysqli_num_rows($res);
 		if ($rows == 1) {
-			$_SESSION["username"] = $username;
+			$_SESSION["skills2017-canada_username"] = $username;
 			Header("Location: index.php");
 		} else {
 			echo "Username/Password combination incorrect!";
