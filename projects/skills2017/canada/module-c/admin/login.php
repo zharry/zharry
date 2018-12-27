@@ -71,8 +71,8 @@
     <div class="container">
 	
 <form action="login.php" method="post">
-<input type="text" name="username" placeholder="admin" required><br/>
-<input type="password" name="password" placeholder="123456" required><br/>
+<input type="text" name="username" placeholder="Eg. Admin" required><br/>
+<input type="password" name="password" placeholder="Eg. 123456789" required><br/>
 <input type="submit" value="Login">
 </form>
 

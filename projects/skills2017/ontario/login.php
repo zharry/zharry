@@ -53,8 +53,8 @@
 		</div>
 		<div id="login">
 			<form action="login.php" method="post" >
-				<input style="height: 40px; width: 200px;" type="text" name="username" placeholder="Username" required><br/>
-				<input style="height: 40px; width: 200px;" type="password" name="password" placeholder="Password" required><br/>
+				<input style="height: 40px; width: 200px;" type="text" name="username" placeholder="Eg. Admin" required><br/>
+				<input style="height: 40px; width: 200px;" type="password" name="password" placeholder="Eg. 123456789" required><br/>
 				<input type="submit" style="height: 40px; width: 204px;">
 			</form>
 		</div>
