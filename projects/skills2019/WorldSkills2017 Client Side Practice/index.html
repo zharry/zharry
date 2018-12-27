@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+    <head>
+        <link rel="stylesheet" style="text/css" href="assets/style.css">
+        <link rel="stylesheet" style="text/css" href="assets/ripple.css">
+    </head>
+    
+    <body>
+        <div id="parent">
+			<div id="menu" class="hidden">
+				<img id="menu-logo" src="assets/logo.png" width="242" height="162" />
+				<button onclick="showPanel('game');" class="button">Start</button>
+				<button onclick="fetchLeaderboard(); showPanel('leaderboard')" class="button">Leaderboards</button>
+            </div>
+            <canvas id="game" class="hidden" width="960" height="600">
+            </canvas>
+			<div id="leaderboard" class="hidden">
+				<img id="leaderboard-logo" src="assets/logo.png" width="121" height="81" />
+				<table id="leaderboard-table">
+				</table>
+				<div id="bottom-controls">
+					<button onclick="prevPage();" class="button leaderboard-button">Prev</button>
+					<button onclick="showPanel('menu');" class="button leaderboard-button play-again">Main Menu</button>
+					<button onclick="nextPage();" class="button leaderboard-button">Next</button>
+				</div>
+			</div>
+			<div id="submit" class="hidden">
+				<img id="submit-logo" src="assets/logo.png" width="242" height="162" />
+				<div id="submit-display">
+				</div>
+				<input id="score" name="score" type="hidden"></input>
+				<input id="time" name="time" type="hidden"></input>					
+				<input id="name" name="name" type="text" required="required" maxlength="12" placeholder="Enter Name">
+				<button required class="button" onclick="submitScore();">Submit Score</button>
+            </div>
+        </div>
+        <script src="scripts/Helper.js"></script>
+        <script src="scripts/Leaderboard.js"></script>
+        <script src="scripts/ActionListeners.js"></script>
+        <script src="scripts/Tutorial.js"></script>
+        <script src="scripts/Game.js"></script>
+        <script src="scripts/Main.js"></script>
+        <script src="scripts/GameObjects/GameObject.js"></script>
+        <script src="scripts/GameObjects/Player.js"></script>
+        <script src="scripts/GameObjects/Ally.js"></script>
+        <script src="scripts/GameObjects/Bullet.js"></script>
+        <script src="scripts/GameObjects/Enemy.js"></script>
+        <script src="scripts/GameObjects/Asteroid.js"></script>
+        <script src="scripts/GameObjects/Image.js"></script>
+        <script src="scripts/GameObjects/Planet.js"></script>
+        <script src="scripts/GameObjects/Text.js"></script>
+        <script src="scripts/GameObjects/UI.js"></script>
+        <script src="scripts/GameObjects/Fuel.js"></script>
+		<script>
+			showPanel("menu");
+		</script>
+    </body>
+
+</html>
