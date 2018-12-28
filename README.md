@@ -66,6 +66,7 @@ Created during the 2017 TDSB Regional Skills Competition, [Canada 150](https://z
 ---
 
 # Archived Projects
+![Archived Projects](https://zharry.ca/img/banners/GitHub_Archived.png)
 
 ### DMCI Robotics Website
 The [DMCI Robotics Website](https://zharry.ca/projects/others/dmcirobotics/) was created for the [Dell Technologies Robotics Team/Club Website Challenge](https://challenges.robotevents.com/challenge/66) during 2016-2018 to give our school robotics team a greater online presence and compete with teams around the world.
@@ -94,6 +95,7 @@ Also created in GameMaker 8, [The Game](https://zharry.ca/projects/others/The%20
 ---
 
 # School Projects
+![Archived Projects](https://zharry.ca/img/banners/GitHub_School.png)
 
 ## Grade 12 (2017-2018)
 
