@@ -82,7 +82,7 @@ function confirmDelete(id) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (xhttp.status == 200 && xhttp.readyState == 4) {
-			alert("Movie Deleted!");
+			alert("Database manipulation is disabled for security purposes!");
 			window.location.href = "index.php";
 		}
 	}
