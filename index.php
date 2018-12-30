@@ -13,7 +13,7 @@
 			if (empty($row["url"]))
 				$people[$row["name"]] = $row["full_name"];
 			else
-				$people[$row["name"]] = '<a class="collab-link" href="' . $row["url"] . '" target="_blank">' . $row["full_name"] . '</a>'
+				$people[$row["name"]] = '<a class="collab-link" href="' . $row["url"] . '" target="_blank">' . $row["full_name"] . '</a>';
 		}
 	}
 	
