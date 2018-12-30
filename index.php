@@ -4,25 +4,27 @@
 		die("Error establishing database connection!");
 	}
 	
-	// Backend Definitions    
-	$people = array(
-        "Jacky" => '<a class="collab-link" href="https://jackyliao.me" target="_blank">Jacky Liao</a>',
-        "Henry" => '<a class="collab-link" href="https://guhenry3.tk" target="_blank">Henry Gu</a>',
-        "Ben" => '<a class="collab-link" href="https://bcheng.cf" target="_blank">Benjamin Cheng</a>',
-        "Jim" => '<a class="collab-link" href="https://jimgao.tk" target="_blank">Jim Gao</a>',
-        "Aaron" => 'Aaron Du',
-        "Jaden" => '<a class="collab-link" href="https://jadenyjw.ml/" target="_blank">Jaden Wang</a>',
-        "Andy" => 'Andy Huang',
-        "Eric" => 'Eric Li',
-        "Roger" => '<a class="collab-link" href="https://kiritofeng.tk" target="_blank">Roger Fu',
-        "Sunny" => 'Sunny Lan',
-        "Avery" => 'Avery Shum'
-    );
-    $linksImgs = array(
-        "GitHub" => "img/social/GitHub.svg",
-        "DevPost" => "img/social/DevPost.svg",
-        "SpaceApps" => "img/social/SpaceApps.svg"
-    );
+	// Get Collaborators Names
+	$people = array();
+	$query = "SELECT * FROM `collab`";
+	$res = mysqli_query($conn, $query);
+	if (mysqli_num_rows($res) > 0) {
+		while($row = mysqli_fetch_assoc($res)) {
+			if (empty($row["url"]))
+				$people[$row["name"]] = $row["full_name"];
+			else
+				$people[$row["name"]] = '<a class="collab-link" href="' . $row["url"] . '" target="_blank">' . $row["full_name"] . '</a>'
+		}
+	}
+	
+	// Get Social Icons
+	$linksImgs = array();
+	$query = "SELECT * FROM `social`";
+	$res = mysqli_query($conn, $query);
+	if (mysqli_num_rows($res) > 0)
+		while($row = mysqli_fetch_assoc($res))
+				$linksImgs[$row["name"]] = $row["link"];
+
 ?>
 
 <!doctype html>
