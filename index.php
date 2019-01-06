@@ -38,7 +38,7 @@
 	<title>Harry Zhang</title>
 	
 	<!-- CSS -->
-	<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 	<!-- CSS reset -->
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- Bootstrap -->
@@ -81,48 +81,81 @@
 		</div>
 	</div>
 
-	<div id="about">
+	<div id="about" class="body-section">
 		<div class="container">
 			<div class="row justify-content-md-center">
-				<div class="col col-xl-2 blank-col">
+				<div class="col-lg-2 blank-col">
 				</div>
-				<div class="col-md-auto">
-					<h2 class="section-title">
-						About Me
+				<div class="col-lg-3">
+					<h2 id="about-title" class="section-title">
+						About <br id="about-break"/>Me
 					</h2>
-					<table>
-						<?php
-							$query = "SELECT * FROM `about` ORDER BY `id` ASC";
-							$res = mysqli_query($conn, $query);
-							if (mysqli_num_rows($res) > 0) {
-								while($row = mysqli_fetch_assoc($res)) { ?>
-									<tr>
-										<td class="center"><i class="dark fas <?php echo $row["icon"]; ?> about-icon"></i></td>
-										<td><?php echo $row["description"]; ?></td>
-									 </tr>
-								<?php }
-							}
-						?>
-					</table>
-					<div id="about-projects">
-						<a data-easing="easeInQuad" id="projects-button" href="#projects">
-							<i class="grey fas fa-angle-down"></i>
-						</a>
-					</div>
 				</div>
-				<div class="col col-xl-2 blank-col">
+				<div class="col-lg-6">
+					<p>I am a first year undergraduate student at the University of Waterloo, 
+					for computer engineering. With over seven years of programming experience, 
+					I'm a self-taught, full stack developer, server administrator and 
+					game developer. </p>
+					<p>I'm currently a Team Canada prospect for Web Design and Development at the upcoming 
+					<a class="external-link" href="https://www.skillscompetencescanada.com/en/worldskills/worldskills-kazan-2019/" target="_blank">WorldSkills competition</a>
+					in Kazan, Russia. I was a two-time winner at Canada's largest hackathon, 
+					<a class="external-link" href="https://hackthenorth.com/">Hack the North</a> in 2018 and 2016, and also won at Canada's largest high school hackathon, 
+					<a class="external-link" href="https://masseyhacks3.devpost.com/">MasseyHacks III</a> in 2017. </p>
+				</div>
+				<div class="col-lg-1 blank-col">
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div id="projects" class="cd-timeline js-cd-timeline">
-		<h2 class="section-title">
-			Things I've Done
+	<div id="experience" class="body-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-md-12">
+					<h2 id="experience-title" class="section-title">
+						Experience
+					</h2>
+				</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-lg-1 col-xl-2 blank-col">
+				</div>
+				<?php
+					$query = "SELECT * FROM `experience` WHERE `enabled` = 1 LIMIT 2;";
+					$res = mysqli_query($conn, $query);
+					if (mysqli_num_rows($res) > 0) {
+						while($row = mysqli_fetch_assoc($res)) { 
+						?>
+							<div class="col-md-6 col-lg-5 col-xl-4 border-right no-border-md experience-content">
+								<div class="experience-section experience-position">
+									<?=$row["position"] ?>
+								</div>
+								<div class="experience-section experience-date">
+									<?=$row["date"] ?>
+								</div>
+								<div class="experience-section experience-tools">
+									<?=$row["tools"] ?>
+								</div>
+								<div class="experience-section experience-desc">
+									<?=$row["description"] ?>
+								</div>
+							</div>
+						<?php }
+					}
+				?>
+				<div class="col-lg-1 col-xl-2 blank-col">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="projects" class="cd-timeline js-cd-timeline body-section">
+		<h2 id="projects-title" class="section-title">
+			Projects
 		</h2>
 		<div class="cd-timeline__container">
 			<?php
-				$query = "SELECT * FROM `projects` ORDER BY `date` DESC";
+				$query = "SELECT * FROM `projects` WHERE `enabled` = 1 ORDER BY `date` DESC;";
 				$res = mysqli_query($conn, $query);
 				if (mysqli_num_rows($res) > 0) {
 					while($row = mysqli_fetch_assoc($res)) { 
@@ -228,7 +261,6 @@
 								</div>
 							</div>
 						</div>
-						
 					<?php }
 				}
 			?>
@@ -238,7 +270,7 @@
 		</div>
 	</div>
 	
-	<div id="social">
+	<div id="social" class="body-section">
 		<div class="container">
 			<h2 class="section-title">
 				Get In Touch!

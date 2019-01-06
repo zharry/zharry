@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top: 0.5em;
 }
 
-/* Page Styles */
+/* Section Styles */
 #header {
     position: relative;
     width: 100%;
@@ -61,12 +61,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 20px;
 }
 #about {
-	background-color: white;
-	padding: 2em 0;
+	background-color: #e9f0f5;
 }
-#about table {
-	margin-left: 12px;
-	margin-right: 12px;
+#about-title {
+	position: relative;
+	top: 50%;
+	transform: translateY(-60%);
+	text-align: left;
 }
 .about-icon {
 	font-size: 22px;
@@ -79,6 +80,20 @@ h1, h2, h3, h4, h5, h6 {
 #about-projects {
 	padding-top: 14px;
 	text-align: center;
+}
+.experience-content {
+	padding: 0 1.5em 1.5em 1.5em;
+}
+.experience-section {
+    padding-bottom: 6px;
+    line-height: 1.58em;
+    padding-top: 6px;
+    border-bottom: 1px solid black;
+}
+.experience-position {
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
 }
 #projects-button {
 	font-size: 32px;
@@ -108,15 +123,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding-top:4px;
 	text-align: center;
 }
-
+#experience {
+	background-color: white;
+}
 #social {
 	background-color: rgba(55, 68, 88, 0.9);
 	color: white;
 	text-align: center;
-}
-#social > .container {
-	padding-top: 3em;
-	padding-bottom: 4.5em;
 }
 #social .section-title {
 	color: white;
@@ -129,6 +142,14 @@ h1, h2, h3, h4, h5, h6 {
 	color: white;
 }
 
+/* General Styles */
+.body-section {	
+	padding: 4.25em 0;
+}
+.external-link {
+	font-weight: 600;
+    color: #0a4094;
+}
 .modal a { 
 	color: black;
 }
@@ -171,6 +192,28 @@ h1, h2, h3, h4, h5, h6 {
 .desc-tech, .desc-collab {
 	margin-bottom: 1rem;
 }
+
+/* Fancy Underline Things*/
+#about-title::after {     
+	background: none repeat scroll 0 0 #374458;
+	bottom: -0.8em;
+	content: "";
+	display: block;
+	height: 3px;
+	position: relative;
+	width: 18px;
+}
+#experience-title::after, #projects-title::after {     
+	background: none repeat scroll 0 0 #374458;
+	bottom: -0.5em;
+	content: "";
+	display: block;
+	height: 3px;
+	position: relative;
+	width: 18px;
+	margin: auto;
+	margin-bottom: 0.5em;
+}
 	
 /* Responsive */
 @media only screen and (max-width: 768px) {
@@ -191,6 +234,12 @@ h1, h2, h3, h4, h5, h6 {
 		padding-top: 2em;
 		padding-bottom: 2.75em;
 	}
+	#experience .no-border-md {
+		border: 0px !important;
+	}
+	#experience .border-left {
+		padding-top: 24px;
+	}
 }
 @media (min-width: 992px) {
 	.modal-lg {
@@ -206,6 +255,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.desc-tech, .desc-collab {
 		text-align: center;
+	}
+	#about-title::after {
+		bottom: -0.5em;
+		margin: auto auto 0.5em auto;
+	}
+	#about-title {
+		text-align: center;
+	}
+	#about-break {
+		display: none;
 	}
 }
 @media only screen and (max-width: 1170px) {

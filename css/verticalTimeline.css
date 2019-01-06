@@ -78,7 +78,7 @@ header h1 {
 
 .cd-timeline {
   overflow: hidden;
-  margin: 2em auto;
+  /*margin: 2em auto; Removed because it overlaps with .body-section*/
 }
 
 .cd-timeline__container {
@@ -258,7 +258,7 @@ header h1 {
 .cd-timeline__content p,
 .cd-timeline__read-more,
 .cd-timeline__date {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .cd-timeline__content p {
