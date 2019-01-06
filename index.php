@@ -123,10 +123,11 @@
 				<?php
 					$query = "SELECT * FROM `experience` WHERE `enabled` = 1 LIMIT 2;";
 					$res = mysqli_query($conn, $query);
+					$doneOne = false;
 					if (mysqli_num_rows($res) > 0) {
 						while($row = mysqli_fetch_assoc($res)) { 
 						?>
-							<div class="col-md-6 col-lg-5 col-xl-4 border-right no-border-md experience-content">
+							<div class="col-md-6 col-lg-5 col-xl-4 <?php echo (!$doneOne ? "border-right" : "border-left"); $doneOne = true; ?> no-border-md experience-content">
 								<div class="experience-section experience-position">
 									<?=$row["position"] ?>
 								</div>
