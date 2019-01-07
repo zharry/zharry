@@ -69,7 +69,7 @@
 	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#e9f0f5">
 </head>
-<body>
+<body onload="onload();">
 	<div id="header">
 		<div id="header-container">
 			<h1 id="header-name">
@@ -80,7 +80,6 @@
 			</h3>
 		</div>
 	</div>
-
 	<div id="about" class="body-section">
 		<div class="container">
 			<div class="row justify-content-md-center">
@@ -94,13 +93,80 @@
 				<div class="col-lg-6">
 					<p>I am a first year undergraduate student at the University of Waterloo, 
 					for computer engineering. With over seven years of programming experience, 
-					I'm a self-taught, full stack developer, server administrator and 
+					I'm a self-taught full stack developer, server administrator and 
 					game developer. </p>
 					<p>I'm currently a Team Canada prospect for Web Design and Development at the upcoming 
 					<a class="external-link" href="https://www.skillscompetencescanada.com/en/worldskills/worldskills-kazan-2019/" target="_blank">WorldSkills competition</a>
 					in Kazan, Russia. I was a two-time winner at Canada's largest hackathon, 
-					<a class="external-link" href="https://hackthenorth.com/">Hack the North</a> in 2018 and 2016, and also won at Canada's largest high school hackathon, 
-					<a class="external-link" href="https://masseyhacks3.devpost.com/">MasseyHacks III</a> in 2017. </p>
+					<a class="external-link" href="https://hackthenorth.com/" target="_blank">Hack the North</a> in 2018 and 2016, and also won at Canada's largest high school hackathon, 
+					<a class="external-link" href="https://masseyhacks3.devpost.com/" target="_blank">MasseyHacks III</a> in 2017. </p>
+				</div>
+				<div class="col-lg-1 blank-col">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="skills" class="body-section">
+		<div class="container">
+			<script>
+			var skills = {
+				<?php
+				$query = "SELECT * FROM `skills`;";
+				$res = mysqli_query($conn, $query);
+				$currentYear = 2000;
+				if (mysqli_num_rows($res) > 0) {
+					while($row = mysqli_fetch_assoc($res)) {
+						echo $row["year"] . ": {";
+						foreach ($row as $v => $val) {
+							echo "'" . (!strpos($v, " ") ? $v : substr($v, 0 , strpos($v, " "))) .  "': '" . $val .  "',";
+						}
+						echo "},";
+						$currentYear = $row["year"];
+					}
+				}
+				?>
+			};
+			var currentYear = <?=$currentYear ?>;
+			var selectedYear = <?=$currentYear ?>;
+			</script>
+			<div class="row">
+				<div class="col-lg-1 blank-col">
+				</div>
+				<div class="col-lg-3">
+					<h2 id="skills-year">
+						<i onclick="showYear(--selectedYear);" id="skill-left" class="clickable skill-move fas fa-chevron-left"></i>
+						&nbsp; Skills in <span id="year-num">2019</span> &nbsp;
+						<i onclick="showYear(++selectedYear);" id="skill-right" class="clickable skill-move fas fa-chevron-right"></i>
+					</h2>
+				</div>
+				<div class="col-lg-7" style="margin-left: 32px; margin-right: 32px;">
+					<div id="skill-display" style="display: none;">
+						<?php
+							$query = "SELECT * FROM `skills`;";
+							$res = mysqli_query($conn, $query);
+							$currentYear = 2000;
+							if (mysqli_num_rows($res) > 0) {
+								while($row = mysqli_fetch_assoc($res)) {
+									foreach ($row as $v => $val) {
+										if ($v == "id" || $v == "year") {
+										} else {
+											$v = (!strpos($v, " ") ? $v : substr($v, 0 , strpos($v, " ")));
+											?>
+											<div id="skill-<?=$v?>" class="skill-listing" style="width: 0%;">
+												<div class="skill-block"></div>
+												<div class="skill-text-connector"></div>
+												<div class="skill-text"><?=$v?></div>
+											</div>
+										<?php		
+										}
+									}
+									break;
+								}
+							}
+							?>
+
+					</div>
 				</div>
 				<div class="col-lg-1 blank-col">
 				</div>
@@ -299,6 +365,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<!-- Custom Scripts -->
-	<script src="js/script.js"></script> 
+	<script src="js/script.js"></script>
+	<script>
+		onload();
+	</script>
 </body>
 </html>

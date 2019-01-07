@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #about {
 	background-color: #e9f0f5;
+	padding-bottom: 2.5em;
 }
 #about-title {
 	position: relative;
@@ -80,6 +81,42 @@ h1, h2, h3, h4, h5, h6 {
 #about-projects {
 	padding-top: 14px;
 	text-align: center;
+}
+#skills {
+	padding-top: 0;
+}
+#skills-year {
+	line-height: 32px;
+	text-align: left;
+}
+.skill-block {
+	height: 12px;
+    top: 12px;
+    position: relative;
+    background-color: #374458;
+    margin-right: 2px;
+}
+.skill-text-connector {
+	height: 16px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 2px;
+    border-left: 1px dotted #3744583d;
+}
+.skill-text {
+    position: relative;
+}
+.skill-listing {
+	float: left;
+	transition: width 0.35s;
+}
+.skill-move {
+	font-size: 80%;
+}
+.arrow-disabled {
+    cursor: default !important;
+    color: lightgrey;
 }
 .experience-content {
 	padding: 0 1.5em 1.5em 1.5em;
@@ -192,6 +229,9 @@ h1, h2, h3, h4, h5, h6 {
 .desc-tech, .desc-collab {
 	margin-bottom: 1rem;
 }
+.clickable {
+	cursor: pointer;
+}
 
 /* Fancy Underline Things*/
 #about-title::after {     
@@ -203,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 	width: 18px;
 }
-#experience-title::after, #projects-title::after {     
+#skills-title::after, #experience-title::after, #projects-title::after {     
 	background: none repeat scroll 0 0 #374458;
 	bottom: -0.5em;
 	content: "";
@@ -265,6 +305,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	#about-break {
 		display: none;
+	}
+	#skills-year {
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 1170px) {
