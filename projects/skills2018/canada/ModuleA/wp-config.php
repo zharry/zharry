@@ -25,7 +25,7 @@ define('FORCE_SSL_ADMIN', false);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'skills_canada-2018');
+define('DB_NAME', 'zharry.ca-skills-canada2018');
 
 /** MySQL database username */
 define('DB_USER', getenv('MYSQL_USER_SKILLS'));

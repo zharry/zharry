@@ -20,7 +20,7 @@ define('WP_SITEURL','https://zharry.ca/projects/grade7/nctech');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', "school_nctech");
+define('DB_NAME', "zharry.ca-school-nctech");
 
 /** MySQL database username */
 define('DB_USER', getenv('MYSQL_USER_SCHOOL'));
