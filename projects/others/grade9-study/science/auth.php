@@ -72,7 +72,7 @@ function requireAdmin($subject) {
 if($_POST != NULL){
 	$token = base64_decode($_POST['t']);
 	if($token != null){
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM USER_TOKEN WHERE TOKEN = ?");
 		mysqli_stmt_bind_param($sql, 's', $token);
 		mysqli_stmt_execute($sql);
@@ -91,7 +91,7 @@ if($_POST != NULL){
 	$last = $_POST['l'];
 	$email = $_POST['e'];
 	if($user != null && $pass != null && $first != null && $last != null && $email != null){
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE USERNAME = ?");
 		mysqli_stmt_bind_param($sql, 's', $user);
 		mysqli_stmt_execute($sql);
@@ -171,7 +171,7 @@ if($_POST != NULL){
 	}
 	$check = $_POST['c'];
 	if($user != null && $pass != null && $check != null){
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE USERNAME = ?");
 		mysqli_stmt_bind_param($sql, 's', $user);
 		mysqli_stmt_execute($sql);
@@ -200,7 +200,7 @@ if($_POST != NULL){
 }
 if($_SESSION != NULL && $_SESSION['g9s_username'] != null){
 	$user = $_SESSION['g9s_username'];
-	$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+	$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
 	$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE USERNAME = ?");
 	mysqli_stmt_bind_param($sql, 's', $user);
 	mysqli_stmt_execute($sql);
@@ -509,7 +509,7 @@ $conlog = $details->country;
 $coordlog = $details->loc;
 $isplog = $details->org;
 
-$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
+$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
 if ($connection) {
 	$sql = mysqli_prepare($connection, "INSERT INTO LOG (TIME, IP, REVERSE_DNS, LOCATION, USERAGENT, COUNTRY, COORDS, ISP, PATH) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 	$path = $_SERVER["SCRIPT_FILENAME"];
