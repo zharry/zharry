@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI";
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: unset !important;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#viewer {
+    padding-top: 74px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.connectLink {
+    border-radius: 12px;
+    position: fixed;
+    padding: 12px;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0 0 10px 0px #0000008c;
+}
+.connectLink0 {
+    transform: translateX(-50%);
+    left: 50%;
+    top: 76px;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.connectLink1 {
+    transform: translateY(-50%) scale(-1,-1);
+    right: 0;
+    top: 50%;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.connectLink2 {
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.connectLink3 {
+    transform: translateY(-50%);
+    left: -26px;
+    top: 50%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.slide {
+    background-color: white;
+    height: calc(100vh - 74px);
+    position: absolute;
+    left: 0;
+    top: 74px;
+    width: 100%;
+}
+.slideContent {
+    padding: 64px;
+    /*
+    width: calc(80% - 128px);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid lightgrey;
+    overflow: auto;
+    max-height: calc(100vh - 74px - 240px);
+    */
+}
+
+#controls {
+    height: 74px;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    background-color: #f5f5f5;
+    box-shadow: 0px -15px 20px 4px black;
+}
+.controlsButton {
+    float: right;
+    padding: 12px;
+    margin: 12px;
+    margin-right: 24px;
+    border-radius: 8px;
+}
+.connectorButton {
+    padding: 8px;
+    border-radius: 8px;
+    margin: 2px 8px 0 0;
+}
+.newNode {
+    position: fixed;
+    padding: 12px;
+    margin: 12px;
+    margin-right: 24px;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+button {
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+}
+.connectionsRow {
+    width: 100%;
+}
+.connectionsItem {
+    width: 33%;
+}
+
+#editor {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#editorCanvas {
+    background-color: white;
+    z-index: 900;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#wysiwyg-wrapper {
+    padding-top: 120px;
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    min-height: 90vh;
+}
+
+.fr-placeholder {
+    display: none !important;
+}
+
+#titleEditor {
+    font-size: 1.5em;
+    width: 100%;
+    height: 1.5em;
+}
+
+.editorButton {
+    cursor: pointer;
+    float: right;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px 0 16px 8px;
+}
+.deleteButton {
+    float: left;
+    margin-left: 0;
+}
+
+
+@keyframes fade-in {
+    0% {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        visibility: unset;
+        display: block;
+        opacity: 1;
+    }
+}
+.fadeIn {
+    animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-out {
+    0% {
+        visibility: unset;
+        diplay: block;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+}
+.fadeOut {
+    animation: fade-out 0.2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slide-in-top {
+    0% {
+        top: calc(-100vh + 74px);
+    }
+    100% {
+        top: 74px;
+    }
+}
+.slideIn0 {
+    animation: slide-in-top 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in-right {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.slideIn1 {
+    animation: slide-in-right 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in-bottom {
+    0% {
+        top: calc(100vh + 74px);
+    }
+    100% {
+        top: 74px;
+    }
+}
+.slideIn2 {
+    animation: slide-in-bottom 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-in-left {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.slideIn3 {
+    animation: slide-in-left 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
