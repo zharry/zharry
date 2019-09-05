@@ -1,0 +1,45 @@
+#demo {
+  position: absolute;
+  left: -9999px;
+}
+
+label {
+  position: relative;
+  padding-left: 4em;
+  padding-top: .25em;
+  cursor: pointer;
+}
+
+label:before, label:after {
+  content: '';
+  position: absolute;
+  height: 1.5em;
+  transition: all .5s ease;
+}
+
+label:before {
+  left: 0;
+  top: 0;
+  width: 3em;
+  border: 2px solid #dddddd;
+  background: #dddddd;
+  border-radius: 1.1em;
+  z-index: -1;
+}
+
+label:after {
+  left: .15em;
+  top: .125em;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.5em;
+}
+
+#demo:checked + label:after { 
+  left: 1.65em;
+}
+
+#demo:checked + label:before {
+  background-color: #72da67;
+  border-color: #72da67;
+}

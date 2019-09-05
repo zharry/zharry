@@ -1,0 +1,45 @@
+.container {
+    display: inline-block;
+    position: relative;
+    width: 88px;
+    height: 88px;
+    background-color: #08051f;
+}
+.inner {
+    position: absolute;
+    left: 22px;
+}
+.bar{
+    display: inline-block;
+    position: absolute;
+    width: 8px;
+    background: #66fdff;
+    animation: loading 1.25s linear infinite;
+}
+.bar1{
+    left: 0px;
+    animation-delay: -0.75s;
+}
+.bar2{
+    left: 12px;
+    animation-delay: -0.5s;
+}
+.bar3 {
+    left: 24px;
+    animation-delay: -0.25s;
+}
+.bar4 {
+    left: 36px;
+    animation-delay: 0;
+}
+
+@keyframes loading {
+    0%, 100% {
+        top: 32px;
+        height: 25px;
+    }
+    50% {
+        top: 19px;
+        height: 50px;
+    }
+}

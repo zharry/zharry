@@ -1,0 +1,14 @@
+{
+    "name": "wsc-t17/php-tests",
+    "require": {
+        "phpunit/phpunit": "7.4.3"
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    },
+    "autoload": {
+        "psr-4": {
+            "WorldSkills\\Trade17\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="display">
+        <div class="text">rgb(127, 127, 127)</div>
+    </div>
+    <br/>
+    Red:
+    <input id="red" class="slider" type="range" min="0" max="255" value="127" oninput="handleChange()">
+    Green:
+    <input id="green" class="slider" type="range" min="0" max="255" value="127" oninput="handleChange()">
+    Blue:
+    <input id="blue" class="slider" type="range" min="0" max="255" value="127" oninput="handleChange()">
+
+    <script>
+        handleChange = () => {
+            const red = document.getElementById("red").value;
+            const green = document.getElementById("green").value;
+            const blue = document.getElementById("blue").value;
+            document.getElementsByClassName("text")[0].innerHTML = "rgb(" + red + ", " + green + ", " + blue + ")";
+            document.getElementsByClassName("display")[0].style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+        }
+    </script>
+</body>
+</html>

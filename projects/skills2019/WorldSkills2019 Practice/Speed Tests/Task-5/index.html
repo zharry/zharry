@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <canvas height="500" width="500">
+    </canvas>
+    <hr/>
+    <div class="RGBtext">rgb(127, 127, 127)</div>
+    <div class="lineWidthText">Line Width: 5</div>
+    <br/>
+
+    Mirror Mode:
+    <input id="mirrorMode" type="checkbox" oninput="handleMirrorChange()">
+    <br/>
+
+    Erase Mode:
+    <input id="eraseMode" type="checkbox" oninput="handleEraseChange()">
+    <br/>
+
+    Rainbow Mode:
+    <input id="rainbowMode" type="checkbox" oninput="handleRainbowChange()">
+    <br/>
+
+    Red:
+    <input id="red" class="slider" type="range" min="0" max="255" value="127" oninput="handleRGBChange()">
+    <br/>
+
+    Green:
+    <input id="green" class="slider" type="range" min="0" max="255" value="127" oninput="handleRGBChange()">
+    <br/>
+
+    Blue:
+    <input id="blue" class="slider" type="range" min="0" max="255" value="127" oninput="handleRGBChange()">
+    <br/>
+
+    Line Width:
+    <input id="lineWidth" class="slider" type="range" min="1" max="24" value="5" oninput="handleLineWidthChange()">
+    <br/>
+
+    <script src="script.js"></script>
+</body>
+</html>
