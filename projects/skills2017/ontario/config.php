@@ -6,6 +6,6 @@ $NAME = "James Johnson";
 $HOST = getenv('MYSQL_HOST');
 $USER = getenv('MYSQL_USER_SKILLS');
 $PASS = getenv('MYSQL_PASS_SKILLS');
-$DB = "zharry.ca-skills-ontario2017";
+$DB = "skills_ontario-2017";
 
 ?>

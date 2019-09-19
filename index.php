@@ -2,7 +2,7 @@
 	if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')))
 		$conn = mysqli_connect("localhost", "root", "", "zharry");
 	else	
-		$conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), "zharry.ca");
+		$conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), "zharry");
 	if (!$conn) {
 		die("Error establishing database connection! " . "Using: " . getenv('MYSQL_HOST'));
 	}

@@ -14,7 +14,7 @@ class CMySQL {
     // constructor
     function CMySQL() {
         $this->sDbHost = getenv('MYSQL_HOST');
-        $this->sDbName = "zharry.ca-school-bioproject";
+        $this->sDbName = "school_bioproject";
         $this->sDbUser = getenv('MYSQL_USER_SCHOOL');
         $this->sDbPass = getenv('MYSQL_PASS_SCHOOL');
 

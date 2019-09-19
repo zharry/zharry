@@ -3,7 +3,7 @@
 $host = getenv('MYSQL_HOST');
 $user = getenv('MYSQL_USER_DEMO');
 $pass = getenv('MYSQL_PASS_DEMO');
-$db = "zharry.ca-skills-octobertraining";
+$db = "skills_october-training";
 
 $conn = new PDO('mysql:host=' . $host . ';dbname=' . $db . ';charset=utf8', $user, $pass, [PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 

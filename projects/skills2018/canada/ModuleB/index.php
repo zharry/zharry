@@ -1,6 +1,6 @@
 <?php
 
-	$conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER_DEMO'), getenv('MYSQL_PASS_DEMO'), "zharry.ca-skills-canada2018");
+	$conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER_DEMO'), getenv('MYSQL_PASS_DEMO'), "skills_canada-2018");
 	if (!$conn) { 
 		die("Failed to connect to database!");
 	}
