@@ -4,7 +4,7 @@
 	else	
 		$conn = mysqli_connect(getenv('MYSQL_HOST'), getenv('MYSQL_USER'), getenv('MYSQL_PASS'), "zharry.ca");
 	if (!$conn) {
-		die("Error establishing database connection!");
+		die("Error establishing database connection! " . "Using: " . getenv('MYSQL_HOST'));
 	}
 	
 	// Get Collaborators Names
