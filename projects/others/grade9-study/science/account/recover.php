@@ -7,7 +7,7 @@
 
 	if($_POST != null && $_POST['remail'] != null){
 		$email = $_POST['remail'];
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM USERS WHERE EMAIL = ?");
 		mysqli_stmt_bind_param($sql, 's', $email);
 		mysqli_stmt_execute($sql);
@@ -64,7 +64,7 @@
 	else if($_POST != null && $_POST['rtoken'] != null && $_POST['rpasswd'] != null){
 		$token = base64_decode($_POST['rtoken']);
 
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM PASSWORD_RECOVER WHERE TOKEN = ?");
 		mysqli_stmt_bind_param($sql, 's', $token);
 		mysqli_stmt_execute($sql);
@@ -89,7 +89,7 @@
 	}
 	else if($_GET != null && $_GET['recToken'] != null){
 		$token = base64_decode($_GET['recToken']);
-		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "zharry.ca-project-grade9study");
+		$connection = mysqli_connect($mysql_creds["host"], $mysql_creds["user"], $mysql_creds["pass"], "project_grade9-study");
 		$sql = mysqli_prepare($connection, "SELECT * FROM PASSWORD_RECOVER WHERE TOKEN = ?");
 		mysqli_stmt_bind_param($sql, 's', $token);
 		mysqli_stmt_execute($sql);

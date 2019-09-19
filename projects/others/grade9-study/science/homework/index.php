@@ -8,7 +8,7 @@
 	$user = getenv('MYSQL_USER_PROJECT'); 
 	$pass = getenv('MYSQL_PASS_PROJECT');
 	$host = getenv('MYSQL_HOST');
-	$dbname = "zharry.ca-project-grade9study";
+	$dbname = "project_grade9-study";
 	$connection = mysqli_connect($host,$user,$pass,$dbname);
 	if (!$connection) {
 		die();
