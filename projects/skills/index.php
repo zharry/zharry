@@ -1,0 +1,1 @@
+<?php header("Location: https://github.com/zharry/zharry#skills-competition"); ?>
