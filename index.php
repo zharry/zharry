@@ -91,15 +91,10 @@
 					</h2>
 				</div>
 				<div class="col-lg-6">
-					<p>I am a first year undergraduate student at the University of Waterloo, 
-					for computer engineering. With over seven years of programming experience, 
-					I'm a self-taught full stack developer, server administrator and 
-					game developer. </p>
-					<p>I'm currently a Team Canada prospect for Web Design and Development at the upcoming 
-					<a class="external-link" href="https://www.skillscompetencescanada.com/en/worldskills/worldskills-kazan-2019/" target="_blank">WorldSkills competition</a>
-					in Kazan, Russia. I was a two-time winner at Canada's largest hackathon, 
-					<a class="external-link" href="https://hackthenorth.com/" target="_blank">Hack the North</a> in 2018 and 2016, and also won at Canada's largest high school hackathon, 
-					<a class="external-link" href="https://masseyhacks3.devpost.com/" target="_blank">MasseyHacks III</a> in 2017. </p>
+					<p>I am a second year undergraduate student at the University of Waterloo, for Computer Engineering.</p>
+					<p>I'm a purpose-driven programmer with over 8 years of experience in developing games and applications for the web and desktop.</p>
+					<p>I bringing a touch of creativity and innovation to everything I work on, allowing me to win at four of the six hackathons I’ve attended.</p>
+					<p>In August 2019, I also competed internationally at <a class="external-link" href="https://www.skillscompetencescanada.com/en/worldskills/worldskills-kazan-2019/" target="_blank">WorldSkills 2019</a> in Russia as a part of Team Canada for Web Technologies.</p>
 				</div>
 				<div class="col-lg-1 blank-col">
 				</div>
