@@ -345,7 +345,7 @@
 				<a href="https://www.facebook.com/zh.harry" alt="Facebook" target="_blank"><i class="light fab fa-facebook-square"></i></a>
 				<a href="https://www.linkedin.com/in/zhharry/" alt="LinkedIn" target="_blank"><i class="light fab fa-linkedin"></i></a>
 			</div>
-			<p>Or by email at <a id="social-email" href="mailto:me@zharry.ca">me@zharry.ca</a></p>
+			<p>Or by email at <a id="social-email" href="mailto:hr2zhang@uwaterloo.ca">hr2zhang@uwaterloo.ca</a></p>
 		</div>
 	</div>
 
