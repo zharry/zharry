@@ -85,6 +85,7 @@
                         <option>Note</option>
                         <option>Tutorial</option>
                         <option>Knowledge</option>
+                        <option>Quote</option>
                         <option>URL</option>
                     </select>
                 </div>
