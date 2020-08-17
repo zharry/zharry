@@ -6,7 +6,7 @@
 	if (!$conn) {
 		die("Error establishing database connection!"); 
 	}
-	
+	 
 	// Get Collaborators Names
 	$people = array();
 	$query = "SELECT * FROM `collab`";
